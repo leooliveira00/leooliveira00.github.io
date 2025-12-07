@@ -1,0 +1,371 @@
+/* Skills Legend */
+.skills-legend {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 60px;
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.legend-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.legend-label {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  font-weight: 500;
+}
+
+/* Skills Section */
+.skills-section {
+  background: white;
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: var(--shadow-md);
+  margin-bottom: 40px;
+  transition: all 0.3s ease;
+}
+
+.skills-section:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-4px);
+}
+
+.skills-section:last-child {
+  margin-bottom: 0;
+}
+
+.skills-section-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid var(--border-color);
+}
+
+.section-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 16px;
+  font-size: 1.8rem;
+  box-shadow: 0 4px 12px rgba(0, 102, 255, 0.2);
+}
+
+.skills-section-title {
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 0;
+}
+
+/* Skill Groups */
+.skills-groups {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 32px;
+}
+
+.skill-group {
+  padding: 24px;
+  background: var(--light-bg);
+  border-radius: 16px;
+  border-left: 4px solid var(--primary-color);
+  transition: all 0.3s ease;
+}
+
+.skill-group:hover {
+  background: white;
+  box-shadow: var(--shadow-md);
+  transform: translateX(4px);
+}
+
+.skill-group-name {
+  font-size: 1.2rem;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.skill-group-name::before {
+  content: '';
+  width: 4px;
+  height: 20px;
+  background: var(--gradient-primary);
+  border-radius: 2px;
+}
+
+/* Skill Items */
+.skill-items {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.skill-item {
+  position: relative;
+}
+
+.skill-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 8px;
+  gap: 12px;
+}
+
+.skill-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+}
+
+.skill-name {
+  font-size: 1rem;
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.skill-status {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.skill-percentage {
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  flex-shrink: 0;
+}
+
+/* Skill Bar */
+.skill-bar-container {
+  width: 100%;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  border-radius: 10px;
+  position: relative;
+  transition: width 1s ease-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.skill-bar-shine {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.3),
+    transparent
+  );
+  animation: shine 2s infinite;
+}
+
+@keyframes shine {
+  0% {
+    left: -100%;
+  }
+  50%, 100% {
+    left: 100%;
+  }
+}
+
+/* Skills Highlight */
+.skills-highlight {
+  margin-top: 60px;
+  background: var(--gradient-dark);
+  border-radius: 20px;
+  padding: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+.skills-highlight::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--gradient-primary);
+}
+
+.highlight-content {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  position: relative;
+  z-index: 2;
+}
+
+.highlight-icon {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-size: 3rem;
+  color: var(--secondary-color);
+  flex-shrink: 0;
+}
+
+.highlight-icon svg:first-child {
+  color: var(--primary-color);
+}
+
+.highlight-icon svg:last-child {
+  color: var(--secondary-color);
+}
+
+.highlight-text {
+  flex: 1;
+}
+
+.highlight-text h3 {
+  font-size: 1.8rem;
+  color: white;
+  margin-bottom: 16px;
+}
+
+.highlight-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 0;
+}
+
+.highlight-text strong {
+  color: white;
+  font-weight: 600;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .skills-groups {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .skills-section {
+    padding: 24px;
+  }
+
+  .skills-section-header {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  .section-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    font-size: 1.5rem;
+  }
+
+  .skills-section-title {
+    font-size: 1.5rem;
+  }
+
+  .skills-groups {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .skill-group {
+    padding: 20px;
+  }
+
+  .skills-highlight {
+    padding: 30px 20px;
+  }
+
+  .highlight-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 24px;
+  }
+
+  .highlight-icon {
+    font-size: 2.5rem;
+  }
+
+  .highlight-text h3 {
+    font-size: 1.4rem;
+  }
+
+  .highlight-text p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .skills-legend {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .skill-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .skill-percentage {
+    align-self: flex-end;
+    margin-top: -20px;
+  }
+
+  .skill-group-name {
+    font-size: 1.1rem;
+  }
+
+  .skill-name {
+    font-size: 0.95rem;
+  }
+}
+
+/* Animation on scroll */
+.skill-bar-fill {
+  animation: fillBar 1.5s ease-out forwards;
+}
+
+@keyframes fillBar {
+  from {
+    width: 0;
+  }
+}
+

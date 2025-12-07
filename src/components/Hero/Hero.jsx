@@ -1,0 +1,183 @@
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
+import { HashLink } from 'react-router-hash-link';
+import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import { 
+  SiReact, 
+  SiNodedotjs, 
+  SiPython, 
+  SiDocker, 
+  SiJavascript, 
+  SiLinux 
+} from 'react-icons/si';
+import './Hero.css';
+
+const Hero = () => {
+  const [currentTech, setCurrentTech] = useState(0);
+  
+  const technologies = [
+    { name: 'React', icon: <SiReact />, color: '#61DAFB' },
+    { name: 'Node.js', icon: <SiNodedotjs />, color: '#339933' },
+    { name: 'Python', icon: <SiPython />, color: '#3776AB' },
+    { name: 'Docker', icon: <SiDocker />, color: '#2496ED' },
+    { name: 'JavaScript', icon: <SiJavascript />, color: '#F7DF1E' },
+    { name: 'Linux', icon: <SiLinux />, color: '#FCC624' }
+  ];
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTech((prev) => (prev + 1) % technologies.length);
+    }, 2000);
+
+    return () => clearInterval(interval);
+  }, [technologies.length]);
+
+  return (
+    <section id="home" className="hero-section">
+      <Container>
+        <Row className="align-items-center min-vh-100">
+          <Col lg={6} className="hero-content">
+            <div className="hero-badge animate-fade-in">
+              <span className="badge-dot"></span>
+              Disponível para novos projetos
+            </div>
+            
+            <h1 className="hero-title animate-fade-in-up">
+              Full Stack Developer
+              <br />
+              <span className="gradient-text">com Base em Infraestrutura</span>
+            </h1>
+            
+            <p className="hero-subtitle animate-fade-in-up">
+              Transformando problemas complexos em soluções escaláveis.
+              <br />
+              Mais de 4 anos em TI, combinando desenvolvimento moderno com 
+              experiência sólida em infraestrutura, automação e DevOps.
+            </p>
+
+            <div className="hero-tech-stack animate-fade-in-up">
+              <span className="tech-label">Tecnologias:</span>
+              <div className="tech-icons">
+                {technologies.map((tech, index) => (
+                  <div 
+                    key={tech.name}
+                    className={`tech-icon ${index === currentTech ? 'active' : ''}`}
+                    style={{ color: tech.color }}
+                    title={tech.name}
+                  >
+                    {tech.icon}
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="hero-cta animate-fade-in-up">
+              <HashLink smooth to="/#projects" className="btn-primary-custom">
+                Ver Projetos
+              </HashLink>
+              <HashLink smooth to="/#contact" className="btn-outline-custom">
+                Entre em Contato
+              </HashLink>
+            </div>
+
+            <div className="hero-social animate-fade-in-up">
+              <a 
+                href="https://github.com/seu-usuario" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="GitHub"
+              >
+                <FaGithub />
+              </a>
+              <a 
+                href="https://linkedin.com/in/seu-perfil" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="social-link"
+                aria-label="LinkedIn"
+              >
+                <FaLinkedin />
+              </a>
+              <a 
+                href="mailto:seu-email@exemplo.com"
+                className="social-link"
+                aria-label="Email"
+              >
+                <FaEnvelope />
+              </a>
+            </div>
+          </Col>
+
+          <Col lg={6} className="hero-visual">
+            <div className="hero-illustration animate-float">
+              <div className="illustration-container">
+                <div className="code-window">
+                  <div className="window-header">
+                    <div className="window-buttons">
+                      <span className="btn-close"></span>
+                      <span className="btn-minimize"></span>
+                      <span className="btn-maximize"></span>
+                    </div>
+                    <div className="window-title">developer.js</div>
+                  </div>
+                  <div className="window-content">
+                    <div className="code-line">
+                      <span className="code-keyword">const</span>{' '}
+                      <span className="code-variable">developer</span> = {'{'};
+                    </div>
+                    <div className="code-line code-indent">
+                      <span className="code-property">name</span>: 
+                      <span className="code-string">"Seu Nome"</span>,
+                    </div>
+                    <div className="code-line code-indent">
+                      <span className="code-property">role</span>: 
+                      <span className="code-string">"Full Stack"</span>,
+                    </div>
+                    <div className="code-line code-indent">
+                      <span className="code-property">experience</span>: 
+                      <span className="code-string">"Infra + Dev"</span>,
+                    </div>
+                    <div className="code-line code-indent">
+                      <span className="code-property">skills</span>: [
+                      <span className="code-string">"React"</span>,
+                      <span className="code-string">"Node.js"</span>,
+                      <span className="code-string">"Docker"</span>]
+                    </div>
+                    <div className="code-line">{'};'}</div>
+                  </div>
+                </div>
+                
+                <div className="floating-elements">
+                  <div className="floating-card card-1">
+                    <SiReact className="float-icon" />
+                  </div>
+                  <div className="floating-card card-2">
+                    <SiDocker className="float-icon" />
+                  </div>
+                  <div className="floating-card card-3">
+                    <SiPython className="float-icon" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </Col>
+        </Row>
+
+        <HashLink smooth to="/#about" className="scroll-indicator">
+          <FaChevronDown className="scroll-icon" />
+          <span>Role para baixo</span>
+        </HashLink>
+      </Container>
+
+      <div className="hero-background">
+        <div className="gradient-orb orb-1"></div>
+        <div className="gradient-orb orb-2"></div>
+        <div className="gradient-orb orb-3"></div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
+
