@@ -7,10 +7,10 @@ export const timelineData = [
     type: "infrastructure",
     description: "Início da carreira em TI focado em infraestrutura de servidores e redes",
     achievements: [
-      "Gerenciamento de servidores Linux e Windows Server",
-      "Implementação e manutenção de redes corporativas",
-      "Configuração de firewalls e políticas de segurança",
-      "Suporte técnico avançado e troubleshooting"
+      "Suporte ao usuário, incluindo resolução de problemas, formatação e configuração de computadores.",
+      "Apoio na administração de dispositivos de rede, como switches, roteadores e firewalls.",
+      "Participação em projetos de melhoria contínua e otimização da infraestrutura de TI.",
+      "Assistência na configuração e manutenção de redes LAN e WAN, garantindo conectividade e desempenho."
     ],
     skills: ["Linux", "Windows Server", "Redes", "Firewall", "VMware"],
     icon: "server"
@@ -23,10 +23,10 @@ export const timelineData = [
     type: "infrastructure",
     description: "Evolução para virtualização, containerização e início em automação",
     achievements: [
-      "Implementação de ambientes virtualizados com VMware",
-      "Migração de serviços para containers Docker",
-      "Criação de scripts Python para automação de tarefas",
-      "Otimização de recursos e redução de custos em 30%"
+      "Prestar suporte técnico a usuários em hardware e software.",
+      "Auxiliar na configuração e manutenção de equipamentos de rede e servidores",
+      "Monitorar o desempenho da infraestrutura e registrar incidentes.",
+      "Apoiar na implementação de políticas de segurança da informação."
     ],
     skills: ["VMware", "Docker", "Python", "Bash", "Automação"],
     icon: "box"
@@ -39,10 +39,10 @@ export const timelineData = [
     type: "infrastructure",
     description: "Ponte entre infraestrutura e desenvolvimento através da automação",
     achievements: [
-      "Desenvolvimento de pipelines de dados com Apache Airflow",
-      "Automações Python para extração e processamento de dados",
-      "Criação de dashboards e relatórios automatizados",
-      "Primeiros projetos web combinando infra + desenvolvimento"
+      "Administração e monitoramento de redes corporativas (LAN, WAN, VPN, VLAN), com foco em alta disponibilidade e performance.",
+      "Gerenciamento de servidores físicos e virtuais (Hyper-V) e serviços de diretório (Active Directory, DNS, DHCP e GPO).",
+      "Atuação em segurança da informação, incluindo firewalls (pfSense), políticas de acesso, VPNs, backups e recuperação de desastres.",
+      "Suporte técnico avançado e análise proativa de incidentes, utilizando logs e métricas para prevenção de falhas."
     ],
     skills: ["Python", "Airflow", "Pandas", "APIs", "SQL"],
     icon: "zap"
@@ -53,12 +53,12 @@ export const timelineData = [
     title: "Desenvolvedor Full Stack",
     company: "Desenvolvedor Full Stack",
     type: "development",
-    description: "Atuação como desenvolvedor full stack com diferencial em infraestrutura",
+    description: "Atuação como desenvolvedor full stack com background em infraestrutura",
     achievements: [
       "Desenvolvimento de aplicações web completas",
-      "Domínio de JavaScript, React e Node.js",
+      "Familiaridade com JavaScript, React e Node.js",
       "Projetos que resolveram problemas reais de negócio",
-      "Aplicação de conhecimento em infra para soluções escaláveis"
+      "Aplicação de conhecimento em infra para soluções escaláveis e eficientes"
     ],
     skills: ["React", "Node.js", "JavaScript", "HTML/CSS", "Bootstrap", "Git"],
     icon: "code",
