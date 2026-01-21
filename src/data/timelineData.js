@@ -1,9 +1,9 @@
 export const timelineData = [
   {
     id: 1,
-    year: "2019 - 2021",
-    title: "Analista de Infraestrutura de TI",
-    company: "Empresa XYZ",
+    year: "2021 - 2022",
+    title: "Estagiário em TI",
+    company: "Scitech Produtos Médicos",
     type: "infrastructure",
     description: "Início da carreira em TI focado em infraestrutura de servidores e redes",
     achievements: [
@@ -17,9 +17,9 @@ export const timelineData = [
   },
   {
     id: 2,
-    year: "2021 - 2023",
-    title: "Especialista em Infraestrutura & Virtualização",
-    company: "Empresa ABC",
+    year: "2022 - 2023",
+    title: "Assistente de TI",
+    company: "Scitech Produtos Médicos",
     type: "infrastructure",
     description: "Evolução para virtualização, containerização e início em automação",
     achievements: [
@@ -33,10 +33,10 @@ export const timelineData = [
   },
   {
     id: 3,
-    year: "2023 - 2024",
-    title: "Transição para Automação & Dados",
-    company: "Projetos Freelance",
-    type: "transition",
+    year: "2023 - 2025",
+    title: "Analista de Infraestrutura",
+    company: "Scitech Produtos Médicos",
+    type: "infrastructure",
     description: "Ponte entre infraestrutura e desenvolvimento através da automação",
     achievements: [
       "Desenvolvimento de pipelines de dados com Apache Airflow",
@@ -49,8 +49,8 @@ export const timelineData = [
   },
   {
     id: 4,
-    year: "2024 - Presente",
-    title: "Full Stack Developer",
+    year: "2025 - Presente",
+    title: "Desenvolvedor Full Stack",
     company: "Desenvolvedor Full Stack",
     type: "development",
     description: "Atuação como desenvolvedor full stack com diferencial em infraestrutura",

@@ -67,19 +67,19 @@ const Contact = () => {
     {
       icon: <FaEnvelope />,
       label: 'Email',
-      value: 'seu-email@exemplo.com',
-      link: 'mailto:seu-email@exemplo.com'
+      value: 'lsousa2020@hotmail.com',
+      link: 'mailto:lsousa2020@hotmail.com'
     },
     {
       icon: <FaPhone />,
       label: 'Telefone',
-      value: '+55 (11) 99999-9999',
-      link: 'tel:+5511999999999'
+      value: '+55 (62) 99941-3201',
+      link: 'tel:+5562999413201'
     },
     {
       icon: <FaMapMarkerAlt />,
       label: 'Localização',
-      value: 'São Paulo, SP - Brasil',
+      value: 'Goiânia, GO - Brasil',
       link: null
     }
   ];
@@ -88,19 +88,19 @@ const Contact = () => {
     {
       icon: <FaLinkedin />,
       label: 'LinkedIn',
-      url: 'https://linkedin.com/in/seu-perfil',
+      url: 'https://www.linkedin.com/in/leooliveira00/',
       color: '#0077B5'
     },
     {
       icon: <FaGithub />,
       label: 'GitHub',
-      url: 'https://github.com/seu-usuario',
+      url: 'https://github.com/leooliveira00/',
       color: '#333'
     },
     {
       icon: <FaEnvelope />,
       label: 'Email',
-      url: 'mailto:seu-email@exemplo.com',
+      url: 'mailto:lsousa2020@hotmail.com',
       color: '#EA4335'
     }
   ];

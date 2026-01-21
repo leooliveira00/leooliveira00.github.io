@@ -82,7 +82,7 @@ const Hero = () => {
 
             <div className="hero-social animate-fade-in-up">
               <a 
-                href="https://github.com/seu-usuario" 
+                href="https://github.com/leooliveira00/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -91,7 +91,7 @@ const Hero = () => {
                 <FaGithub />
               </a>
               <a 
-                href="https://linkedin.com/in/seu-perfil" 
+                href="https://www.linkedin.com/in/leooliveira00/" 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="social-link"
@@ -100,7 +100,7 @@ const Hero = () => {
                 <FaLinkedin />
               </a>
               <a 
-                href="mailto:seu-email@exemplo.com"
+                href="mailto:lsousa2020@hotmail.com"
                 className="social-link"
                 aria-label="Email"
               >
@@ -128,7 +128,7 @@ const Hero = () => {
                     </div>
                     <div className="code-line code-indent">
                       <span className="code-property">name</span>: 
-                      <span className="code-string">"Seu Nome"</span>,
+                      <span className="code-string">"Leonardo Sousa"</span>,
                     </div>
                     <div className="code-line code-indent">
                       <span className="code-property">role</span>: 
@@ -142,7 +142,7 @@ const Hero = () => {
                       <span className="code-property">skills</span>: [
                       <span className="code-string">"React"</span>,
                       <span className="code-string">"Node.js"</span>,
-                      <span className="code-string">"Docker"</span>]
+                      <span className="code-string">"Python"</span>]
                     </div>
                     <div className="code-line">{'};'}</div>
                   </div>

@@ -18,7 +18,7 @@
 
 .timeline-item.current .timeline-content {
   border: 2px solid var(--success-color);
-  box-shadow: 0 0 30px rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 30px rgba(96, 173, 148, 0.2);
 }
 
 /* Timeline Connector */
@@ -67,6 +67,8 @@
   flex: 1;
   position: relative;
   transition: all 0.3s ease;
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .timeline-content:hover {
@@ -76,18 +78,18 @@
 
 .current-badge {
   position: absolute;
-  top: -12px;
-  right: 24px;
+  top: 42px;
+  right: 12px;
   display: flex;
   align-items: center;
   gap: 8px;
   padding: 6px 16px;
-  background: var(--success-color);
+  background: var(--primary-color);
   color: white;
   border-radius: 20px;
   font-size: 0.8rem;
   font-weight: 600;
-  box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
+  box-shadow: 0 4px 12px rgba(32, 81, 241, 0.3);
   z-index: 2;
 }
 
