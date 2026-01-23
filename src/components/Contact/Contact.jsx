@@ -160,11 +160,6 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-
-              <div className="availability-badge">
-                <div className="availability-dot"></div>
-                <span>Disponível para trabalho</span>
-              </div>
             </div>
           </Col>
 

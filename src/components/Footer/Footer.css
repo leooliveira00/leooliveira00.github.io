@@ -180,23 +180,6 @@
   flex-shrink: 0;
 }
 
-.footer-availability {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  color: var(--success-color);
-  font-weight: 600;
-  font-size: 0.9rem;
-  margin: 0;
-}
-
-.footer-availability .availability-dot {
-  width: 10px;
-  height: 10px;
-  background: var(--success-color);
-  border-radius: 50%;
-  animation: pulse 2s ease-in-out infinite;
-}
 
 /* Footer Bottom */
 .footer-bottom {

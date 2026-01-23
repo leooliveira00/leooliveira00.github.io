@@ -5,7 +5,6 @@ import {
   FaGithub, 
   FaLinkedin, 
   FaEnvelope,
-  FaHeart,
   FaCode,
   FaRocket,
   FaArrowUp
@@ -32,17 +31,17 @@ const Footer = () => {
       { 
         name: 'GitHub', 
         icon: <FaGithub />, 
-        url: 'https://github.com/seu-usuario' 
+        url: 'https://github.com/leooliveira00/' 
       },
       { 
         name: 'LinkedIn', 
         icon: <FaLinkedin />, 
-        url: 'https://linkedin.com/in/seu-perfil' 
+        url: 'https://linkedin.com/in/leooliveira00/' 
       },
       { 
         name: 'Email', 
         icon: <FaEnvelope />, 
-        url: 'mailto:seu-email@exemplo.com' 
+        url: 'mailto:lsousa2020@hotmail.com' 
       }
     ]
   };
@@ -55,7 +54,7 @@ const Footer = () => {
             <div className="footer-brand">
               <div className="brand-logo-footer">
                 <FaCode className="brand-icon" />
-                <span className="brand-text">DevPortfolio</span>
+                <span className="brand-text">Leonardo Sousa</span>
               </div>
               <p className="footer-description">
                 Desenvolvedor Full Stack em evolução com sólida base em Infraestrutura de TI.
@@ -114,12 +113,8 @@ const Footer = () => {
               <div className="footer-contact">
                 <a href="mailto:seu-email@exemplo.com" className="footer-contact-link">
                   <FaEnvelope />
-                  seu-email@exemplo.com
+                  lsousa2020@hotmail.com
                 </a>
-                <p className="footer-availability">
-                  <span className="availability-dot"></span>
-                  Disponível para trabalho
-                </p>
               </div>
             </div>
           </Col>
@@ -128,11 +123,10 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p>
-              © {currentYear} DevPortfolio. Feito com <FaHeart className="heart-icon" /> 
-              usando React, Bootstrap e muita dedicação.
+              © {currentYear} Portfólio desenvolvido utilizando React, Bootstrap e muita dedicação.
             </p>
             <p className="footer-credits">
-              Desenvolvido por <strong>Seu Nome</strong> - Full Stack Developer
+              Desenvolvido por <strong>Leonardo Sousa</strong> - Full Stack Developer
             </p>
           </div>
 
