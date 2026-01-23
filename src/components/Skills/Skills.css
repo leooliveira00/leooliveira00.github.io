@@ -6,9 +6,10 @@
   gap: 24px;
   margin-bottom: 60px;
   padding: 20px;
-  background: white;
+  background: var(--light-bg);
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .legend-item {
@@ -32,17 +33,19 @@
 
 /* Skills Section */
 .skills-section {
-  background: white;
+  background: var(--light-bg);
   border-radius: 20px;
   padding: 40px;
   box-shadow: var(--shadow-md);
   margin-bottom: 40px;
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .skills-section:hover {
   box-shadow: var(--shadow-lg);
   transform: translateY(-4px);
+  border-color: var(--primary-color);
 }
 
 .skills-section:last-child {
@@ -73,7 +76,7 @@
 
 .skills-section-title {
   font-size: 2rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 0;
 }
 
@@ -86,21 +89,23 @@
 
 .skill-group {
   padding: 24px;
-  background: var(--light-bg);
+  background: var(--dark-bg);
   border-radius: 16px;
   border-left: 4px solid var(--primary-color);
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .skill-group:hover {
-  background: white;
+  background: var(--light-bg);
   box-shadow: var(--shadow-md);
   transform: translateX(4px);
+  border-color: var(--primary-color);
 }
 
 .skill-group-name {
   font-size: 1.2rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 20px;
   font-weight: 600;
   display: flex;
@@ -144,7 +149,7 @@
 
 .skill-name {
   font-size: 1rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-weight: 600;
 }
 

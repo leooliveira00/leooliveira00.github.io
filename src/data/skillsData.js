@@ -6,30 +6,30 @@ export const skillsData = {
       {
         name: "Frontend",
         items: [
-          { name: "HTML5", level: 90, status: "proficient" },
-          { name: "CSS3", level: 90, status: "proficient" },
-          { name: "JavaScript", level: 85, status: "learning" },
-          { name: "React", level: 70, status: "learning" },
-          { name: "Bootstrap", level: 85, status: "proficient" },
-          { name: "Responsive Design", level: 90, status: "proficient" }
+          { name: "HTML5", level: 85, status: "proficient" },
+          { name: "CSS3", level: 85, status: "proficient" },
+          { name: "JavaScript", level: 70, status: "learning" },
+          { name: "React", level: 60, status: "learning" },
+          { name: "Bootstrap", level: 80, status: "proficient" },
+          { name: "Responsive Design", level: 75, status: "learning" }
         ]
       },
       {
         name: "Backend",
         items: [
-          { name: "Node.js", level: 65, status: "learning" },
-          { name: "Python", level: 85, status: "proficient" },
-          { name: "RESTful APIs", level: 75, status: "proficient" },
-          { name: "SQL", level: 80, status: "proficient" }
+          { name: "Node.js", level: 55, status: "learning" },
+          { name: "Python", level: 80, status: "proficient" },
+          { name: "RESTful APIs", level: 65, status: "learning" },
+          { name: "SQL", level: 70, status: "learning" }
         ]
       },
       {
         name: "Banco de Dados",
         items: [
-          { name: "PostgreSQL", level: 75, status: "proficient" },
-          { name: "MySQL", level: 75, status: "proficient" },
-          { name: "SQLite", level: 80, status: "proficient" },
-          { name: "MongoDB", level: 60, status: "learning" }
+          { name: "PostgreSQL", level: 60, status: "learning" },
+          { name: "MySQL", level: 60, status: "learning" },
+          { name: "SQLite", level: 70, status: "proficient" },
+          { name: "MongoDB", level: 45, status: "learning" }
         ]
       }
     ]
@@ -41,10 +41,10 @@ export const skillsData = {
       {
         name: "Cloud & Servidores",
         items: [
-          { name: "Linux Administration", level: 90, status: "proficient" },
-          { name: "Windows Server", level: 85, status: "proficient" },
-          { name: "AWS", level: 70, status: "learning" },
-          { name: "Vercel / Netlify", level: 75, status: "proficient" }
+          { name: "Linux Administration", level: 85, status: "proficient" },
+          { name: "Windows Server", level: 80, status: "proficient" },
+          { name: "AWS", level: 50, status: "learning" },
+          { name: "Vercel / Netlify", level: 65, status: "learning" }
         ]
       },
       {
@@ -83,17 +83,17 @@ export const skillsData = {
       {
         name: "Desenvolvimento",
         items: [
-          { name: "VS Code", level: 90, status: "proficient" },
-          { name: "Git", level: 85, status: "proficient" },
-          { name: "npm / yarn", level: 80, status: "proficient" },
-          { name: "Postman", level: 80, status: "proficient" }
+          { name: "VS Code", level: 85, status: "proficient" },
+          { name: "Git", level: 75, status: "proficient" },
+          { name: "npm / yarn", level: 70, status: "learning" },
+          { name: "Postman", level: 65, status: "learning" }
         ]
       },
       {
         name: "Design & Prototipagem",
         items: [
-          { name: "Figma", level: 65, status: "learning" },
-          { name: "Adobe XD", level: 60, status: "learning" }
+          { name: "Figma", level: 50, status: "learning" },
+          { name: "Adobe XD", level: 45, status: "learning" }
         ]
       },
       {
@@ -110,6 +110,6 @@ export const skillsData = {
 export const skillLevels = {
   proficient: { label: "Proficiente", color: "#10B981" },
   learning: { label: "Em aprendizado ativo", color: "#3B82F6" },
-  familiar: { label: "Familiar", color: "#8B5CF6" }
+  familiar: { label: "Familiar", color: "#1D64C6" }
 };
 

@@ -4,7 +4,7 @@
 
 .info-title {
   font-size: 2rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 16px;
 }
 
@@ -28,15 +28,17 @@
   align-items: flex-start;
   gap: 16px;
   padding: 20px;
-  background: white;
+  background: var(--light-bg);
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
+  border: 1px solid var(--border-color);
 }
 
 .contact-info-item:hover {
   transform: translateX(8px);
   box-shadow: var(--shadow-md);
+  border-color: var(--primary-color);
 }
 
 .info-icon {
@@ -67,7 +69,7 @@
 
 .info-value {
   font-size: 1.05rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-weight: 500;
   text-decoration: none;
   transition: color 0.3s ease;
@@ -84,7 +86,7 @@ a.info-value:hover {
 
 .social-title {
   font-size: 1.3rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 20px;
 }
 
@@ -100,17 +102,19 @@ a.info-value:hover {
   align-items: center;
   gap: 8px;
   padding: 20px;
-  background: white;
+  background: var(--light-bg);
   border-radius: 12px;
   text-decoration: none;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .social-link-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   background: var(--social-color);
+  border-color: var(--social-color);
 }
 
 .social-link-card:hover .social-icon {
@@ -129,7 +133,7 @@ a.info-value:hover {
 
 .social-label {
   font-size: 0.9rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-weight: 600;
   transition: color 0.3s ease;
 }
@@ -163,7 +167,7 @@ a.info-value:hover {
 
 .form-title {
   font-size: 1.8rem;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 24px;
 }
 
@@ -173,13 +177,15 @@ a.info-value:hover {
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: white;
+  background: var(--dark-bg);
+  color: var(--text-light);
 }
 
 .custom-input:focus {
   border-color: var(--primary-color);
-  box-shadow: 0 0 0 3px rgba(0, 102, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(0, 127, 255, 0.2);
   outline: none;
+  background: var(--light-bg);
 }
 
 .custom-input::placeholder {
@@ -188,7 +194,7 @@ a.info-value:hover {
 
 Form.Label {
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-light);
   margin-bottom: 8px;
   font-size: 0.95rem;
 }

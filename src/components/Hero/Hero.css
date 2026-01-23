@@ -1,7 +1,7 @@
 .hero-section {
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #ffffff 0%, #f8fafc 100%);
+  background: var(--darker-bg);
   padding-top: 100px;
 }
 
@@ -37,7 +37,7 @@
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 24px;
-  color: var(--dark-bg);
+  color: var(--text-light);
   animation-delay: 0.2s;
 }
 
@@ -60,7 +60,7 @@
 
 .tech-label {
   font-weight: 600;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-size: 0.95rem;
 }
 
@@ -107,12 +107,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: white;
+  background: var(--light-bg);
   border-radius: 50%;
-  color: var(--text-dark);
+  color: var(--text-light);
   font-size: 1.3rem;
   transition: all 0.3s ease;
   box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border-color);
 }
 
 .social-link:hover {
@@ -120,6 +121,7 @@
   color: white;
   transform: translateY(-4px);
   box-shadow: var(--shadow-lg);
+  border-color: transparent;
 }
 
 /* Hero Visual */
@@ -230,13 +232,14 @@
   position: absolute;
   width: 60px;
   height: 60px;
-  background: white;
+  background: var(--light-bg);
   border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: var(--shadow-lg);
   animation: float 4s ease-in-out infinite;
+  border: 1px solid var(--border-color);
 }
 
 .float-icon {
@@ -334,7 +337,7 @@
 .orb-3 {
   width: 300px;
   height: 300px;
-  background: linear-gradient(135deg, #8B5CF6 0%, #C084FC 100%);
+  background: linear-gradient(135deg, #1D64C6 0%, #3B82F6 100%);
   top: 50%;
   left: 50%;
   animation-delay: 4s;

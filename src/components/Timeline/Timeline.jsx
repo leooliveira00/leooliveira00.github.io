@@ -25,7 +25,7 @@ const Timeline = () => {
 
   const typeColors = {
     infrastructure: { bg: '#3B82F6', label: 'Infraestrutura' },
-    transition: { bg: '#8B5CF6', label: 'Transição' },
+    transition: { bg: '#1D64C6', label: 'Transição' },
     development: { bg: '#10B981', label: 'Desenvolvimento' },
     future: { bg: '#F59E0B', label: 'Futuro' }
   };
@@ -134,9 +134,9 @@ const Timeline = () => {
             <h3>A Jornada Completa</h3>
             <p>
               De <strong>infraestrutura</strong> a <strong>automação</strong> e 
-              finalmente <strong>desenvolvimento full stack</strong>. Cada etapa 
-              construiu uma base sólida que me diferencia no mercado, permitindo 
-              criar soluções que funcionam perfeitamente do código à produção.
+              agora <strong>desenvolvimento full stack</strong>. Cada etapa 
+              construiu uma base sólida que me diferencia, trazendo uma perspectiva 
+              única sobre como aplicações funcionam do código à produção.
             </p>
             <div className="summary-stats">
               <div className="summary-stat">
@@ -145,7 +145,7 @@ const Timeline = () => {
               </div>
               <div className="summary-stat">
                 <div className="stat-value">3</div>
-                <div className="stat-label">Áreas Dominadas</div>
+                <div className="stat-label">Áreas de Atuação</div>
               </div>
               <div className="summary-stat">
                 <div className="stat-value">∞</div>

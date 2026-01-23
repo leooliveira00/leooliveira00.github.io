@@ -5,14 +5,14 @@ export const timelineData = [
     title: "Estagiário em TI",
     company: "Scitech Produtos Médicos",
     type: "infrastructure",
-    description: "Início da carreira em TI focado em infraestrutura de servidores e redes",
+    description: "Início da carreira em TI com foco em suporte técnico, configuração de computadores e apoio na administração de dispositivos de rede",
     achievements: [
       "Suporte ao usuário, incluindo resolução de problemas, formatação e configuração de computadores.",
       "Apoio na administração de dispositivos de rede, como switches, roteadores e firewalls.",
       "Participação em projetos de melhoria contínua e otimização da infraestrutura de TI.",
       "Assistência na configuração e manutenção de redes LAN e WAN, garantindo conectividade e desempenho."
     ],
-    skills: ["Linux", "Windows Server", "Redes", "Firewall", "VMware"],
+    skills: ["Windows", "Linux", "Redes", "Switches", "Roteadores"],
     icon: "server"
   },
   {
@@ -21,14 +21,14 @@ export const timelineData = [
     title: "Assistente de TI",
     company: "Scitech Produtos Médicos",
     type: "infrastructure",
-    description: "Evolução para virtualização, containerização e início em automação",
+    description: "Suporte técnico avançado, configuração e manutenção de servidores e equipamentos de rede, com monitoramento de desempenho e segurança da informação",
     achievements: [
       "Prestar suporte técnico a usuários em hardware e software.",
       "Auxiliar na configuração e manutenção de equipamentos de rede e servidores",
       "Monitorar o desempenho da infraestrutura e registrar incidentes.",
       "Apoiar na implementação de políticas de segurança da informação."
     ],
-    skills: ["VMware", "Docker", "Python", "Bash", "Automação"],
+    skills: ["Windows Server", "Linux", "LAN/WAN", "Monitoramento", "Segurança"],
     icon: "box"
   },
   {
@@ -37,14 +37,14 @@ export const timelineData = [
     title: "Analista de Infraestrutura",
     company: "Scitech Produtos Médicos",
     type: "infrastructure",
-    description: "Ponte entre infraestrutura e desenvolvimento através da automação",
+    description: "Administração completa de redes corporativas, gerenciamento de servidores e Active Directory, com foco em segurança da informação e análise proativa de incidentes",
     achievements: [
       "Administração e monitoramento de redes corporativas (LAN, WAN, VPN, VLAN), com foco em alta disponibilidade e performance.",
       "Gerenciamento de servidores físicos e virtuais (Hyper-V) e serviços de diretório (Active Directory, DNS, DHCP e GPO).",
       "Atuação em segurança da informação, incluindo firewalls (pfSense), políticas de acesso, VPNs, backups e recuperação de desastres.",
       "Suporte técnico avançado e análise proativa de incidentes, utilizando logs e métricas para prevenção de falhas."
     ],
-    skills: ["Python", "Airflow", "Pandas", "APIs", "SQL"],
+    skills: ["Hyper-V", "Active Directory", "AD/DHCP", "pfSense", "VPN/VLAN", "Backup", "Switches"],
     icon: "zap"
   },
   {
@@ -60,25 +60,9 @@ export const timelineData = [
       "Projetos que resolveram problemas reais de negócio",
       "Aplicação de conhecimento em infra para soluções escaláveis e eficientes"
     ],
-    skills: ["React", "Node.js", "JavaScript", "HTML/CSS", "Bootstrap", "Git"],
+    skills: ["React", "Node.js", "Express", "Python", "Bootstrap", "Git"],
     icon: "code",
     current: true
-  },
-  {
-    id: 5,
-    year: "Futuro",
-    title: "Full Stack Engineer",
-    company: "Próximos Objetivos",
-    type: "future",
-    description: "Evolução contínua como desenvolvedor full stack com expertise DevOps",
-    achievements: [
-      "Especialização em arquiteturas cloud-native",
-      "Implementação de práticas avançadas de CI/CD",
-      "Contribuição em projetos open source",
-      "Liderança técnica em projetos complexos"
-    ],
-    skills: ["Kubernetes", "AWS", "CI/CD", "Microservices", "TypeScript"],
-    icon: "target"
   }
 ];
 

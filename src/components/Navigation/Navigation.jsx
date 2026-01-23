@@ -36,8 +36,8 @@ const Navigation = () => {
         <Navbar.Brand as={HashLink} smooth to="/#home" className="brand-logo">
           <FaCode className="brand-icon" />
           <span className="brand-text">
-            <span className="brand-name">DevPortfolio</span>
-            <span className="brand-tagline">Full Stack + Infra</span>
+            <span className="brand-name">Leonardo Sousa</span>
+            <span className="brand-tagline">Desenvolvedor Full Stack</span>
           </span>
         </Navbar.Brand>
 

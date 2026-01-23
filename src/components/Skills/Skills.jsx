@@ -69,7 +69,7 @@ const Skills = () => {
         <div className="section-title">
           <h2>Habilidades Técnicas</h2>
           <p className="section-subtitle">
-            Combinação única de desenvolvimento moderno e infraestrutura robusta
+            Desenvolvimento em aprendizado ativo com base sólida em infraestrutura
           </p>
         </div>
 
@@ -117,10 +117,10 @@ const Skills = () => {
             <div className="highlight-text">
               <h3>O Diferencial da Combinação</h3>
               <p>
-                A junção de <strong>desenvolvimento moderno</strong> com 
-                <strong> infraestrutura sólida</strong> me permite criar aplicações 
-                que não apenas funcionam bem no código, mas também são 
-                <strong> escaláveis, seguras e otimizadas</strong> para produção desde o primeiro deploy.
+                A junção de <strong>aprendizado em desenvolvimento</strong> com 
+                <strong> experiência em infraestrutura</strong> me traz uma perspectiva 
+                diferenciada sobre como aplicações funcionam, desde o código até a 
+                <strong> operação em produção</strong>, pensando em deploy, monitoramento e manutenção.
               </p>
             </div>
           </div>

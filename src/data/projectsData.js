@@ -6,12 +6,12 @@ export const projectsData = [
     categoryLabel: "Desenvolvimento Web",
     shortDescription: "Aplicação web para gerenciamento de reservas de salas de reunião",
     problem: "Controle manual em papel gerava conflitos de agendamento e perda de produtividade da equipe administrativa",
-    solution: "Sistema automatizado que eliminou conflitos, economizou 5h/semana da equipe e aumentou a eficiência em 80%",
+    solution: "Sistema web que digitalizou o processo de reservas, reduzindo conflitos e facilitando o agendamento",
     impact: [
-      "Eliminação de 100% dos conflitos de agendamento",
-      "Economia de 5 horas/semana da equipe administrativa",
-      "Redução de 80% no tempo de marcação de reuniões",
-      "Interface intuitiva com taxa de adoção de 95%"
+      "Redução significativa de conflitos de agendamento",
+      "Economia estimada de 5 horas/semana da equipe",
+      "Processo de marcação de reuniões mais ágil",
+      "Feedback positivo dos usuários da equipe"
     ],
     technologies: ["Python", "JavaScript", "HTML5", "CSS3", "Bootstrap", "SQLite"],
     infrastructureRole: "Deploy em servidor Linux com automação de backup diário e monitoramento de uptime",
@@ -27,12 +27,12 @@ export const projectsData = [
     categoryLabel: "Automação & Dados",
     shortDescription: "Pipeline automatizado com Airflow para geração de previsões de vendas",
     problem: "Processo manual e repetitivo de coleta, transformação e análise de dados de vendas consumia horas diárias",
-    solution: "Pipeline orquestrado que automatizou 100% do processo, gerando planilhas dinâmicas e previsões precisas diariamente",
+    solution: "Pipeline com Airflow que automatizou a coleta e transformação de dados, gerando relatórios diários",
     impact: [
-      "Automação completa eliminando trabalho manual diário",
-      "Previsões de vendas com 85% de precisão",
-      "Redução de 90% no tempo de geração de relatórios",
-      "Dashboard atualizado automaticamente"
+      "Automatizou processo de coleta e transformação de dados",
+      "Pipeline funcional gerando relatórios diariamente",
+      "Redução significativa no tempo de geração de relatórios",
+      "Sistema em uso pela equipe de vendas"
     ],
     technologies: ["Python", "Apache Airflow", "Pandas", "NumPy", "PostgreSQL", "Docker"],
     infrastructureRole: "Containerização com Docker, orquestração de tarefas, monitoramento de jobs e alertas automáticos",
@@ -48,12 +48,12 @@ export const projectsData = [
     categoryLabel: "Automação & Dados",
     shortDescription: "Script Python para extração automatizada de dados filtrados do DATASUS",
     problem: "Extração manual de dados do DATASUS era demorada, propensa a erros e limitava análises rápidas",
-    solution: "Automação que extrai, filtra e processa dados em minutos, com validações e exportação em múltiplos formatos",
+    solution: "Script Python que automatiza a extração e filtragem de dados, com exportação em diferentes formatos",
     impact: [
-      "Redução de horas para minutos no processo de extração",
-      "Eliminação de erros humanos na coleta de dados",
+      "Processo de extração muito mais rápido que manualmente",
+      "Redução de erros na coleta de dados",
       "Exportação automática em CSV, Excel e JSON",
-      "Agendamento automático de extrações periódicas"
+      "Script reutilizável para extrações futuras"
     ],
     technologies: ["Python", "Requests", "BeautifulSoup", "Pandas", "Schedule"],
     infrastructureRole: "Agendamento via cron, logs estruturados e notificações automáticas",
@@ -69,18 +69,18 @@ export const projectsData = [
     categoryLabel: "Desenvolvimento Web",
     shortDescription: "Website completo para profissional com 30 anos de experiência",
     problem: "Profissional experiente sem presença digital perdia oportunidades de negócio para concorrentes online",
-    solution: "Site moderno, responsivo e otimizado para SEO que gerou 40% mais clientes nos primeiros 3 meses",
+    solution: "Site moderno e responsivo com informações dos serviços, galeria de trabalhos e formulário de contato",
     impact: [
-      "Aumento de 40% na captação de novos clientes",
-      "Posicionamento no Google para palavras-chave locais",
-      "Redução de 60% em ligações com dúvidas básicas (FAQ integrado)",
-      "Sistema de orçamentos online funcional"
+      "Presença digital profissional estabelecida",
+      "Facilita que clientes encontrem e conheçam os serviços",
+      "FAQ integrado respondendo dúvidas comuns",
+      "Formulário de contato funcional para orçamentos"
     ],
     technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP"],
     infrastructureRole: "Configuração de hospedagem, SSL, CDN para imagens e otimização de performance",
     githubUrl: "https://github.com/seu-usuario/site-encanador",
     liveUrl: "https://encanador-exemplo.com.br",
-    image: "/projects/site-encanador.jpg",
+    image: "/src/img/projects/exemplo_imagem.jpg", 
     featured: true
   },
   {
@@ -90,12 +90,12 @@ export const projectsData = [
     categoryLabel: "Desenvolvimento Web",
     shortDescription: "Desenvolvimento e customização de sites WordPress para diversos clientes",
     problem: "Clientes precisavam de sites profissionais sem complexidade de manutenção",
-    solution: "Sites WordPress customizados com temas otimizados, plugins selecionados e treinamento de uso",
+    solution: "Sites WordPress customizados com temas otimizados, plugins selecionados e orientação de uso",
     impact: [
-      "5+ sites entregues com satisfação total dos clientes",
-      "Velocidade de carregamento otimizada (score 90+)",
-      "SEO on-page implementado em todos os projetos",
-      "Clientes autônomos para atualizações de conteúdo"
+      "Diversos sites entregues com feedback positivo",
+      "Boa velocidade de carregamento e performance",
+      "SEO básico implementado em todos os projetos",
+      "Clientes conseguem fazer atualizações de conteúdo"
     ],
     technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "MySQL"],
     infrastructureRole: "Migração de hospedagens, otimização de banco de dados, backups automáticos",

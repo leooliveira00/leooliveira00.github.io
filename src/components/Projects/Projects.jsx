@@ -32,7 +32,7 @@ const Projects = () => {
         <div className="section-title">
           <h2>Projetos que Resolvem Problemas Reais</h2>
           <p className="section-subtitle">
-            Soluções completas que combinam desenvolvimento e infraestrutura para gerar impacto mensurável
+            Aplicações práticas que combinam desenvolvimento e conhecimento em infraestrutura
           </p>
         </div>
 
@@ -53,89 +53,72 @@ const Projects = () => {
         {/* Projects Grid */}
         <Row className="projects-grid">
           {filteredProjects.map(project => (
-            <Col key={project.id} lg={6} className="mb-4">
-              <div className={`project-card card-dark ${project.featured ? 'featured' : ''}`}>
+            <Col key={project.id} lg={4} md={6} className="mb-4" data-aos="fade-up">
+              <div 
+                className={`project-card ${project.featured ? 'featured' : ''}`}
+                onClick={() => setSelectedProject(project)}
+              >
                 {project.featured && (
                   <div className="featured-badge">
                     <FaCheckCircle /> Destaque
                   </div>
                 )}
 
-                <div className="project-header">
+                <div className="project-icon-wrapper">
+                  <div className="project-icon">
+                    {categoryIcons[project.category === 'web' ? 'code' : 
+                                   project.category === 'automation' ? 'cpu' : 'server']}
+                  </div>
+                </div>
+
+                <div className="project-content">
                   <div className="project-category-badge">
                     {project.categoryLabel}
                   </div>
+                  
                   <h3 className="project-title">{project.title}</h3>
-                  <p className="project-short-desc">{project.shortDescription}</p>
-                </div>
+                  <p className="project-description">{project.shortDescription}</p>
 
-                <div className="project-body">
-                  <div className="project-problem">
-                    <div className="problem-label">
-                      <FaLightbulb className="problem-icon" />
-                      <strong>Problema:</strong>
-                    </div>
-                    <p>{project.problem}</p>
-                  </div>
-
-                  <div className="project-solution">
-                    <div className="solution-label">
-                      <FaCheckCircle className="solution-icon" />
-                      <strong>Solução:</strong>
-                    </div>
-                    <p>{project.solution}</p>
-                  </div>
-
-                  {project.infrastructureRole && (
-                    <div className="project-infrastructure">
-                      <div className="infra-label">
-                        <FaServer className="infra-icon" />
-                        <strong>Infraestrutura:</strong>
-                      </div>
-                      <p>{project.infrastructureRole}</p>
-                    </div>
-                  )}
-
-                  <div className="project-tech">
-                    <strong>Tecnologias:</strong>
-                    <div className="tech-badges">
-                      {project.technologies.map((tech, index) => (
-                        <span key={index} className="tech-badge">{tech}</span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-
-                <div className="project-footer">
-                  <button 
-                    className="btn-detail"
-                    onClick={() => setSelectedProject(project)}
-                  >
-                    Ver Detalhes
-                  </button>
-                  <div className="project-links">
-                    {project.githubUrl && (
-                      <a 
-                        href={project.githubUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="project-link"
-                        title="Ver código no GitHub"
-                      >
-                        <FaGithub />
-                      </a>
+                  <div className="project-tech-preview">
+                    {project.technologies.slice(0, 3).map((tech, index) => (
+                      <span key={index} className="tech-badge-small">{tech}</span>
+                    ))}
+                    {project.technologies.length > 3 && (
+                      <span className="tech-badge-small more">+{project.technologies.length - 3}</span>
                     )}
-                    {project.liveUrl && (
-                      <a 
-                        href={project.liveUrl} 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="project-link"
-                        title="Ver projeto ao vivo"
-                      >
-                        <FaExternalLinkAlt />
-                      </a>
-                    )}
+                  </div>
+
+                  <div className="project-action">
+                    <span className="view-details">
+                      Ver detalhes <FaExternalLinkAlt className="icon-small" />
+                    </span>
+                    
+                    <div className="project-quick-links">
+                      {project.githubUrl && (
+                        <a 
+                          href={project.githubUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="quick-link"
+                          title="GitHub"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaGithub />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a 
+                          href={project.liveUrl} 
+                          target="_blank" 
+                          rel="noopener noreferrer"
+                          className="quick-link"
+                          title="Demo"
+                          onClick={(e) => e.stopPropagation()}
+                        >
+                          <FaRocket />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>

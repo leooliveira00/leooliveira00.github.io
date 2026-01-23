@@ -63,20 +63,21 @@ const About = () => {
               
               <p className="about-text">
                 Com <strong>mais de 4 anos de experiência em infraestrutura de TI</strong> 
-                (servidores, redes, virtualização, containers), estou em transição para 
-                desenvolvimento full stack - e essa combinação é meu maior diferencial.
+                (servidores, redes, virtualização, containers), atuo como 
+                desenvolvedor full stack - e essa combinação é meu maior diferencial.
               </p>
               
               <p className="about-text">
-                Minha experiência anterior não ficou para trás. Ela me permite 
-                <strong> criar aplicações pensando em todo o ecossistema</strong>: performance, 
-                escalabilidade, segurança e automação desde o primeiro commit.
+                Minha experiência anterior em infraestrutura me dá uma 
+                <strong> perspectiva diferente no desenvolvimento</strong>. Enquanto estou 
+                aprendendo a construir aplicações web, já entendo conceitos de deploy, 
+                performance e escalabilidade que muitos júniores ainda não conhecem.
               </p>
               
               <p className="about-text">
-                Atualmente focado em <strong>JavaScript, React e Node.js</strong>, 
-                aplico princípios de infraestrutura e DevOps para construir 
-                soluções modernas, eficientes e prontas para crescer.
+                Atualmente <strong>aprendendo JavaScript, React e Node.js na prática</strong>, 
+                aplicando meu conhecimento em infraestrutura para criar soluções 
+                que funcionam bem tanto no código quanto em produção.
               </p>
 
               <div className="about-highlights">
@@ -90,8 +91,8 @@ const About = () => {
                 <div className="highlight-item">
                   <FaCode className="highlight-icon" />
                   <div>
-                    <h4>Desenvolvimento Moderno</h4>
-                    <p>React, Node.js, Python e tecnologias atuais</p>
+                    <h4>Desenvolvimento em Evolução</h4>
+                    <p>Aprendendo React, Node.js e aplicando Python em projetos reais</p>
                   </div>
                 </div>
               </div>
@@ -130,19 +131,19 @@ const About = () => {
             <h3 className="pitch-title">Por que minha experiência importa?</h3>
             <p className="pitch-text">
               <FaCheckCircle className="pitch-icon" />
-              <strong>Desenvolvo pensando em escalabilidade</strong> - sei o que funciona em produção
+              <strong>Entendo infraestrutura</strong> - sei como aplicações funcionam em produção
             </p>
             <p className="pitch-text">
               <FaCheckCircle className="pitch-icon" />
-              <strong>Debug mais rápido</strong> - entendo problemas de performance e infraestrutura
+              <strong>Facilidade com debug</strong> - experiência com logs, monitoramento e troubleshooting
             </p>
             <p className="pitch-text">
               <FaCheckCircle className="pitch-icon" />
-              <strong>Automatizo processos</strong> - economizo tempo com CI/CD e scripts
+              <strong>Conheço automação</strong> - familiaridade com scripts e processos automatizados
             </p>
             <p className="pitch-text">
               <FaCheckCircle className="pitch-icon" />
-              <strong>Visão completa</strong> - da arquitetura do código à arquitetura do servidor
+              <strong>Perspectiva ampla</strong> - vejo além do código, incluindo deploy e operação
             </p>
           </div>
         </div>

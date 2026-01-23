@@ -49,10 +49,10 @@ const Hero = () => {
             </h1>
             
             <p className="hero-subtitle animate-fade-in-up">
-              Transformando problemas complexos em soluções escaláveis.
+              Desenvolvedor em evolução com sólida base em infraestrutura.
               <br />
-              Mais de 4 anos em TI, combinando desenvolvimento moderno com 
-              experiência sólida em infraestrutura, automação e DevOps.
+              Mais de 4 anos em TI, aprendendo desenvolvimento web e aplicando 
+              experiência em infraestrutura, automação e DevOps.
             </p>
 
             <div className="hero-tech-stack animate-fade-in-up">

@@ -1,19 +1,36 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, lazy, Suspense } from 'react';
 import { HashRouter as Router } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles/globals.css';
 
-// Components
+// Componentes críticos (carregam imediatamente)
 import Navigation from './components/Navigation/Navigation';
 import Hero from './components/Hero/Hero';
-import About from './components/About/About';
-import Projects from './components/Projects/Projects';
-import Skills from './components/Skills/Skills';
-import Timeline from './components/Timeline/Timeline';
-import Contact from './components/Contact/Contact';
-import Footer from './components/Footer/Footer';
+import SEO from './components/SEO/SEO';
+import ScrollProgress from './components/ScrollProgress/ScrollProgress';
+
+// Lazy load de componentes abaixo da dobra
+const About = lazy(() => import('./components/About/About'));
+const Projects = lazy(() => import('./components/Projects/Projects'));
+const Skills = lazy(() => import('./components/Skills/Skills'));
+const Timeline = lazy(() => import('./components/Timeline/Timeline'));
+const Contact = lazy(() => import('./components/Contact/Contact'));
+const Footer = lazy(() => import('./components/Footer/Footer'));
+
+// Loading component
+const LoadingFallback = () => (
+  <div style={{ 
+    minHeight: '200px', 
+    display: 'flex', 
+    alignItems: 'center', 
+    justifyContent: 'center' 
+  }}>
+    <div className="loading-spinner"></div>
+  </div>
+);
 
 function App() {
   useEffect(() => {
@@ -30,20 +47,34 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Navigation />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Skills />
-          <Timeline />
-          <Contact />
-        </main>
-        <Footer />
-      </div>
-    </Router>
+    <HelmetProvider>
+      <Router>
+        <div className="App">
+          <SEO />
+          <ScrollProgress />
+          
+          {/* Skip to content link for accessibility */}
+          <a href="#main-content" className="skip-to-content">
+            Pular para o conteúdo principal
+          </a>
+          
+          <Navigation />
+          <main id="main-content">
+            <Hero />
+            <Suspense fallback={<LoadingFallback />}>
+              <About />
+              <Projects />
+              <Skills />
+              <Timeline />
+              <Contact />
+            </Suspense>
+          </main>
+          <Suspense fallback={null}>
+            <Footer />
+          </Suspense>
+        </div>
+      </Router>
+    </HelmetProvider>
   );
 }
 

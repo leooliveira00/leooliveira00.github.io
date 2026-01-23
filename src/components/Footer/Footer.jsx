@@ -58,8 +58,8 @@ const Footer = () => {
                 <span className="brand-text">DevPortfolio</span>
               </div>
               <p className="footer-description">
-                Full Stack Developer com sólida base em Infraestrutura de TI.
-                Transformando ideias em soluções escaláveis e eficientes.
+                Desenvolvedor Full Stack em evolução com sólida base em Infraestrutura de TI.
+                Aplicando conhecimento técnico para criar soluções funcionais e bem estruturadas.
               </p>
               <div className="footer-badges">
                 <span className="footer-badge">
