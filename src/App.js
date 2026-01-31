@@ -1,6 +1,7 @@
 import React, { useEffect, lazy, Suspense } from 'react';
 import { HashRouter as Router } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
+import { useTranslation } from 'react-i18next';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -32,6 +33,8 @@ const LoadingFallback = () => (
 );
 
 function App() {
+  const { t } = useTranslation('common');
+  
   useEffect(() => {
     // Initialize AOS (Animate On Scroll)
     AOS.init({
@@ -54,7 +57,7 @@ function App() {
           
           {/* Skip to content link for accessibility */}
           <a href="#main-content" className="skip-to-content">
-            Pular para o conteúdo principal
+            {t('skipToContent')}
           </a>
           
           <Navigation />

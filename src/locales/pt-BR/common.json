@@ -10,5 +10,8 @@
     "portuguese": "Português",
     "english": "English"
   },
-  "featured": "Destaque"
+  "featured": "Destaque",
+  "pageTitle": "Leonardo Sousa | Full Stack Developer",
+  "pageDescription": "Full Stack Developer com forte background em infraestrutura. Combinando desenvolvimento web moderno com expertise em DevOps, automação e cloud computing.",
+  "skipToContent": "Pular para o conteúdo principal"
 }

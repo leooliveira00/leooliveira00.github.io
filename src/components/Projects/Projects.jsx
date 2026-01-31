@@ -20,8 +20,7 @@ const Projects = () => {
   const categories = [
     { id: 'all', icon: 'grid' },
     { id: 'web', icon: 'code' },
-    { id: 'automation', icon: 'cpu' },
-    { id: 'infrastructure', icon: 'server' }
+    { id: 'automation', icon: 'cpu' }
   ];
 
   // Build projects data from translation
@@ -42,7 +41,7 @@ const Projects = () => {
     infrastructureRole: project.infrastructureRole,
     githubUrl: "https://github.com/seu-usuario/projeto",
     liveUrl: null,
-    featured: index === 0
+    featured: index === 1 // Pipeline de Forecast com Airflow é o destaque
   }));
 
   const filteredProjects = activeCategory === 'all' 
@@ -66,8 +65,8 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Category Filters */}
-        <div className="category-filters">
+        {/* Category Filters - Horizontal scroll em mobile */}
+        <div className="category-filters mb-4">
           {categories.map(category => (
             <button
               key={category.id}
@@ -75,7 +74,12 @@ const Projects = () => {
               onClick={() => setActiveCategory(category.id)}
             >
               <span className="filter-icon">{categoryIcons[category.icon]}</span>
-              {t(`projects:categories.${category.id}`)}
+              <span className="d-none d-sm-inline">{t(`projects:categories.${category.id}`)}</span>
+              <span className="d-inline d-sm-none">
+                {category.id === 'all' ? t(`projects:categories.${category.id}`) : 
+                 category.id === 'web' ? 'Web' : 
+                 category.id === 'automation' ? 'Auto' : 'Infra'}
+              </span>
             </button>
           ))}
         </div>
@@ -83,7 +87,7 @@ const Projects = () => {
         {/* Projects Grid */}
         <Row className="projects-grid">
           {filteredProjects.map(project => (
-            <Col key={project.id} lg={4} md={6} className="mb-4" data-aos="fade-up">
+            <Col key={project.id} lg={4} md={6} sm={12} className="mb-3 mb-md-4" data-aos="fade-up">
               <div 
                 className={`project-card ${project.featured ? 'featured' : ''}`}
                 onClick={() => setSelectedProject(project)}

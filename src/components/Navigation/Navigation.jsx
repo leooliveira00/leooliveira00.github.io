@@ -98,7 +98,9 @@ const Navigation = () => {
             >
               {t('common:navigation.contact')}
             </Nav.Link>
-            <LanguageSwitcher />
+            <div className="language-switcher-container">
+              <LanguageSwitcher />
+            </div>
           </Nav>
         </Navbar.Collapse>
       </Container>

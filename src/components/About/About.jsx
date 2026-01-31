@@ -25,7 +25,7 @@ const About = () => {
         <Row className="align-items-center">
           <Col lg={8} className="mx-auto">
             <div className="about-content">
-              <div className="about-label">
+              <div className="about-label mb-3 mb-md-4">
                 <FaCheckCircle className="label-icon" />
                 {t('label')}
               </div>
@@ -38,26 +38,26 @@ const About = () => {
               
               <p className="about-text" dangerouslySetInnerHTML={{ __html: t('paragraph2') }} />
 
-              <div className="about-highlights">
-                <div className="highlight-item">
+              <div className="about-highlights mt-4">
+                <div className="highlight-item mb-3 mb-md-4">
                   <FaServer className="highlight-icon" />
                   <div>
                     <h4>{t('highlights.infrastructure.title')}</h4>
-                    <p>{t('highlights.infrastructure.description')}</p>
+                    <p className="mb-0">{t('highlights.infrastructure.description')}</p>
                   </div>
                 </div>
-                <div className="highlight-item">
+                <div className="highlight-item mb-3 mb-md-4">
                   <FaCode className="highlight-icon" />
                   <div>
                     <h4>{t('highlights.development.title')}</h4>
-                    <p>{t('highlights.development.description')}</p>
+                    <p className="mb-0">{t('highlights.development.description')}</p>
                   </div>
                 </div>
-                <div className="highlight-item">
+                <div className="highlight-item mb-0">
                   <FaRocket className="highlight-icon" />
                   <div>
                     <h4>{t('highlights.vision.title')}</h4>
-                    <p>{t('highlights.vision.description')}</p>
+                    <p className="mb-0">{t('highlights.vision.description')}</p>
                   </div>
                 </div>
               </div>

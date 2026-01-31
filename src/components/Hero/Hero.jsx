@@ -54,7 +54,8 @@ const Hero = () => {
               {t('subtitle2')}
             </p>
 
-            <div className="hero-tech-stack animate-fade-in-up">
+            {/* Tech Stack - Simplificado em mobile */}
+            <div className="hero-tech-stack animate-fade-in-up d-none d-sm-flex">
               <span className="tech-label">{t('techLabel')}</span>
               <div className="tech-icons">
                 {technologies.map((tech, index) => (
@@ -108,7 +109,8 @@ const Hero = () => {
             </div>
           </Col>
 
-          <Col lg={6} className="hero-visual">
+          {/* Hero Visual - Oculto em mobile para melhor performance */}
+          <Col lg={6} className="hero-visual d-none d-lg-block">
             <div className="hero-illustration animate-float">
               <div className="illustration-container">
                 <div className="code-window">
@@ -163,7 +165,8 @@ const Hero = () => {
           </Col>
         </Row>
 
-        <HashLink smooth to="/#about" className="scroll-indicator">
+        {/* Scroll indicator - Oculto em mobile */}
+        <HashLink smooth to="/#about" className="scroll-indicator d-none d-md-flex">
           <FaChevronDown className="scroll-icon" />
           <span>{t('scroll')}</span>
         </HashLink>

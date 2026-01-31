@@ -146,7 +146,7 @@ const Skills = () => {
         </div>
 
         {/* Legend */}
-        <div className="skills-legend">
+        <div className="skills-legend mb-4 mb-md-5">
           {Object.entries(skillLevels).map(([key, value]) => (
             <div key={key} className="legend-item">
               <span 
@@ -159,7 +159,7 @@ const Skills = () => {
         </div>
 
         {/* Development Skills */}
-        <Row className="mb-5">
+        <Row className="mb-4 mb-md-5">
           <Col lg={12}>
             {renderSkillSection('development', skillsData.development)}
           </Col>

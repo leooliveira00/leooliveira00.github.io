@@ -110,8 +110,20 @@
   display: none;
 }
 
+/* Language Switcher Container */
+.language-switcher-container {
+  margin-left: 20px;
+  display: flex;
+  align-items: center;
+}
+
 /* Mobile Styles */
 @media (max-width: 991px) {
+  .language-switcher-container {
+    margin-left: 0;
+    margin-top: 16px;
+    justify-content: center;
+  }
   .navbar-collapse {
     background: var(--light-bg);
     padding: 20px;

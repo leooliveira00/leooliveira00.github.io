@@ -123,16 +123,16 @@ const Contact = () => {
         </div>
 
         <Row>
-          <Col lg={5} className="mb-5 mb-lg-0">
+          <Col lg={5} className="mb-4 mb-lg-0">
             <div className="contact-info-section">
-              <h3 className="info-title">{t('infoTitle')}</h3>
-              <p className="info-description">
+              <h3 className="info-title mb-2 mb-md-3">{t('infoTitle')}</h3>
+              <p className="info-description mb-3 mb-md-4">
                 {t('infoDescription')}
               </p>
 
-              <div className="contact-info-list">
+              <div className="contact-info-list mb-4">
                 {contactInfo.map((info, index) => (
-                  <div key={index} className="contact-info-item">
+                  <div key={index} className="contact-info-item mb-3">
                     <div className="info-icon">{info.icon}</div>
                     <div className="info-content">
                       <div className="info-label">{info.label}</div>
@@ -148,8 +148,8 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="social-links-section">
-                <h4 className="social-title">{t('socialTitle')}</h4>
+              <div className="social-links-section d-none d-sm-block">
+                <h4 className="social-title mb-3">{t('socialTitle')}</h4>
                 <div className="social-links-grid">
                   {socialLinks.map((social, index) => (
                     <a

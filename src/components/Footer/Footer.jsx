@@ -51,16 +51,16 @@ const Footer = () => {
     <footer className="footer">
       <Container>
         <Row className="footer-main">
-          <Col lg={4} md={6} className="mb-4 mb-lg-0">
+          <Col lg={4} md={6} sm={12} className="mb-4 mb-lg-0">
             <div className="footer-brand">
-              <div className="brand-logo-footer">
+              <div className="brand-logo-footer mb-3">
                 <FaCode className="brand-icon" />
                 <span className="brand-text">{t('footer:brandName')}</span>
               </div>
-              <p className="footer-description">
+              <p className="footer-description mb-3">
                 {t('footer:description')}
               </p>
-              <div className="footer-badges">
+              <div className="footer-badges d-flex flex-wrap gap-2">
                 <span className="footer-badge">
                   <FaRocket /> {t('footer:badges.experience')}
                 </span>
@@ -71,9 +71,9 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg={3} md={6} className="mb-4 mb-lg-0">
+          <Col lg={3} md={6} sm={6} xs={6} className="mb-4 mb-lg-0">
             <div className="footer-section">
-              <h4 className="footer-title">{t('footer:navigationTitle')}</h4>
+              <h4 className="footer-title mb-3">{t('footer:navigationTitle')}</h4>
               <ul className="footer-links">
                 {footerLinks.navigation.map((link, index) => (
                   <li key={index}>
@@ -86,10 +86,10 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg={2} md={6} className="mb-4 mb-lg-0">
+          <Col lg={2} md={6} sm={6} xs={6} className="mb-4 mb-lg-0">
             <div className="footer-section">
-              <h4 className="footer-title">{t('footer:socialTitle')}</h4>
-              <div className="footer-social">
+              <h4 className="footer-title mb-3">{t('footer:socialTitle')}</h4>
+              <div className="footer-social d-flex gap-2">
                 {footerLinks.social.map((social, index) => (
                   <a
                     key={index}
@@ -107,9 +107,9 @@ const Footer = () => {
             </div>
           </Col>
 
-          <Col lg={3} md={6}>
+          <Col lg={3} md={6} sm={12} className="d-none d-md-block">
             <div className="footer-section">
-              <h4 className="footer-title">{t('footer:contactTitle')}</h4>
+              <h4 className="footer-title mb-3">{t('footer:contactTitle')}</h4>
               <div className="footer-contact">
                 <a href="mailto:lsousa2020@hotmail.com" className="footer-contact-link">
                   <FaEnvelope />
