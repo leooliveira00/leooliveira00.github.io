@@ -1,0 +1,15 @@
+{
+  "brandName": "Leonardo Sousa",
+  "description": "Full Stack Developer with strong infrastructure background. Combining modern web development with expertise in DevOps, automation, and cloud computing.",
+  "badges": {
+    "experience": "4+ years in IT",
+    "stack": "React • Node.js • Python"
+  },
+  "navigationTitle": "Navigation",
+  "socialTitle": "Social Media",
+  "contactTitle": "Get in Touch",
+  "copyright": "Leonardo Sousa. All rights reserved.",
+  "credits": "Built with",
+  "creditsAnd": "and",
+  "backToTop": "Back to top"
+}

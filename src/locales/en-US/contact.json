@@ -1,0 +1,33 @@
+{
+  "title": "Let's Work Together",
+  "subtitle": "I'm available for new opportunities and challenging projects",
+  "infoTitle": "Get in Touch",
+  "infoDescription": "Have a project in mind or want to talk about opportunities? Fill out the form or reach out through the channels below.",
+  "contactInfo": {
+    "email": "Email",
+    "phone": "Phone",
+    "location": "Location",
+    "locationValue": "Goiânia, GO - Brazil"
+  },
+  "socialTitle": "Social Media",
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "formTitle": "Send a Message",
+  "form": {
+    "name": "Full Name",
+    "namePlaceholder": "Your name",
+    "email": "Email",
+    "emailPlaceholder": "your-email@example.com",
+    "subject": "Subject",
+    "subjectPlaceholder": "What would you like to talk about?",
+    "message": "Message",
+    "messagePlaceholder": "Describe your project or opportunity...",
+    "submit": "Send Message",
+    "sending": "Sending...",
+    "successMessage": "Message sent successfully! I'll get back to you soon.",
+    "errorMessage": "Error sending message. Please try again."
+  }
+}

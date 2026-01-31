@@ -6,16 +6,19 @@ import {
   FaRocket, 
   FaCheckCircle
 } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './About.css';
 
 const About = () => {
+  const { t } = useTranslation('about');
+  
   return (
     <section id="about" className="section section-light">
       <Container>
         <div className="section-title">
-          <h2>Sobre Mim</h2>
+          <h2>{t('title')}</h2>
           <p className="section-subtitle">
-            Combinando experiência em infraestrutura com desenvolvimento moderno
+            {t('subtitle')}
           </p>
         </div>
 
@@ -24,48 +27,37 @@ const About = () => {
             <div className="about-content">
               <div className="about-label">
                 <FaCheckCircle className="label-icon" />
-                Minha Jornada
+                {t('label')}
               </div>
               
               <h3 className="about-heading">
-                De Infraestrutura a <span className="gradient-text">Full Stack Developer</span>
+                {t('heading')} <span className="gradient-text">{t('headingHighlight')}</span>
               </h3>
               
-              <p className="about-text">
-                Com mais de <strong>4 anos de experiência em TI</strong>, atuando em 
-                <strong> multinacional do setor de dispositivos médicos</strong>, comecei 
-                minha carreira em infraestrutura (servidores, redes, virtualização, containers) 
-                e hoje atuo como desenvolvedor full stack.
-              </p>
+              <p className="about-text" dangerouslySetInnerHTML={{ __html: t('paragraph1') }} />
               
-              <p className="about-text">
-                Essa trajetória me dá uma <strong>perspectiva única no desenvolvimento</strong>: 
-                entendo todo o ciclo de vida das aplicações, desde o código até a produção. 
-                Enquanto desenvolvo com <strong>React, Node.js e Python</strong>, aplico 
-                conhecimentos de infraestrutura para criar soluções robustas, escaláveis e 
-                bem estruturadas.
-              </p>
+              <p className="about-text" dangerouslySetInnerHTML={{ __html: t('paragraph2') }} />
 
               <div className="about-highlights">
                 <div className="highlight-item">
                   <FaServer className="highlight-icon" />
                   <div>
-                    <h4>Base Sólida em Infraestrutura</h4>
-                    <p>4+ anos com servidores, Docker, automação e DevOps</p>
+                    <h4>{t('highlights.infrastructure.title')}</h4>
+                    <p>{t('highlights.infrastructure.description')}</p>
                   </div>
                 </div>
                 <div className="highlight-item">
                   <FaCode className="highlight-icon" />
                   <div>
-                    <h4>Desenvolvimento Full Stack</h4>
-                    <p>React, Node.js, Python e bancos de dados</p>
+                    <h4>{t('highlights.development.title')}</h4>
+                    <p>{t('highlights.development.description')}</p>
                   </div>
                 </div>
                 <div className="highlight-item">
                   <FaRocket className="highlight-icon" />
                   <div>
-                    <h4>Visão End-to-End</h4>
-                    <p>Do código à produção, pensando em performance e escalabilidade</p>
+                    <h4>{t('highlights.vision.title')}</h4>
+                    <p>{t('highlights.vision.description')}</p>
                   </div>
                 </div>
               </div>

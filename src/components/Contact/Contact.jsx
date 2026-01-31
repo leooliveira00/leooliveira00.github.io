@@ -10,9 +10,11 @@ import {
   FaCheckCircle,
   FaExclamationCircle
 } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact = () => {
+  const { t } = useTranslation('contact');
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -46,7 +48,7 @@ const Contact = () => {
       setFormStatus({
         submitted: true,
         success: true,
-        message: 'Mensagem enviada com sucesso! Entrarei em contato em breve.'
+        message: t('form.successMessage')
       });
       setIsSubmitting(false);
       
@@ -68,40 +70,43 @@ const Contact = () => {
   const contactInfo = [
     {
       icon: <FaEnvelope />,
-      label: 'Email',
+      label: t('contactInfo.email'),
       value: 'lsousa2020@hotmail.com',
-      link: 'mailto:lsousa2020@hotmail.com'
+      link: 'mailto:lsousa2020@hotmail.com',
+      key: 'email'
     },
     {
       icon: <FaPhone />,
-      label: 'Telefone',
+      label: t('contactInfo.phone'),
       value: '+55 (62) 99941-3201',
-      link: 'tel:+5562999413201'
+      link: 'tel:+5562999413201',
+      key: 'phone'
     },
     {
       icon: <FaMapMarkerAlt />,
-      label: 'Localização',
-      value: 'Goiânia, GO - Brasil',
-      link: null
+      label: t('contactInfo.location'),
+      value: t('contactInfo.locationValue'),
+      link: null,
+      key: 'location'
     }
   ];
 
   const socialLinks = [
     {
       icon: <FaLinkedin />,
-      label: 'LinkedIn',
+      label: t('social.linkedin'),
       url: 'https://www.linkedin.com/in/leooliveira00/',
       color: '#0077B5'
     },
     {
       icon: <FaGithub />,
-      label: 'GitHub',
+      label: t('social.github'),
       url: 'https://github.com/leooliveira00/',
       color: '#333'
     },
     {
       icon: <FaEnvelope />,
-      label: 'Email',
+      label: t('social.email'),
       url: 'mailto:lsousa2020@hotmail.com',
       color: '#EA4335'
     }
@@ -111,19 +116,18 @@ const Contact = () => {
     <section id="contact" className="section section-light">
       <Container>
         <div className="section-title">
-          <h2>Vamos Trabalhar Juntos?</h2>
+          <h2>{t('title')}</h2>
           <p className="section-subtitle">
-            Estou disponível para novas oportunidades e projetos desafiadores
+            {t('subtitle')}
           </p>
         </div>
 
         <Row>
           <Col lg={5} className="mb-5 mb-lg-0">
             <div className="contact-info-section">
-              <h3 className="info-title">Entre em Contato</h3>
+              <h3 className="info-title">{t('infoTitle')}</h3>
               <p className="info-description">
-                Tem um projeto em mente ou quer conversar sobre oportunidades? 
-                Preencha o formulário ou entre em contato pelos canais abaixo.
+                {t('infoDescription')}
               </p>
 
               <div className="contact-info-list">
@@ -145,7 +149,7 @@ const Contact = () => {
               </div>
 
               <div className="social-links-section">
-                <h4 className="social-title">Redes Sociais</h4>
+                <h4 className="social-title">{t('socialTitle')}</h4>
                 <div className="social-links-grid">
                   {socialLinks.map((social, index) => (
                     <a
@@ -167,7 +171,7 @@ const Contact = () => {
 
           <Col lg={7}>
             <div className="contact-form-section card-custom">
-              <h3 className="form-title">Envie uma Mensagem</h3>
+              <h3 className="form-title">{t('formTitle')}</h3>
 
               {formStatus.submitted && (
                 <div className={`form-alert ${formStatus.success ? 'alert-success' : 'alert-error'}`}>
@@ -184,13 +188,13 @@ const Contact = () => {
                 <Row>
                   <Col md={6} className="mb-3">
                     <Form.Group>
-                      <Form.Label>Nome Completo</Form.Label>
+                      <Form.Label>{t('form.name')}</Form.Label>
                       <Form.Control
                         type="text"
                         name="name"
                         value={formData.name}
                         onChange={handleChange}
-                        placeholder="Seu nome"
+                        placeholder={t('form.namePlaceholder')}
                         required
                         className="custom-input"
                       />
@@ -198,13 +202,13 @@ const Contact = () => {
                   </Col>
                   <Col md={6} className="mb-3">
                     <Form.Group>
-                      <Form.Label>Email</Form.Label>
+                      <Form.Label>{t('form.email')}</Form.Label>
                       <Form.Control
                         type="email"
                         name="email"
                         value={formData.email}
                         onChange={handleChange}
-                        placeholder="seu-email@exemplo.com"
+                        placeholder={t('form.emailPlaceholder')}
                         required
                         className="custom-input"
                       />
@@ -213,27 +217,27 @@ const Contact = () => {
                 </Row>
 
                 <Form.Group className="mb-3">
-                  <Form.Label>Assunto</Form.Label>
+                  <Form.Label>{t('form.subject')}</Form.Label>
                   <Form.Control
                     type="text"
                     name="subject"
                     value={formData.subject}
                     onChange={handleChange}
-                    placeholder="Sobre o que gostaria de conversar?"
+                    placeholder={t('form.subjectPlaceholder')}
                     required
                     className="custom-input"
                   />
                 </Form.Group>
 
                 <Form.Group className="mb-4">
-                  <Form.Label>Mensagem</Form.Label>
+                  <Form.Label>{t('form.message')}</Form.Label>
                   <Form.Control
                     as="textarea"
                     rows={5}
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
-                    placeholder="Descreva seu projeto ou oportunidade..."
+                    placeholder={t('form.messagePlaceholder')}
                     required
                     className="custom-input"
                   />
@@ -247,12 +251,12 @@ const Contact = () => {
                   {isSubmitting ? (
                     <>
                       <div className="loading-spinner"></div>
-                      Enviando...
+                      {t('form.sending')}
                     </>
                   ) : (
                     <>
                       <FaPaperPlane />
-                      Enviar Mensagem
+                      {t('form.submit')}
                     </>
                   )}
                 </button>

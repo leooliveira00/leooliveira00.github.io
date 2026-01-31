@@ -8,12 +8,42 @@ import {
   FaLightbulb,
   FaRocket
 } from 'react-icons/fa';
-import { projectsData, categories } from '../../data/projectsData';
+import { useTranslation } from 'react-i18next';
 import './Projects.css';
 
 const Projects = () => {
+  const { t } = useTranslation(['projects', 'common']);
   const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
+
+  // Categories
+  const categories = [
+    { id: 'all', icon: 'grid' },
+    { id: 'web', icon: 'code' },
+    { id: 'automation', icon: 'cpu' },
+    { id: 'infrastructure', icon: 'server' }
+  ];
+
+  // Build projects data from translation
+  const projectsData = t('projects:projects', { returnObjects: true }).map((project, index) => ({
+    id: index + 1,
+    title: project.title,
+    category: index === 0 ? 'web' : 'automation',
+    categoryLabel: project.category,
+    shortDescription: project.shortDescription,
+    problem: project.problem,
+    solution: project.solution,
+    impact: project.impact,
+    technologies: index === 0 
+      ? ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Express.js", "Node.js", "MSSQL Express"]
+      : index === 1
+      ? ["Python", "Apache Airflow", "Pandas", "scikit-learn", "PostgreSQL", "Docker"]
+      : ["Python", "Selenium", "Pandas", "MSSQL Express", "Task Scheduler"],
+    infrastructureRole: project.infrastructureRole,
+    githubUrl: "https://github.com/seu-usuario/projeto",
+    liveUrl: null,
+    featured: index === 0
+  }));
 
   const filteredProjects = activeCategory === 'all' 
     ? projectsData 
@@ -30,9 +60,9 @@ const Projects = () => {
     <section id="projects" className="section section-dark">
       <Container>
         <div className="section-title">
-          <h2>Projetos que Resolvem Problemas Reais</h2>
+          <h2>{t('projects:title')}</h2>
           <p className="section-subtitle">
-            Aplicações práticas que combinam desenvolvimento e conhecimento em infraestrutura
+            {t('projects:subtitle')}
           </p>
         </div>
 
@@ -45,7 +75,7 @@ const Projects = () => {
               onClick={() => setActiveCategory(category.id)}
             >
               <span className="filter-icon">{categoryIcons[category.icon]}</span>
-              {category.label}
+              {t(`projects:categories.${category.id}`)}
             </button>
           ))}
         </div>
@@ -60,7 +90,7 @@ const Projects = () => {
               >
                 {project.featured && (
                   <div className="featured-badge">
-                    <FaCheckCircle /> Destaque
+                    <FaCheckCircle /> {t('common:featured', { defaultValue: 'Destaque' })}
                   </div>
                 )}
 
@@ -90,7 +120,7 @@ const Projects = () => {
 
                   <div className="project-action">
                     <span className="view-details">
-                      Ver detalhes <FaExternalLinkAlt className="icon-small" />
+                      {t('projects:viewDetails')} <FaExternalLinkAlt className="icon-small" />
                     </span>
                     
                     <div className="project-quick-links">
@@ -128,7 +158,7 @@ const Projects = () => {
 
         {filteredProjects.length === 0 && (
           <div className="no-projects">
-            <p>Nenhum projeto encontrado nesta categoria.</p>
+            <p>{t('projects:noProjects')}</p>
           </div>
         )}
       </Container>
@@ -175,7 +205,7 @@ const Projects = () => {
                 <div className="context-item">
                   <h4>
                     <FaLightbulb className="section-icon" />
-                    O Desafio
+                    {t('projects:modal.problem')}
                   </h4>
                   <p>{selectedProject.problem}</p>
                 </div>
@@ -183,7 +213,7 @@ const Projects = () => {
                 <div className="context-item">
                   <h4>
                     <FaCheckCircle className="section-icon" />
-                    A Solução
+                    {t('projects:modal.solution')}
                   </h4>
                   <p>{selectedProject.solution}</p>
                 </div>
@@ -193,7 +223,7 @@ const Projects = () => {
               <div className="modal-section modal-section-highlight">
                 <h4>
                   <FaRocket className="section-icon" />
-                  Impacto e Resultados
+                  {t('projects:modal.impact')}
                 </h4>
                 <ul className="impact-list">
                   {selectedProject.impact.map((item, index) => (
@@ -208,7 +238,7 @@ const Projects = () => {
               {/* Two Column Layout for Stack & Infrastructure */}
               <div className="modal-tech-section">
                 <div className="tech-column">
-                  <h4>Stack Tecnológica</h4>
+                  <h4>{t('projects:modal.stack')}</h4>
                   <div className="tech-badges">
                     {selectedProject.technologies.map((tech, index) => (
                       <span key={index} className="tech-badge">{tech}</span>
@@ -220,7 +250,7 @@ const Projects = () => {
                   <div className="infra-column">
                     <h4>
                       <FaServer className="section-icon" />
-                      Infraestrutura
+                      {t('projects:modal.infrastructure')}
                     </h4>
                     <p className="infra-description">{selectedProject.infrastructureRole}</p>
                   </div>
@@ -236,7 +266,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="btn-primary-custom"
                   >
-                    <FaGithub /> Ver no GitHub
+                    <FaGithub /> {t('projects:modal.github')}
                   </a>
                 )}
                 {selectedProject.liveUrl && (
@@ -246,7 +276,7 @@ const Projects = () => {
                     rel="noopener noreferrer"
                     className="btn-accent-custom"
                   >
-                    <FaExternalLinkAlt /> Ver Projeto Ao Vivo
+                    <FaExternalLinkAlt /> {t('projects:modal.live')}
                   </a>
                 )}
               </div>

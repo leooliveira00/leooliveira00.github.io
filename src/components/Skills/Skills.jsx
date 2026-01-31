@@ -1,13 +1,86 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { FaCode, FaServer } from 'react-icons/fa';
-import { skillsData, skillLevels } from '../../data/skillsData';
+import { useTranslation } from 'react-i18next';
 import './Skills.css';
 
 const Skills = () => {
+  const { t } = useTranslation('skills');
+  
   const iconMapping = {
     code: <FaCode />,
     server: <FaServer />
+  };
+
+  // Skill levels
+  const skillLevels = {
+    proficient: {
+      label: t('legend.proficient'),
+      color: '#10B981'
+    },
+    learning: {
+      label: t('legend.learning'),
+      color: '#3B82F6'
+    }
+  };
+
+  // Build skills data from translation
+  const skillsData = {
+    development: {
+      title: t('sections.development'),
+      icon: 'code',
+      skills: [
+        {
+          name: t('groups.frontend'),
+          items: [
+            { name: t('skills.react'), level: 75, status: 'proficient' },
+            { name: t('skills.javascript'), level: 80, status: 'proficient' },
+            { name: t('skills.html5css3'), level: 85, status: 'proficient' },
+            { name: t('skills.bootstrap'), level: 75, status: 'proficient' }
+          ]
+        },
+        {
+          name: t('groups.backendDatabase'),
+          items: [
+            { name: t('skills.nodeExpress'), level: 70, status: 'proficient' },
+            { name: t('skills.python'), level: 85, status: 'proficient' },
+            { name: t('skills.restfulAPIs'), level: 75, status: 'proficient' },
+            { name: t('skills.postgresql'), level: 70, status: 'proficient' },
+            { name: t('skills.mssql'), level: 80, status: 'proficient' }
+          ]
+        }
+      ]
+    },
+    infrastructure: {
+      title: t('sections.infrastructure'),
+      icon: 'server',
+      skills: [
+        {
+          name: t('groups.automationCICD'),
+          items: [
+            { name: t('skills.pythonAutomation'), level: 85, status: 'proficient' },
+            { name: t('skills.apacheAirflow'), level: 70, status: 'proficient' },
+            { name: t('skills.bashScripting'), level: 75, status: 'proficient' },
+            { name: t('skills.gitGitHub'), level: 80, status: 'proficient' }
+          ]
+        },
+        {
+          name: t('groups.serversContainers'),
+          items: [
+            { name: t('skills.dockerCompose'), level: 75, status: 'proficient' },
+            { name: t('skills.linuxAdmin'), level: 80, status: 'proficient' },
+            { name: t('skills.windowsServer'), level: 85, status: 'proficient' }
+          ]
+        },
+        {
+          name: t('groups.networkingMonitoring'),
+          items: [
+            { name: t('skills.tcpipNetworking'), level: 80, status: 'proficient' },
+            { name: t('skills.monitoringLogs'), level: 75, status: 'learning' }
+          ]
+        }
+      ]
+    }
   };
 
   const renderSkillSection = (sectionKey, sectionData) => {
@@ -66,9 +139,9 @@ const Skills = () => {
     <section id="skills" className="section section-light">
       <Container>
         <div className="section-title">
-          <h2>Habilidades Técnicas</h2>
+          <h2>{t('title')}</h2>
           <p className="section-subtitle">
-            Stack completo: desenvolvimento, infraestrutura e ferramentas
+            {t('subtitle')}
           </p>
         </div>
 

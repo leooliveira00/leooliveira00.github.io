@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import { FaGithub, FaLinkedin, FaEnvelope, FaChevronDown } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import { 
   SiReact, 
   SiNodedotjs, 
@@ -13,6 +14,7 @@ import {
 import './Hero.css';
 
 const Hero = () => {
+  const { t } = useTranslation('hero');
   const [currentTech, setCurrentTech] = useState(0);
   
   const technologies = [
@@ -39,22 +41,21 @@ const Hero = () => {
           <Col lg={6} className="hero-content">
             <div className="hero-badge animate-fade-in">
               <span className="badge-dot"></span>
-              Disponível para novos projetos
+              {t('badge')}
             </div>
             
             <h1 className="hero-title animate-fade-in-up">
-              Full Stack Developer
+              {t('title')}
             </h1>
             
             <p className="hero-subtitle animate-fade-in-up">
-              Forte background em infraestrutura e DevOps.
+              {t('subtitle')}
               <br />
-              Combinando desenvolvimento web moderno com expertise em 
-              automação, cloud computing e arquitetura de sistemas.
+              {t('subtitle2')}
             </p>
 
             <div className="hero-tech-stack animate-fade-in-up">
-              <span className="tech-label">Tecnologias:</span>
+              <span className="tech-label">{t('techLabel')}</span>
               <div className="tech-icons">
                 {technologies.map((tech, index) => (
                   <div 
@@ -71,10 +72,10 @@ const Hero = () => {
 
             <div className="hero-cta animate-fade-in-up">
               <HashLink smooth to="/#projects" className="btn-primary-custom">
-                Ver Projetos
+                {t('cta.projects')}
               </HashLink>
               <HashLink smooth to="/#contact" className="btn-outline-custom">
-                Entre em Contato
+                {t('cta.contact')}
               </HashLink>
             </div>
 
@@ -164,7 +165,7 @@ const Hero = () => {
 
         <HashLink smooth to="/#about" className="scroll-indicator">
           <FaChevronDown className="scroll-icon" />
-          <span>Role para baixo</span>
+          <span>{t('scroll')}</span>
         </HashLink>
       </Container>
 

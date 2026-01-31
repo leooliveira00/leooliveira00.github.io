@@ -1,0 +1,33 @@
+{
+  "title": "Vamos Trabalhar Juntos?",
+  "subtitle": "Estou disponível para novas oportunidades e projetos desafiadores",
+  "infoTitle": "Entre em Contato",
+  "infoDescription": "Tem um projeto em mente ou quer conversar sobre oportunidades? Preencha o formulário ou entre em contato pelos canais abaixo.",
+  "contactInfo": {
+    "email": "Email",
+    "phone": "Telefone",
+    "location": "Localização",
+    "locationValue": "Goiânia, GO - Brasil"
+  },
+  "socialTitle": "Redes Sociais",
+  "social": {
+    "linkedin": "LinkedIn",
+    "github": "GitHub",
+    "email": "Email"
+  },
+  "formTitle": "Envie uma Mensagem",
+  "form": {
+    "name": "Nome Completo",
+    "namePlaceholder": "Seu nome",
+    "email": "Email",
+    "emailPlaceholder": "seu-email@exemplo.com",
+    "subject": "Assunto",
+    "subjectPlaceholder": "Sobre o que gostaria de conversar?",
+    "message": "Mensagem",
+    "messagePlaceholder": "Descreva seu projeto ou oportunidade...",
+    "submit": "Enviar Mensagem",
+    "sending": "Enviando...",
+    "successMessage": "Mensagem enviada com sucesso! Entrarei em contato em breve.",
+    "errorMessage": "Erro ao enviar mensagem. Tente novamente."
+  }
+}

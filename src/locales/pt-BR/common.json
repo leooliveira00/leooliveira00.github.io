@@ -1,0 +1,14 @@
+{
+  "navigation": {
+    "home": "Início",
+    "about": "Sobre",
+    "projects": "Projetos",
+    "skills": "Habilidades",
+    "contact": "Contato"
+  },
+  "language": {
+    "portuguese": "Português",
+    "english": "English"
+  },
+  "featured": "Destaque"
+}

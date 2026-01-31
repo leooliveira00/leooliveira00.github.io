@@ -1,0 +1,23 @@
+{
+  "title": "Sobre Mim",
+  "subtitle": "Combinando experiência em infraestrutura com desenvolvimento moderno",
+  "label": "Minha Jornada",
+  "heading": "De Infraestrutura a",
+  "headingHighlight": "Full Stack Developer",
+  "paragraph1": "Com mais de 4 anos de experiência em TI, atuando em multinacional do setor de dispositivos médicos, comecei minha carreira em infraestrutura (servidores, redes, virtualização, containers) e hoje atuo como desenvolvedor full stack.",
+  "paragraph2": "Essa trajetória me dá uma perspectiva única no desenvolvimento: entendo todo o ciclo de vida das aplicações, desde o código até a produção. Enquanto desenvolvo com React, Node.js e Python, aplico conhecimentos de infraestrutura para criar soluções robustas, escaláveis e bem estruturadas.",
+  "highlights": {
+    "infrastructure": {
+      "title": "Base Sólida em Infraestrutura",
+      "description": "4+ anos com servidores, Docker, automação e DevOps"
+    },
+    "development": {
+      "title": "Desenvolvimento Full Stack",
+      "description": "React, Node.js, Python e bancos de dados"
+    },
+    "vision": {
+      "title": "Visão End-to-End",
+      "description": "Do código à produção, pensando em performance e escalabilidade"
+    }
+  }
+}

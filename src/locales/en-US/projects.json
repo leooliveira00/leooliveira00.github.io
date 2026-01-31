@@ -1,0 +1,69 @@
+{
+  "title": "Projects That Solve Real Problems",
+  "subtitle": "Practical applications combining development and infrastructure knowledge",
+  "categories": {
+    "all": "All Projects",
+    "web": "Web Development",
+    "automation": "Automation & Data",
+    "infrastructure": "Infrastructure & DevOps"
+  },
+  "viewDetails": "View details",
+  "noProjects": "No projects found in this category.",
+  "modal": {
+    "problem": "The Challenge",
+    "solution": "The Solution",
+    "impact": "Impact and Results",
+    "infrastructure": "Infrastructure",
+    "stack": "Technology Stack",
+    "github": "View on GitHub",
+    "live": "View Live Project",
+    "close": "Close"
+  },
+  "projects": [
+    {
+      "title": "Meeting Room Reservation System",
+      "category": "Web Development",
+      "shortDescription": "Full stack web system for meeting room reservations management in corporate environment",
+      "problem": "Manual paper-based control generated scheduling conflicts, rework, and low employee adoption across two company locations.",
+      "solution": "Centralized web application with interactive calendar and automatic notifications, completely digitalizing the reservation process.",
+      "impact": [
+        "150+ active users across 2 locations (headquarters and branch)",
+        "100+ bookings processed monthly",
+        "Elimination of scheduling conflicts",
+        "90% reduction in room reservation time",
+        "Email notifications"
+      ],
+      "infrastructureRole": "Docker deployment on Linux server, automated backup, uptime monitoring, and centralized logs."
+    },
+    {
+      "title": "Sales Forecast Pipeline",
+      "category": "Automation & Data",
+      "shortDescription": "Automated pipeline with Apache Airflow for sales forecasting using 4 statistical models",
+      "problem": "Analyst spent almost a week manually generating forecasts and spreadsheets, a repetitive and error-prone process that delayed strategic decisions.",
+      "solution": "ETL pipeline with Airflow that automates data collection, applies 4 statistical models (Holt, ARIMA, AutoARIMA, Holt-Winters) and generates spreadsheets for manager input.",
+      "impact": [
+        "Reduction from 1 week to 2 hours of processing (97% faster)",
+        "4 statistical models running automatically (Holt, ARIMA, AutoARIMA, Holt-Winters)",
+        "Monthly forecasts automatically delivered to managers",
+        "Elimination of manual errors in ETL process",
+        "Gain of 5 days/month in analyst productivity"
+      ],
+      "infrastructureRole": "Docker containerization, DAG orchestration, job monitoring, automatic email alerts, and structured logs."
+    },
+    {
+      "title": "DATASUS Data Extraction Automation",
+      "category": "Automation & Data",
+      "shortDescription": "Python automation for DATASUS data extraction and analysis for market intelligence",
+      "problem": "Marketing department needed DATASUS data for competitor analysis and market share, but manual extraction was time-consuming and error-prone.",
+      "solution": "Python script that automates monthly DATASUS data extraction, filters relevant information, and makes it available in database for market intelligence analysis.",
+      "impact": [
+        "100% automation of data extraction and filtering",
+        "Monthly execution scheduled via Task Scheduler",
+        "Sales and competition data available for strategic analysis",
+        "Support for Marketing department's market intelligence",
+        "Month-2 sales analysis for decision making"
+      ],
+      "infrastructureRole": "Task Scheduler scheduling, structured logs, error handling, and automatic email notifications"
+    }
+  ]
+}

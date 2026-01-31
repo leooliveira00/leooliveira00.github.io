@@ -2,9 +2,12 @@ import React, { useState, useEffect } from 'react';
 import { Navbar, Container, Nav } from 'react-bootstrap';
 import { HashLink } from 'react-router-hash-link';
 import { FaCode, FaBars, FaTimes } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
+import LanguageSwitcher from '../LanguageSwitcher/LanguageSwitcher';
 import './Navigation.css';
 
 const Navigation = () => {
+  const { t } = useTranslation(['common', 'hero']);
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -36,8 +39,8 @@ const Navigation = () => {
         <Navbar.Brand as={HashLink} smooth to="/#home" className="brand-logo">
           <FaCode className="brand-icon" />
           <span className="brand-text">
-            <span className="brand-name">Leonardo Sousa</span>
-            <span className="brand-tagline">Desenvolvedor Full Stack</span>
+            <span className="brand-name">{t('hero:brandName')}</span>
+            <span className="brand-tagline">{t('hero:brandTag')}</span>
           </span>
         </Navbar.Brand>
 
@@ -49,7 +52,7 @@ const Navigation = () => {
         </Navbar.Toggle>
 
         <Navbar.Collapse id="navbar-nav">
-          <Nav className="ms-auto">
+          <Nav className="ms-auto align-items-center">
             <Nav.Link 
               as={HashLink} 
               smooth 
@@ -57,7 +60,7 @@ const Navigation = () => {
               onClick={closeMenu}
               className="nav-link-custom"
             >
-              Início
+              {t('common:navigation.home')}
             </Nav.Link>
             <Nav.Link 
               as={HashLink} 
@@ -66,7 +69,7 @@ const Navigation = () => {
               onClick={closeMenu}
               className="nav-link-custom"
             >
-              Sobre
+              {t('common:navigation.about')}
             </Nav.Link>
             <Nav.Link 
               as={HashLink} 
@@ -75,7 +78,7 @@ const Navigation = () => {
               onClick={closeMenu}
               className="nav-link-custom"
             >
-              Projetos
+              {t('common:navigation.projects')}
             </Nav.Link>
             <Nav.Link 
               as={HashLink} 
@@ -84,7 +87,7 @@ const Navigation = () => {
               onClick={closeMenu}
               className="nav-link-custom"
             >
-              Habilidades
+              {t('common:navigation.skills')}
             </Nav.Link>
             <Nav.Link 
               as={HashLink} 
@@ -93,8 +96,9 @@ const Navigation = () => {
               onClick={closeMenu}
               className="nav-link-custom btn-contact"
             >
-              Contato
+              {t('common:navigation.contact')}
             </Nav.Link>
+            <LanguageSwitcher />
           </Nav>
         </Navbar.Collapse>
       </Container>

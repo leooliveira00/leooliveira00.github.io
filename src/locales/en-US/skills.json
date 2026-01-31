@@ -1,0 +1,39 @@
+{
+  "title": "Technical Skills",
+  "subtitle": "Complete stack: development, infrastructure, and tools",
+  "legend": {
+    "proficient": "Proficient",
+    "learning": "Actively Learning"
+  },
+  "sections": {
+    "development": "Development",
+    "infrastructure": "Infrastructure & DevOps"
+  },
+  "groups": {
+    "frontend": "Frontend",
+    "backendDatabase": "Backend & Database",
+    "automationCICD": "Automation & CI/CD",
+    "serversContainers": "Servers & Containers",
+    "networkingMonitoring": "Networking & Monitoring"
+  },
+  "skills": {
+    "react": "React",
+    "javascript": "JavaScript",
+    "html5css3": "HTML5 & CSS3",
+    "bootstrap": "Bootstrap",
+    "nodeExpress": "Node.js & Express",
+    "python": "Python",
+    "restfulAPIs": "RESTful APIs",
+    "postgresql": "PostgreSQL",
+    "mssql": "MSSQL",
+    "pythonAutomation": "Python Automation",
+    "apacheAirflow": "Apache Airflow",
+    "bashScripting": "Bash Scripting",
+    "gitGitHub": "Git & GitHub",
+    "dockerCompose": "Docker & Docker Compose",
+    "linuxAdmin": "Linux Administration",
+    "windowsServer": "Windows Server",
+    "tcpipNetworking": "TCP/IP & Networking",
+    "monitoringLogs": "Monitoring & Logs"
+  }
+}

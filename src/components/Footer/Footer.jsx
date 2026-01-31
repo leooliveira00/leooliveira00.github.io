@@ -9,9 +9,11 @@ import {
   FaRocket,
   FaArrowUp
 } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 import './Footer.css';
 
 const Footer = () => {
+  const { t } = useTranslation(['footer', 'common']);
   const currentYear = new Date().getFullYear();
 
   const scrollToTop = () => {
@@ -20,11 +22,11 @@ const Footer = () => {
 
   const footerLinks = {
     navigation: [
-      { name: 'Início', path: '/#home' },
-      { name: 'Sobre', path: '/#about' },
-      { name: 'Projetos', path: '/#projects' },
-      { name: 'Habilidades', path: '/#skills' },
-      { name: 'Contato', path: '/#contact' }
+      { name: t('common:navigation.home'), path: '/#home', key: 'home' },
+      { name: t('common:navigation.about'), path: '/#about', key: 'about' },
+      { name: t('common:navigation.projects'), path: '/#projects', key: 'projects' },
+      { name: t('common:navigation.skills'), path: '/#skills', key: 'skills' },
+      { name: t('common:navigation.contact'), path: '/#contact', key: 'contact' }
     ],
     social: [
       { 
@@ -53,18 +55,17 @@ const Footer = () => {
             <div className="footer-brand">
               <div className="brand-logo-footer">
                 <FaCode className="brand-icon" />
-                <span className="brand-text">Leonardo Sousa</span>
+                <span className="brand-text">{t('footer:brandName')}</span>
               </div>
               <p className="footer-description">
-                Full Stack Developer com forte background em infraestrutura.
-                Combinando desenvolvimento web moderno com expertise em DevOps, automação e cloud computing.
+                {t('footer:description')}
               </p>
               <div className="footer-badges">
                 <span className="footer-badge">
-                  <FaRocket /> 4+ anos em TI
+                  <FaRocket /> {t('footer:badges.experience')}
                 </span>
                 <span className="footer-badge">
-                  <FaCode /> React • Node.js • Python
+                  <FaCode /> {t('footer:badges.stack')}
                 </span>
               </div>
             </div>
@@ -72,7 +73,7 @@ const Footer = () => {
 
           <Col lg={3} md={6} className="mb-4 mb-lg-0">
             <div className="footer-section">
-              <h4 className="footer-title">Navegação</h4>
+              <h4 className="footer-title">{t('footer:navigationTitle')}</h4>
               <ul className="footer-links">
                 {footerLinks.navigation.map((link, index) => (
                   <li key={index}>
@@ -87,7 +88,7 @@ const Footer = () => {
 
           <Col lg={2} md={6} className="mb-4 mb-lg-0">
             <div className="footer-section">
-              <h4 className="footer-title">Redes Sociais</h4>
+              <h4 className="footer-title">{t('footer:socialTitle')}</h4>
               <div className="footer-social">
                 {footerLinks.social.map((social, index) => (
                   <a
@@ -108,7 +109,7 @@ const Footer = () => {
 
           <Col lg={3} md={6}>
             <div className="footer-section">
-              <h4 className="footer-title">Entre em Contato</h4>
+              <h4 className="footer-title">{t('footer:contactTitle')}</h4>
               <div className="footer-contact">
                 <a href="mailto:lsousa2020@hotmail.com" className="footer-contact-link">
                   <FaEnvelope />
@@ -122,17 +123,17 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p>
-              © {currentYear} Leonardo Sousa. Todos os direitos reservados.
+              © {currentYear} {t('footer:copyright')}
             </p>
             <p className="footer-credits">
-              Desenvolvido com <strong>React</strong> e <strong>Bootstrap</strong>
+              {t('footer:credits')} <strong>React</strong> {t('footer:creditsAnd')} <strong>Bootstrap</strong>
             </p>
           </div>
 
           <button 
             onClick={scrollToTop} 
             className="scroll-to-top"
-            aria-label="Voltar ao topo"
+            aria-label={t('footer:backToTop')}
           >
             <FaArrowUp />
           </button>
