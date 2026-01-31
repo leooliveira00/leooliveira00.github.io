@@ -4,19 +4,20 @@ export const projectsData = [
     title: "Sistema de Reservas de Salas",
     category: "web",
     categoryLabel: "Desenvolvimento Web",
-    shortDescription: "Aplicação web para gerenciamento de reservas de salas de reunião",
-    problem: "Controle manual em papel gerava conflitos de agendamento e perda de produtividade da equipe administrativa",
-    solution: "Sistema web que digitalizou o processo de reservas, reduzindo conflitos e facilitando o agendamento",
+    shortDescription: "Sistema web full stack para gerenciamento de reservas de salas em ambiente corporativo",
+    problem: "Controle manual em papel gerava conflitos de agendamento, retrabalho e baixa adesão dos colaboradores em duas unidades da empresa.",
+    solution: "Aplicação web centralizada, calendário interativo e notificações automáticas, digitalizando completamente o processo de reservas.",
     impact: [
-      "Redução significativa de conflitos de agendamento",
-      "Economia estimada de 5 horas/semana da equipe",
-      "Processo de marcação de reuniões mais ágil",
-      "Feedback positivo dos usuários da equipe"
+      "150+ colaboradores ativos em 2 unidades (matriz e filial)",
+      "100+ agendamentos processados mensalmente",
+      "Eliminação de conflitos de agendamento",
+      "Redução de 90% no tempo de reserva de salas",
+      "Notificações via e-mail"
     ],
-    technologies: ["Python", "JavaScript", "HTML5", "CSS3", "Bootstrap", "SQLite"],
-    infrastructureRole: "Deploy em servidor Linux com automação de backup diário e monitoramento de uptime",
+    technologies: ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Express.js", "Node.js", "MSSQL Express"],
+    infrastructureRole: "Deploy com Docker em servidor Linux, backup automatizado, monitoramento de uptime e logs centralizados.",
     githubUrl: "https://github.com/seu-usuario/reservas-salas",
-    liveUrl: "https://reservas-salas-demo.vercel.app",
+    liveUrl: null,
     image: "/projects/reservas-salas.jpg",
     featured: true
   },
@@ -25,17 +26,18 @@ export const projectsData = [
     title: "Pipeline de Forecast de Vendas",
     category: "automation",
     categoryLabel: "Automação & Dados",
-    shortDescription: "Pipeline automatizado com Airflow para geração de previsões de vendas",
-    problem: "Processo manual e repetitivo de coleta, transformação e análise de dados de vendas consumia horas diárias",
-    solution: "Pipeline com Airflow que automatizou a coleta e transformação de dados, gerando relatórios diários",
+    shortDescription: "Pipeline automatizado com Apache Airflow para previsão de vendas usando 4 modelos estatísticos",
+    problem: "Analista dedicava quase 1 semana gerando previsões e planilhas manualmente, processo repetitivo e propenso a erros que atrasava decisões estratégicas.",
+    solution: "Pipeline ETL com Airflow que automatiza coleta de dados, aplica 4 modelos estatísticos (Holt, ARIMA, AutoARIMA, Holt-Winters) e gera planilhas para preenchimento dos gestores.",
     impact: [
-      "Automatizou processo de coleta e transformação de dados",
-      "Pipeline funcional gerando relatórios diariamente",
-      "Redução significativa no tempo de geração de relatórios",
-      "Sistema em uso pela equipe de vendas"
+      "Redução de 1 semana para 2 horas de processamento (97% mais rápido)",
+      "4 modelos estatísticos rodando automaticamente (Holt, ARIMA, AutoARIMA, Holt-Winters)",
+      "Previsões mensais entregues automaticamente aos gestores",
+      "Eliminação de erros manuais no processo de ETL",
+      "Ganho de 5 dias/mês de produtividade do analista"
     ],
-    technologies: ["Python", "Apache Airflow", "Pandas", "NumPy", "PostgreSQL", "Docker"],
-    infrastructureRole: "Containerização com Docker, orquestração de tarefas, monitoramento de jobs e alertas automáticos",
+    technologies: ["Python", "Apache Airflow", "Pandas", "NumPy", "Statsmodels", "PostgreSQL", "Docker"],
+    infrastructureRole: "Containerização com Docker, orquestração de DAGs, monitoramento de jobs, alertas automáticos via email e logs estruturados",
     githubUrl: "https://github.com/seu-usuario/forecast-pipeline",
     liveUrl: null,
     image: "/projects/forecast-pipeline.jpg",
@@ -46,84 +48,22 @@ export const projectsData = [
     title: "Automação de Extração DATASUS",
     category: "automation",
     categoryLabel: "Automação & Dados",
-    shortDescription: "Script Python para extração automatizada de dados filtrados do DATASUS",
-    problem: "Extração manual de dados do DATASUS era demorada, propensa a erros e limitava análises rápidas",
-    solution: "Script Python que automatiza a extração e filtragem de dados, com exportação em diferentes formatos",
+    shortDescription: "Automação Python para extração e análise de dados DATASUS para inteligência de mercado",
+    problem: "Departamento de Marketing precisava de dados do DATASUS para análise de concorrentes e market share, mas extração manual era demorada e propensa a erros.",
+    solution: "Script Python que automatiza extração mensal de dados DATASUS, filtra informações relevantes e disponibiliza em banco de dados para análise de inteligência de mercado.",
     impact: [
-      "Processo de extração muito mais rápido que manualmente",
-      "Redução de erros na coleta de dados",
-      "Exportação automática em CSV, Excel e JSON",
-      "Script reutilizável para extrações futuras"
+      "Automação 100% da extração e filtragem de dados",
+      "Execução mensal agendada via Task Scheduler",
+      "Dados de vendas e concorrência disponíveis para análise estratégica",
+      "Suporte à inteligência de mercado do departamento de Marketing",
+      "Análise de vendas mês-2 para tomada de decisão"
     ],
-    technologies: ["Python", "Requests", "BeautifulSoup", "Pandas", "Schedule"],
-    infrastructureRole: "Agendamento via cron, logs estruturados e notificações automáticas",
+    technologies: ["Python", "Pandas", "Requests", "Task Scheduler"],
+    infrastructureRole: "Agendamento via Task Scheduler, logs estruturados, tratamento de erros e notificações automáticas via e-mail",
     githubUrl: "https://github.com/seu-usuario/datasus-extractor",
     liveUrl: null,
     image: "/projects/datasus-automation.jpg",
-    featured: false
-  },
-  {
-    id: 4,
-    title: "Site Profissional para Encanador",
-    category: "web",
-    categoryLabel: "Desenvolvimento Web",
-    shortDescription: "Website completo para profissional com 30 anos de experiência",
-    problem: "Profissional experiente sem presença digital perdia oportunidades de negócio para concorrentes online",
-    solution: "Site moderno e responsivo com informações dos serviços, galeria de trabalhos e formulário de contato",
-    impact: [
-      "Presença digital profissional estabelecida",
-      "Facilita que clientes encontrem e conheçam os serviços",
-      "FAQ integrado respondendo dúvidas comuns",
-      "Formulário de contato funcional para orçamentos"
-    ],
-    technologies: ["HTML5", "CSS3", "JavaScript", "Bootstrap", "PHP"],
-    infrastructureRole: "Configuração de hospedagem, SSL, CDN para imagens e otimização de performance",
-    githubUrl: "https://github.com/seu-usuario/site-encanador",
-    liveUrl: "https://encanador-exemplo.com.br",
-    image: "/src/img/projects/exemplo_imagem.jpg", 
     featured: true
-  },
-  {
-    id: 5,
-    title: "Sites WordPress Customizados",
-    category: "web",
-    categoryLabel: "Desenvolvimento Web",
-    shortDescription: "Desenvolvimento e customização de sites WordPress para diversos clientes",
-    problem: "Clientes precisavam de sites profissionais sem complexidade de manutenção",
-    solution: "Sites WordPress customizados com temas otimizados, plugins selecionados e orientação de uso",
-    impact: [
-      "Diversos sites entregues com feedback positivo",
-      "Boa velocidade de carregamento e performance",
-      "SEO básico implementado em todos os projetos",
-      "Clientes conseguem fazer atualizações de conteúdo"
-    ],
-    technologies: ["WordPress", "PHP", "HTML5", "CSS3", "JavaScript", "MySQL"],
-    infrastructureRole: "Migração de hospedagens, otimização de banco de dados, backups automáticos",
-    githubUrl: null,
-    liveUrl: null,
-    image: "/projects/wordpress-sites.jpg",
-    featured: false
-  },
-  {
-    id: 6,
-    title: "Infraestrutura & DevOps",
-    category: "infrastructure",
-    categoryLabel: "Infraestrutura & DevOps",
-    shortDescription: "Projetos de automação, containerização e gerenciamento de infraestrutura",
-    problem: "Ambientes inconsistentes, deploys manuais e falta de automação em infraestrutura",
-    solution: "Implementação de práticas DevOps, containerização e automação de processos",
-    impact: [
-      "Ambientes containerizados com Docker",
-      "Scripts de automação para provisionamento",
-      "Monitoramento e logs centralizados",
-      "Documentação de arquitetura e processos"
-    ],
-    technologies: ["Docker", "Linux", "Bash", "Python", "Git", "Nginx"],
-    infrastructureRole: "Design e implementação completa de soluções de infraestrutura",
-    githubUrl: "https://github.com/seu-usuario/devops-scripts",
-    liveUrl: null,
-    image: "/projects/infrastructure.jpg",
-    featured: false
   }
 ];
 
@@ -131,6 +71,4 @@ export const categories = [
   { id: 'all', label: 'Todos os Projetos', icon: 'grid' },
   { id: 'web', label: 'Desenvolvimento Web', icon: 'code' },
   { id: 'automation', label: 'Automação & Dados', icon: 'cpu' },
-  { id: 'infrastructure', label: 'Infraestrutura & DevOps', icon: 'server' }
 ];
-

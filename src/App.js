@@ -16,7 +16,6 @@ import ScrollProgress from './components/ScrollProgress/ScrollProgress';
 const About = lazy(() => import('./components/About/About'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
-const Timeline = lazy(() => import('./components/Timeline/Timeline'));
 const Contact = lazy(() => import('./components/Contact/Contact'));
 const Footer = lazy(() => import('./components/Footer/Footer'));
 
@@ -65,7 +64,6 @@ function App() {
               <About />
               <Projects />
               <Skills />
-              <Timeline />
               <Contact />
             </Suspense>
           </main>

@@ -1,10 +1,32 @@
+/* Projects Section Title Override */
+#projects .section-title {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+#projects .section-title h2 {
+  color: var(--text-light);
+  margin-bottom: 16px;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  font-weight: 700;
+}
+
+#projects .section-subtitle {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 1.1rem;
+  max-width: 700px;
+  margin: 0 auto 0;
+  line-height: 1.6;
+}
+
 /* Category Filters */
 .category-filters {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 60px;
+  margin-top: 40px;
+  margin-bottom: 50px;
 }
 
 .filter-btn {
@@ -42,7 +64,8 @@
 
 /* Projects Grid */
 .projects-grid {
-  margin-top: 40px;
+  margin-top: 0;
+  padding-top: 0;
 }
 
 /* Modern Project Card Design */
@@ -392,21 +415,57 @@
 }
 
 .modal-header {
-  padding: 40px 40px 20px;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 50px 50px 40px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.modal-header .project-category-badge {
+  display: block;
+  width: fit-content;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, rgba(0, 127, 255, 0.2) 0%, rgba(0, 127, 255, 0.1) 100%);
+  color: var(--primary-color);
+  border-radius: 8px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 0 0 28px 0;
+  border: 1px solid rgba(0, 127, 255, 0.4);
+  box-shadow: 0 2px 8px rgba(0, 127, 255, 0.15);
+  text-align: left;
 }
 
 .modal-header h2 {
+  display: block;
+  width: 100%;
   color: white;
-  margin-bottom: 12px;
-  font-size: 2rem;
-  padding-right: 40px;
+  margin: 0 0 24px 0;
+  padding: 0 60px 0 0;
+  font-size: 2.2rem;
+  font-weight: 700;
+  line-height: 1.25;
+  word-wrap: break-word;
+  clear: both;
+  text-align: left;
 }
 
 .modal-subtitle {
-  color: rgba(255, 255, 255, 0.7);
-  font-size: 1.05rem;
-  margin-bottom: 0;
+  display: block;
+  width: 100%;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin: 0;
+  padding: 0 50px 0 0;
+  font-weight: 400;
+  clear: both;
+  text-align: left;
 }
 
 .modal-body {
@@ -478,16 +537,155 @@
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Key Metrics Section */
+.key-metrics {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.metric-card {
+  background: linear-gradient(135deg, rgba(0, 127, 255, 0.1) 0%, rgba(0, 191, 255, 0.05) 100%);
+  border: 1px solid rgba(0, 127, 255, 0.3);
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  transition: all 0.3s ease;
+}
+
+.metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 127, 255, 0.2);
+  border-color: var(--primary-color);
+}
+
+.metric-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--gradient-primary);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.metric-text {
+  color: rgba(255, 255, 255, 0.95);
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+/* Context Section - Two Column Layout */
+.modal-context {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.context-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.context-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 12px;
+}
+
+.context-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
+/* Highlight Section for Impact */
+.modal-section-highlight {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.08) 0%, rgba(5, 150, 105, 0.04) 100%);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.modal-section-highlight h4 {
+  color: var(--success-color);
+}
+
+.modal-section-highlight .impact-list li {
+  color: rgba(255, 255, 255, 0.9);
+  font-weight: 500;
+}
+
+/* Tech & Infrastructure Section - Two Column Layout */
+.modal-tech-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.tech-column h4,
+.infra-column h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 16px;
+}
+
+.infra-description {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-bottom: 0;
+}
+
 /* Responsive */
 @media (max-width: 991px) {
-  .projects-grid {
-    margin-top: 30px;
+  #projects .section-title {
+    margin-bottom: 40px;
+  }
+
+  .category-filters {
+    margin-top: 35px;
+    margin-bottom: 45px;
   }
 }
 
 @media (max-width: 768px) {
+  #projects .section-title {
+    margin-bottom: 35px;
+  }
+
+  #projects .section-title h2 {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  #projects .section-subtitle {
+    font-size: 1rem;
+    padding: 0 20px;
+  }
+
   .category-filters {
     gap: 8px;
+    margin-top: 30px;
+    margin-bottom: 40px;
   }
 
   .filter-btn {
@@ -522,11 +720,33 @@
   }
 
   .modal-header {
-    padding: 30px 24px 20px;
+    padding: 40px 30px 32px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .modal-header .project-category-badge {
+    font-size: 0.65rem;
+    padding: 6px 12px;
+    margin-bottom: 22px;
+    letter-spacing: 1.2px;
+    text-align: left;
   }
 
   .modal-header h2 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
+    padding-right: 45px;
+    margin-bottom: 18px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .modal-subtitle {
+    font-size: 1rem;
+    padding-right: 35px;
+    line-height: 1.6;
+    text-align: left;
+    width: 100%;
   }
 
   .modal-body {
@@ -541,9 +761,65 @@
   .impact-list li {
     font-size: 0.95rem;
   }
+
+  .key-metrics {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .metric-card {
+    padding: 16px;
+  }
+
+  .metric-icon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+
+  .metric-text {
+    font-size: 0.9rem;
+  }
+
+  .modal-context,
+  .modal-tech-section {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .context-item {
+    padding: 20px;
+  }
 }
 
 @media (max-width: 576px) {
+  #projects .section-title {
+    margin-bottom: 30px;
+  }
+
+  #projects .section-title h2 {
+    font-size: 1.6rem;
+  }
+
+  #projects .section-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .category-filters {
+    gap: 6px;
+    margin-top: 25px;
+    margin-bottom: 35px;
+  }
+
+  .filter-btn {
+    padding: 8px 16px;
+    font-size: 0.8rem;
+  }
+
+  .filter-icon {
+    font-size: 1rem;
+  }
+
   .project-card {
     border-radius: 16px;
   }
@@ -578,6 +854,45 @@
     justify-content: flex-start;
   }
 
+  .modal-header {
+    padding: 32px 24px 28px;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .modal-header .project-category-badge {
+    font-size: 0.6rem;
+    padding: 6px 12px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
+    text-align: left;
+  }
+
+  .modal-header h2 {
+    font-size: 1.4rem;
+    padding-right: 40px;
+    margin-bottom: 16px;
+    line-height: 1.3;
+    text-align: left;
+    width: 100%;
+  }
+
+  .modal-subtitle {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding-right: 30px;
+    text-align: left;
+    width: 100%;
+  }
+
+  .modal-close {
+    width: 38px;
+    height: 38px;
+    top: 18px;
+    right: 18px;
+    font-size: 1.8rem;
+  }
+
   .modal-links {
     flex-direction: column;
   }
@@ -585,6 +900,33 @@
   .modal-links a {
     width: 100%;
     justify-content: center;
+  }
+
+  .metric-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 16px;
+  }
+
+  .metric-icon {
+    width: 48px;
+    height: 48px;
+  }
+
+  .metric-text {
+    font-size: 0.85rem;
+  }
+
+  .context-item {
+    padding: 16px;
+  }
+
+  .context-item h4 {
+    font-size: 1rem;
+  }
+
+  .modal-section-highlight {
+    padding: 20px;
   }
 }
 

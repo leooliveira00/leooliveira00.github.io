@@ -89,15 +89,6 @@ const Navigation = () => {
             <Nav.Link 
               as={HashLink} 
               smooth 
-              to="/#timeline" 
-              onClick={closeMenu}
-              className="nav-link-custom"
-            >
-              Trajetória
-            </Nav.Link>
-            <Nav.Link 
-              as={HashLink} 
-              smooth 
               to="/#contact" 
               onClick={closeMenu}
               className="nav-link-custom btn-contact"

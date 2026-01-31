@@ -39,7 +39,9 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Simular envio (você pode integrar com EmailJS ou outro serviço)
+    // ATENÇÃO: Atualmente simulando envio de email
+    // Para enviar emails reais, integre com EmailJS, SendGrid ou configure backend
+    // Veja o arquivo CONFIGURAR_EMAILJS.md na raiz do projeto para instruções
     setTimeout(() => {
       setFormStatus({
         submitted: true,

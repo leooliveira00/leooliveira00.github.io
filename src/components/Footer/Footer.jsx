@@ -24,7 +24,6 @@ const Footer = () => {
       { name: 'Sobre', path: '/#about' },
       { name: 'Projetos', path: '/#projects' },
       { name: 'Habilidades', path: '/#skills' },
-      { name: 'Trajetória', path: '/#timeline' },
       { name: 'Contato', path: '/#contact' }
     ],
     social: [
@@ -57,15 +56,15 @@ const Footer = () => {
                 <span className="brand-text">Leonardo Sousa</span>
               </div>
               <p className="footer-description">
-                Desenvolvedor Full Stack em evolução com sólida base em Infraestrutura de TI.
-                Aplicando conhecimento técnico para criar soluções funcionais e bem estruturadas.
+                Full Stack Developer com forte background em infraestrutura.
+                Combinando desenvolvimento web moderno com expertise em DevOps, automação e cloud computing.
               </p>
               <div className="footer-badges">
                 <span className="footer-badge">
                   <FaRocket /> 4+ anos em TI
                 </span>
                 <span className="footer-badge">
-                  <FaCode /> Full Stack Dev
+                  <FaCode /> React • Node.js • Python
                 </span>
               </div>
             </div>
@@ -111,7 +110,7 @@ const Footer = () => {
             <div className="footer-section">
               <h4 className="footer-title">Entre em Contato</h4>
               <div className="footer-contact">
-                <a href="mailto:seu-email@exemplo.com" className="footer-contact-link">
+                <a href="mailto:lsousa2020@hotmail.com" className="footer-contact-link">
                   <FaEnvelope />
                   lsousa2020@hotmail.com
                 </a>
@@ -123,10 +122,10 @@ const Footer = () => {
         <div className="footer-bottom">
           <div className="footer-copyright">
             <p>
-              © {currentYear} Portfólio desenvolvido utilizando React, Bootstrap e muita dedicação.
+              © {currentYear} Leonardo Sousa. Todos os direitos reservados.
             </p>
             <p className="footer-credits">
-              Desenvolvido por <strong>Leonardo Sousa</strong> - Full Stack Developer
+              Desenvolvido com <strong>React</strong> e <strong>Bootstrap</strong>
             </p>
           </div>
 

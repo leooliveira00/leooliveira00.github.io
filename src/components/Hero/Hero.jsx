@@ -44,15 +44,13 @@ const Hero = () => {
             
             <h1 className="hero-title animate-fade-in-up">
               Full Stack Developer
-              <br />
-              <span className="gradient-text">com Base em Infraestrutura</span>
             </h1>
             
             <p className="hero-subtitle animate-fade-in-up">
-              Desenvolvedor em evolução com sólida base em infraestrutura.
+              Forte background em infraestrutura e DevOps.
               <br />
-              Mais de 4 anos em TI, aprendendo desenvolvimento web e aplicando 
-              experiência em infraestrutura, automação e DevOps.
+              Combinando desenvolvimento web moderno com expertise em 
+              automação, cloud computing e arquitetura de sistemas.
             </p>
 
             <div className="hero-tech-stack animate-fade-in-up">

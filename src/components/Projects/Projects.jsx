@@ -150,23 +150,47 @@ const Projects = () => {
             </div>
 
             <div className="modal-body">
-              <div className="modal-section">
-                <h4>
-                  <FaLightbulb className="section-icon" />
-                  Problema Identificado
-                </h4>
-                <p>{selectedProject.problem}</p>
+              {/* Key Metrics Highlight */}
+              {selectedProject.impact && selectedProject.impact.length > 0 && (
+                <div className="key-metrics">
+                  {selectedProject.impact.slice(0, 3).map((item, index) => {
+                    // Extract numbers from impact strings for visual emphasis
+                    const hasNumber = item.match(/(\d+[+%]?)/);
+                    const isHighlightMetric = hasNumber || item.includes('Redução') || item.includes('colaboradores') || item.includes('agendamentos');
+                    
+                    return isHighlightMetric ? (
+                      <div key={index} className="metric-card">
+                        <div className="metric-icon">
+                          {index === 0 ? <FaRocket /> : index === 1 ? <FaCheckCircle /> : <FaServer />}
+                        </div>
+                        <div className="metric-text">{item}</div>
+                      </div>
+                    ) : null;
+                  }).filter(Boolean)}
+                </div>
+              )}
+
+              {/* Context Section */}
+              <div className="modal-context">
+                <div className="context-item">
+                  <h4>
+                    <FaLightbulb className="section-icon" />
+                    O Desafio
+                  </h4>
+                  <p>{selectedProject.problem}</p>
+                </div>
+
+                <div className="context-item">
+                  <h4>
+                    <FaCheckCircle className="section-icon" />
+                    A Solução
+                  </h4>
+                  <p>{selectedProject.solution}</p>
+                </div>
               </div>
 
-              <div className="modal-section">
-                <h4>
-                  <FaCheckCircle className="section-icon" />
-                  Solução Implementada
-                </h4>
-                <p>{selectedProject.solution}</p>
-              </div>
-
-              <div className="modal-section">
+              {/* Impact & Results */}
+              <div className="modal-section modal-section-highlight">
                 <h4>
                   <FaRocket className="section-icon" />
                   Impacto e Resultados
@@ -175,31 +199,35 @@ const Projects = () => {
                   {selectedProject.impact.map((item, index) => (
                     <li key={index}>
                       <FaCheckCircle className="impact-icon" />
-                      {item}
+                      <span>{item}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {selectedProject.infrastructureRole && (
-                <div className="modal-section">
-                  <h4>
-                    <FaServer className="section-icon" />
-                    Papel da Infraestrutura
-                  </h4>
-                  <p>{selectedProject.infrastructureRole}</p>
+              {/* Two Column Layout for Stack & Infrastructure */}
+              <div className="modal-tech-section">
+                <div className="tech-column">
+                  <h4>Stack Tecnológica</h4>
+                  <div className="tech-badges">
+                    {selectedProject.technologies.map((tech, index) => (
+                      <span key={index} className="tech-badge">{tech}</span>
+                    ))}
+                  </div>
                 </div>
-              )}
 
-              <div className="modal-section">
-                <h4>Stack Tecnológica</h4>
-                <div className="tech-badges tech-badges-large">
-                  {selectedProject.technologies.map((tech, index) => (
-                    <span key={index} className="tech-badge">{tech}</span>
-                  ))}
-                </div>
+                {selectedProject.infrastructureRole && (
+                  <div className="infra-column">
+                    <h4>
+                      <FaServer className="section-icon" />
+                      Infraestrutura
+                    </h4>
+                    <p className="infra-description">{selectedProject.infrastructureRole}</p>
+                  </div>
+                )}
               </div>
 
+              {/* Action Links */}
               <div className="modal-links">
                 {selectedProject.githubUrl && (
                   <a 

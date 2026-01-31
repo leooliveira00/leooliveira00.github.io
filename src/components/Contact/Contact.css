@@ -155,26 +155,81 @@ a.info-value:hover {
   border-radius: 10px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: var(--dark-bg);
-  color: var(--text-light);
+  background: var(--dark-bg) !important;
+  color: var(--text-light) !important;
 }
 
 .custom-input:focus {
   border-color: var(--primary-color);
   box-shadow: 0 0 0 3px rgba(0, 127, 255, 0.2);
   outline: none;
-  background: var(--light-bg);
+  background: var(--light-bg) !important;
+  color: var(--text-light) !important;
 }
 
 .custom-input::placeholder {
-  color: #9CA3AF;
+  color: #9CA3AF !important;
+  opacity: 1;
 }
 
-Form.Label {
+/* Garante que o texto digitado seja visível */
+.custom-input::-webkit-input-placeholder {
+  color: #9CA3AF !important;
+}
+
+.custom-input::-moz-placeholder {
+  color: #9CA3AF !important;
+}
+
+.custom-input:-ms-input-placeholder {
+  color: #9CA3AF !important;
+}
+
+/* Força cor do texto em textarea */
+textarea.custom-input {
+  color: var(--text-light) !important;
+  background: var(--dark-bg) !important;
+  resize: vertical;
+  min-height: 120px;
+}
+
+textarea.custom-input:focus {
+  color: var(--text-light) !important;
+  background: var(--light-bg) !important;
+}
+
+/* Sobrescreve estilos do Bootstrap para garantir visibilidade */
+.form-control.custom-input {
+  background-color: var(--dark-bg) !important;
+  color: var(--text-light) !important;
+  border: 2px solid var(--border-color) !important;
+}
+
+.form-control.custom-input:focus {
+  background-color: var(--light-bg) !important;
+  color: var(--text-light) !important;
+  border-color: var(--primary-color) !important;
+  box-shadow: 0 0 0 3px rgba(0, 127, 255, 0.2) !important;
+}
+
+/* Remove autocomplete styles que podem adicionar fundo branco */
+.custom-input:-webkit-autofill,
+.custom-input:-webkit-autofill:hover,
+.custom-input:-webkit-autofill:focus,
+.custom-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 30px var(--dark-bg) inset !important;
+  -webkit-text-fill-color: var(--text-light) !important;
+  caret-color: var(--text-light) !important;
+}
+
+/* Labels do formulário */
+.form-label,
+label {
   font-weight: 600;
-  color: var(--text-light);
+  color: var(--text-light) !important;
   margin-bottom: 8px;
   font-size: 0.95rem;
+  display: block;
 }
 
 .btn-submit {
@@ -216,6 +271,17 @@ Form.Label {
 .alert-icon {
   font-size: 1.5rem;
   flex-shrink: 0;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Responsive */

@@ -1,14 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { FaCode, FaServer, FaTools } from 'react-icons/fa';
+import { FaCode, FaServer } from 'react-icons/fa';
 import { skillsData, skillLevels } from '../../data/skillsData';
 import './Skills.css';
 
 const Skills = () => {
   const iconMapping = {
     code: <FaCode />,
-    server: <FaServer />,
-    tool: <FaTools />
+    server: <FaServer />
   };
 
   const renderSkillSection = (sectionKey, sectionData) => {
@@ -69,7 +68,7 @@ const Skills = () => {
         <div className="section-title">
           <h2>Habilidades Técnicas</h2>
           <p className="section-subtitle">
-            Desenvolvimento em aprendizado ativo com base sólida em infraestrutura
+            Stack completo: desenvolvimento, infraestrutura e ferramentas
           </p>
         </div>
 
@@ -94,37 +93,11 @@ const Skills = () => {
         </Row>
 
         {/* Infrastructure Skills */}
-        <Row className="mb-5">
+        <Row>
           <Col lg={12}>
             {renderSkillSection('infrastructure', skillsData.infrastructure)}
           </Col>
         </Row>
-
-        {/* Tools Skills */}
-        <Row>
-          <Col lg={12}>
-            {renderSkillSection('tools', skillsData.tools)}
-          </Col>
-        </Row>
-
-        {/* Highlight Box */}
-        <div className="skills-highlight">
-          <div className="highlight-content">
-            <div className="highlight-icon">
-              <FaCode />
-              <FaServer />
-            </div>
-            <div className="highlight-text">
-              <h3>O Diferencial da Combinação</h3>
-              <p>
-                A junção de <strong>aprendizado em desenvolvimento</strong> com 
-                <strong> experiência em infraestrutura</strong> me traz uma perspectiva 
-                diferenciada sobre como aplicações funcionam, desde o código até a 
-                <strong> operação em produção</strong>, pensando em deploy, monitoramento e manutenção.
-              </p>
-            </div>
-          </div>
-        </div>
       </Container>
     </section>
   );
