@@ -68,7 +68,7 @@ export const timelineData = [
 
 export const careerStats = [
   {
-    number: "4+",
+    number: "5+",
     label: "Anos em TI",
     icon: "calendar"
   },
