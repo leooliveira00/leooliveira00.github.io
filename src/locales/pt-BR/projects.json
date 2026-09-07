@@ -8,6 +8,15 @@
     "infrastructure": "Infraestrutura & DevOps"
   },
   "viewDetails": "Ver detalhes",
+  "gallery": {
+    "prev": "Imagem anterior",
+    "next": "Próxima imagem",
+    "goTo": "Ir para a imagem"
+  },
+  "featuredLabel": "Projetos em Destaque",
+  "moreLabel": "Mais Projetos",
+  "showMore": "Ver mais projetos",
+  "showLess": "Ver menos",
   "noProjects": "Nenhum projeto encontrado nesta categoria.",
   "modal": {
     "problem": "O Desafio",
@@ -22,7 +31,8 @@
   "projects": [
     {
       "title": "Sistema de Reservas de Salas",
-      "category": "Desenvolvimento Web",
+      "category": "web",
+      "categoryLabel": "Desenvolvimento Web",
       "shortDescription": "Sistema web full stack para gerenciamento de reservas de salas em ambiente corporativo",
       "problem": "Controle manual em papel gerava conflitos de agendamento, retrabalho e baixa adesão dos colaboradores em duas unidades da empresa.",
       "solution": "Aplicação web centralizada, calendário interativo e notificações automáticas, digitalizando completamente o processo de reservas.",
@@ -33,26 +43,42 @@
         "Redução de 90% no tempo de reserva de salas",
         "Notificações via e-mail"
       ],
-      "infrastructureRole": "Deploy com Docker em servidor Linux, backup automatizado, monitoramento de uptime e logs centralizados."
+      "technologies": ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Express.js", "Node.js", "MSSQL Express"],
+      "infrastructureRole": "Deploy com Docker em servidor Linux, backup automatizado, monitoramento de uptime e logs centralizados.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": false
     },
     {
-      "title": "Pipeline de Forecast de Vendas",
-      "category": "Automação & Dados",
-      "shortDescription": "Pipeline automatizado com Apache Airflow para previsão de vendas usando 4 modelos estatísticos",
-      "problem": "Analista dedicava quase 1 semana gerando previsões e planilhas manualmente, processo repetitivo e propenso a erros que atrasava decisões estratégicas.",
-      "solution": "Pipeline ETL com Airflow que automatiza coleta de dados, aplica 4 modelos estatísticos (Holt, ARIMA, AutoARIMA, Holt-Winters) e gera planilhas para preenchimento dos gestores.",
+      "title": "Plataforma de Forecast de Vendas com IA",
+      "category": "web",
+      "categoryLabel": "Desenvolvimento Web",
+      "shortDescription": "Plataforma full-stack que substitui planilhas de forecast por um fluxo colaborativo com aprovação, auditoria e previsão assistida por IA",
+      "problem": "Múltiplas unidades de venda consolidavam previsões mensais em planilhas soltas por e-mail: cada gestor preenchia a sua, a consolidação era manual, aprovações aconteciam fora do arquivo e não havia histórico confiável de quem mudou o quê.",
+      "solution": "Plataforma web com fluxo de estados (rascunho → submissão → aprovação), motor de IA que testa 6 modelos estatísticos de série temporal por produto/unidade e seleciona o de menor erro, e dashboards consolidados que comparam orçado × forecast × vendas realizadas.",
       "impact": [
-        "Redução de 1 semana para 2 horas de processamento (97% mais rápido)",
-        "4 modelos estatísticos rodando automaticamente (Holt, ARIMA, AutoARIMA, Holt-Winters)",
-        "Previsões mensais entregues automaticamente aos gestores",
-        "Eliminação de erros manuais no processo de ETL",
-        "Ganho de 5 dias/mês de produtividade do analista"
+        "Substituição completa de planilhas por um fluxo único com trilha de auditoria",
+        "Motor de IA testa 6 modelos estatísticos por série e seleciona automaticamente o de menor erro",
+        "Integração bidirecional com ERP para sincronização de dados e exportação de resultados",
+        "4 perfis de acesso com controle reforçado no backend (gestor, PCP, TI, consulta)",
+        "Interface multi-idioma (português, inglês e espanhol)"
       ],
-      "infrastructureRole": "Containerização com Docker, orquestração de DAGs, monitoramento de jobs, alertas automáticos via email e logs estruturados."
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
+      "infrastructureRole": "Orquestração via Docker Compose com Traefik como proxy reverso, DAGs Airflow para sincronização com ERP e execução do motor de forecast, autenticação dupla (JWT de usuário + token estático para chamadas internas do Airflow).",
+      "images": [
+        "/projects/sales-forecast-consolidado.jpg",
+        "/projects/sales-forecast-aprovacoes.jpg",
+        "/projects/sales-forecast-meu-forecast.jpg",
+        "/projects/sales-forecast-login.jpg"
+      ],
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
     },
     {
       "title": "Automação de Extração DATASUS",
-      "category": "Automação & Dados",
+      "category": "automation",
+      "categoryLabel": "Automação & Dados",
       "shortDescription": "Automação Python para extração e análise de dados DATASUS para inteligência de mercado",
       "problem": "Departamento de Marketing precisava de dados do DATASUS para análise de concorrentes e market share, mas extração manual era demorada e propensa a erros.",
       "solution": "Script Python que automatiza extração mensal de dados DATASUS, filtra informações relevantes e disponibiliza em banco de dados para análise de inteligência de mercado.",
@@ -63,7 +89,49 @@
         "Suporte à inteligência de mercado do departamento de Marketing",
         "Análise de vendas mês-2 para tomada de decisão"
       ],
-      "infrastructureRole": "Agendamento via Task Scheduler, logs estruturados, tratamento de erros e notificações automáticas via e-mail"
+      "technologies": ["Python", "Pandas", "Requests", "Task Scheduler"],
+      "infrastructureRole": "Agendamento via Task Scheduler, logs estruturados, tratamento de erros e notificações automáticas via e-mail",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": false
+    },
+    {
+      "title": "Sistema de Gestão de Capacidade para Estudos de Estabilidade",
+      "category": "web",
+      "categoryLabel": "Desenvolvimento Web",
+      "shortDescription": "Plataforma que controla estudos de estabilidade de produtos médicos e aloca automaticamente a capacidade de estufas/incubadoras via algoritmo de otimização",
+      "problem": "O controle de estudos de estabilidade e a alocação de amostras em estufas/incubadoras era feito manualmente, sem visibilidade de capacidade disponível nem verificação sistemática de conflitos entre estudos concorrentes.",
+      "solution": "Motor de alocação que calcula, para cada estudo, quais incubadoras atendem as condições exigidas de temperatura/umidade, verifica conflitos de capacidade e altura entre estudos com janelas sobrepostas, e sugere a melhor alocação priorizando o reaproveitamento de prateleiras já em uso.",
+      "impact": [
+        "Algoritmo de alocação substitui o controle manual de capacidade das estufas",
+        "Verificação automática de conflitos entre estudos concorrentes por período e capacidade física",
+        "Rastreamento completo do ciclo de retirada de amostras (pull points) por estudo",
+        "Versionamento com Conventional Commits e releases automatizados (semantic-release)"
+      ],
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker"],
+      "infrastructureRole": "Deploy em containers Docker atrás de Traefik, schema versionado com Prisma Migrate, pipeline de release semântico com Conventional Commits.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
+    },
+    {
+      "title": "Plataforma de Automação de Rateio Contábil",
+      "category": "web",
+      "categoryLabel": "Desenvolvimento Web",
+      "shortDescription": "Plataforma modular que automatiza lançamentos contábeis recorrentes, concilia documentos e integra com ERP corporativo",
+      "problem": "Lançamentos contábeis recorrentes (mensalidades, descontos e faturas de fornecedores) eram processados manualmente por múltiplos departamentos, com conciliação sujeita a erro e sem trilha de auditoria de quem lançou o quê.",
+      "solution": "Plataforma com arquitetura de módulos plugáveis — cada processo de rateio é descoberto automaticamente no startup, permitindo adicionar novos processos sem alterar o núcleo do sistema. Concilia os documentos recebidos, lança automaticamente no ERP e notifica o departamento responsável por e-mail.",
+      "impact": [
+        "Arquitetura de plugins: novos processos de rateio são adicionados sem alterar o núcleo da aplicação",
+        "Estratégia de dupla base no ERP (leitura da base oficial, escrita na base de teste) para rollout seguro em produção — troca de ambiente via variável de configuração",
+        "Trava anti-parcial: lançamentos multi-documento só são confirmados no ERP quando todos os itens são aceitos",
+        "Controle de acesso por área/departamento com notificação automática ao setor responsável"
+      ],
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker"],
+      "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, deploy em containers Docker atrás de Traefik, gate automatizado de qualidade com ruff e mypy.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
     }
   ]
 }

@@ -6,7 +6,7 @@ import './Skills.css';
 
 const Skills = () => {
   const { t } = useTranslation('skills');
-  
+
   const iconMapping = {
     code: <FaCode />,
     server: <FaServer />
@@ -33,20 +33,20 @@ const Skills = () => {
         {
           name: t('groups.frontend'),
           items: [
-            { name: t('skills.react'), level: 75, status: 'proficient' },
-            { name: t('skills.javascript'), level: 80, status: 'proficient' },
-            { name: t('skills.html5css3'), level: 85, status: 'proficient' },
-            { name: t('skills.bootstrap'), level: 75, status: 'proficient' }
+            { name: t('skills.reactTypescript'), status: 'proficient' },
+            { name: t('skills.javascript'), status: 'proficient' },
+            { name: t('skills.html5css3'), status: 'proficient' },
+            { name: t('skills.bootstrapTailwind'), status: 'proficient' }
           ]
         },
         {
           name: t('groups.backendDatabase'),
           items: [
-            { name: t('skills.nodeExpress'), level: 70, status: 'proficient' },
-            { name: t('skills.python'), level: 85, status: 'proficient' },
-            { name: t('skills.restfulAPIs'), level: 75, status: 'proficient' },
-            { name: t('skills.postgresql'), level: 70, status: 'proficient' },
-            { name: t('skills.mssql'), level: 80, status: 'proficient' }
+            { name: t('skills.nodeExpress'), status: 'proficient' },
+            { name: t('skills.pythonFastapi'), status: 'proficient' },
+            { name: t('skills.ormPrismaSqlalchemy'), status: 'proficient' },
+            { name: t('skills.databases'), status: 'proficient' },
+            { name: t('skills.apiAuth'), status: 'proficient' }
           ]
         }
       ]
@@ -58,25 +58,24 @@ const Skills = () => {
         {
           name: t('groups.automationCICD'),
           items: [
-            { name: t('skills.pythonAutomation'), level: 85, status: 'proficient' },
-            { name: t('skills.apacheAirflow'), level: 70, status: 'proficient' },
-            { name: t('skills.bashScripting'), level: 75, status: 'proficient' },
-            { name: t('skills.gitGitHub'), level: 80, status: 'proficient' }
+            { name: t('skills.airflowAutomation'), status: 'proficient' },
+            { name: t('skills.gitCicd'), status: 'proficient' },
+            { name: t('skills.bashScripting'), status: 'proficient' }
           ]
         },
         {
           name: t('groups.serversContainers'),
           items: [
-            { name: t('skills.dockerCompose'), level: 75, status: 'proficient' },
-            { name: t('skills.linuxAdmin'), level: 80, status: 'proficient' },
-            { name: t('skills.windowsServer'), level: 85, status: 'proficient' }
+            { name: t('skills.dockerCompose'), status: 'proficient' },
+            { name: t('skills.traefik'), status: 'proficient' },
+            { name: t('skills.serversOS'), status: 'proficient' }
           ]
         },
         {
           name: t('groups.networkingMonitoring'),
           items: [
-            { name: t('skills.tcpipNetworking'), level: 80, status: 'proficient' },
-            { name: t('skills.monitoringLogs'), level: 75, status: 'learning' }
+            { name: t('skills.networking'), status: 'proficient' },
+            { name: t('skills.monitoringLogs'), status: 'learning' }
           ]
         }
       ]
@@ -97,35 +96,19 @@ const Skills = () => {
           {sectionData.skills.map((group, groupIndex) => (
             <div key={groupIndex} className="skill-group">
               <h4 className="skill-group-name">{group.name}</h4>
-              <div className="skill-items">
+              <div className="skill-tags">
                 {group.items.map((skill, skillIndex) => (
-                  <div key={skillIndex} className="skill-item">
-                    <div className="skill-header">
-                      <div className="skill-info">
-                        <span className="skill-name">{skill.name}</span>
-                        <span 
-                          className="skill-status" 
-                          style={{ color: skillLevels[skill.status].color }}
-                        >
-                          {skillLevels[skill.status].label}
-                        </span>
-                      </div>
-                      <span className="skill-percentage">{skill.level}%</span>
-                    </div>
-                    <div className="skill-bar-container">
-                      <div 
-                        className="skill-bar-fill" 
-                        style={{ 
-                          width: `${skill.level}%`,
-                          background: skill.status === 'learning' 
-                            ? 'linear-gradient(90deg, #3B82F6 0%, #60A5FA 100%)'
-                            : 'linear-gradient(90deg, #10B981 0%, #34D399 100%)'
-                        }}
-                      >
-                        <div className="skill-bar-shine"></div>
-                      </div>
-                    </div>
-                  </div>
+                  <span
+                    key={skillIndex}
+                    className="skill-tag"
+                    title={skillLevels[skill.status].label}
+                  >
+                    <span
+                      className="skill-tag-dot"
+                      style={{ background: skillLevels[skill.status].color }}
+                    ></span>
+                    {skill.name}
+                  </span>
                 ))}
               </div>
             </div>
@@ -149,8 +132,8 @@ const Skills = () => {
         <div className="skills-legend mb-4 mb-md-5">
           {Object.entries(skillLevels).map(([key, value]) => (
             <div key={key} className="legend-item">
-              <span 
-                className="legend-dot" 
+              <span
+                className="legend-dot"
                 style={{ background: value.color }}
               ></span>
               <span className="legend-label">{value.label}</span>
@@ -177,4 +160,3 @@ const Skills = () => {
 };
 
 export default Skills;
-

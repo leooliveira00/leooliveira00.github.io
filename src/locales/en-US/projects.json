@@ -8,6 +8,15 @@
     "infrastructure": "Infrastructure & DevOps"
   },
   "viewDetails": "View details",
+  "gallery": {
+    "prev": "Previous image",
+    "next": "Next image",
+    "goTo": "Go to image"
+  },
+  "featuredLabel": "Featured Projects",
+  "moreLabel": "More Projects",
+  "showMore": "Show more projects",
+  "showLess": "Show less",
   "noProjects": "No projects found in this category.",
   "modal": {
     "problem": "The Challenge",
@@ -22,7 +31,8 @@
   "projects": [
     {
       "title": "Meeting Room Reservation System",
-      "category": "Web Development",
+      "category": "web",
+      "categoryLabel": "Web Development",
       "shortDescription": "Full stack web system for meeting room reservations management in corporate environment",
       "problem": "Manual paper-based control generated scheduling conflicts, rework, and low employee adoption across two company locations.",
       "solution": "Centralized web application with interactive calendar and automatic notifications, completely digitalizing the reservation process.",
@@ -33,26 +43,42 @@
         "90% reduction in room reservation time",
         "Email notifications"
       ],
-      "infrastructureRole": "Docker deployment on Linux server, automated backup, uptime monitoring, and centralized logs."
+      "technologies": ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Express.js", "Node.js", "MSSQL Express"],
+      "infrastructureRole": "Docker deployment on Linux server, automated backup, uptime monitoring, and centralized logs.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": false
     },
     {
-      "title": "Sales Forecast Pipeline",
-      "category": "Automation & Data",
-      "shortDescription": "Automated pipeline with Apache Airflow for sales forecasting using 4 statistical models",
-      "problem": "Analyst spent almost a week manually generating forecasts and spreadsheets, a repetitive and error-prone process that delayed strategic decisions.",
-      "solution": "ETL pipeline with Airflow that automates data collection, applies 4 statistical models (Holt, ARIMA, AutoARIMA, Holt-Winters) and generates spreadsheets for manager input.",
+      "title": "AI-Powered Sales Forecast Platform",
+      "category": "web",
+      "categoryLabel": "Web Development",
+      "shortDescription": "Full-stack platform that replaces forecast spreadsheets with a collaborative flow featuring approvals, audit trail, and AI-assisted forecasting",
+      "problem": "Multiple sales units consolidated monthly forecasts in loose email spreadsheets: each manager filled their own, consolidation was manual, approvals happened outside the file, and there was no reliable history of who changed what.",
+      "solution": "Web platform with a state-based flow (draft → submission → approval), an AI engine that tests 6 statistical time-series models per product/unit and selects the one with the lowest error, and consolidated dashboards comparing budgeted × forecast × actual sales.",
       "impact": [
-        "Reduction from 1 week to 2 hours of processing (97% faster)",
-        "4 statistical models running automatically (Holt, ARIMA, AutoARIMA, Holt-Winters)",
-        "Monthly forecasts automatically delivered to managers",
-        "Elimination of manual errors in ETL process",
-        "Gain of 5 days/month in analyst productivity"
+        "Complete replacement of spreadsheets with a single flow with full audit trail",
+        "AI engine tests 6 statistical models per series and automatically selects the lowest-error one",
+        "Bidirectional ERP integration for data sync and results export",
+        "4 access profiles with backend-enforced authorization (manager, PCP, IT, read-only)",
+        "Multi-language interface (Portuguese, English, and Spanish)"
       ],
-      "infrastructureRole": "Docker containerization, DAG orchestration, job monitoring, automatic email alerts, and structured logs."
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
+      "infrastructureRole": "Docker Compose orchestration with Traefik as reverse proxy, Airflow DAGs for ERP sync and forecast engine execution, dual authentication (user JWT + static token for internal Airflow calls).",
+      "images": [
+        "/projects/sales-forecast-consolidado.jpg",
+        "/projects/sales-forecast-aprovacoes.jpg",
+        "/projects/sales-forecast-meu-forecast.jpg",
+        "/projects/sales-forecast-login.jpg"
+      ],
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
     },
     {
       "title": "DATASUS Data Extraction Automation",
-      "category": "Automation & Data",
+      "category": "automation",
+      "categoryLabel": "Automation & Data",
       "shortDescription": "Python automation for DATASUS data extraction and analysis for market intelligence",
       "problem": "Marketing department needed DATASUS data for competitor analysis and market share, but manual extraction was time-consuming and error-prone.",
       "solution": "Python script that automates monthly DATASUS data extraction, filters relevant information, and makes it available in database for market intelligence analysis.",
@@ -63,7 +89,49 @@
         "Support for Marketing department's market intelligence",
         "Month-2 sales analysis for decision making"
       ],
-      "infrastructureRole": "Task Scheduler scheduling, structured logs, error handling, and automatic email notifications"
+      "technologies": ["Python", "Pandas", "Requests", "Task Scheduler"],
+      "infrastructureRole": "Task Scheduler scheduling, structured logs, error handling, and automatic email notifications",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": false
+    },
+    {
+      "title": "Capacity Management System for Stability Studies",
+      "category": "web",
+      "categoryLabel": "Web Development",
+      "shortDescription": "Platform that controls medical product stability studies and automatically allocates incubator/chamber capacity via an optimization algorithm",
+      "problem": "Stability study tracking and sample allocation in incubators/chambers was done manually, with no visibility into available capacity or systematic conflict checking between concurrent studies.",
+      "solution": "Allocation engine that calculates, for each study, which incubators meet the required temperature/humidity conditions, checks capacity and height conflicts between studies with overlapping windows, and suggests the best allocation prioritizing reuse of shelves already in use.",
+      "impact": [
+        "Allocation algorithm replaces manual incubator capacity control",
+        "Automatic conflict detection between concurrent studies by period and physical capacity",
+        "Full tracking of the sample pull-point cycle per study",
+        "Versioning with Conventional Commits and automated releases (semantic-release)"
+      ],
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker"],
+      "infrastructureRole": "Docker containers behind Traefik, schema versioned with Prisma Migrate, semantic release pipeline with Conventional Commits.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
+    },
+    {
+      "title": "Accounting Apportionment Automation Platform",
+      "category": "web",
+      "categoryLabel": "Web Development",
+      "shortDescription": "Modular platform that automates recurring accounting postings, reconciles documents, and integrates with the corporate ERP",
+      "problem": "Recurring accounting postings (monthly fees, deductions, and vendor invoices) were processed manually across multiple departments, with reconciliation prone to error and no audit trail of who posted what.",
+      "solution": "Platform with a pluggable module architecture — each apportionment process is auto-discovered at startup, allowing new processes to be added without changing the core system. It reconciles received documents, automatically posts to the ERP, and notifies the responsible department by email.",
+      "impact": [
+        "Plugin architecture: new apportionment processes are added without touching the application core",
+        "Dual ERP base strategy (reads from the official base, writes to the test base) for safe production rollout — environment switch via a configuration variable",
+        "Anti-partial lock: multi-document postings are only confirmed in the ERP when all items are accepted",
+        "Access control by area/department with automatic notification to the responsible team"
+      ],
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker"],
+      "infrastructureRole": "Python backend (FastAPI + SQLAlchemy 2.0) with idempotent migrations, Docker deployment behind Traefik, automated quality gate with ruff and mypy.",
+      "githubUrl": null,
+      "liveUrl": null,
+      "featured": true
     }
   ]
 }

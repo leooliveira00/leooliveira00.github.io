@@ -51,16 +51,17 @@ export const timelineData = [
     id: 4,
     year: "2025 - Presente",
     title: "Desenvolvedor Full Stack",
-    company: "Desenvolvedor Full Stack",
+    company: "Scitech Produtos Médicos",
     type: "development",
-    description: "Atuação como desenvolvedor full stack com background em infraestrutura",
+    description: "Arquitetura e entrega de sistemas full stack em produção, integrados a ERP corporativo, aplicando a base de infraestrutura em decisões de deploy, segurança e confiabilidade",
     achievements: [
-      "Desenvolvimento de aplicações web completas",
-      "Familiaridade com JavaScript, React e Node.js",
-      "Projetos que resolveram problemas reais de negócio",
-      "Aplicação de conhecimento em infra para soluções escaláveis e eficientes"
+      "Arquitetei e entreguei múltiplos sistemas full stack em produção, incluindo integração bidirecional com ERP (Protheus)",
+      "Motor de forecast de vendas assistido por IA, testando múltiplos modelos estatísticos e selecionando o de menor erro",
+      "Motor de alocação e otimização de capacidade para estudos de estabilidade de produtos médicos",
+      "Plataforma de automação de lançamentos contábeis com arquitetura de módulos plugáveis",
+      "Expansão do stack para TypeScript, Prisma, FastAPI e orquestração via Docker Compose + Traefik"
     ],
-    skills: ["React", "Node.js", "Express", "Python", "Bootstrap", "Git"],
+    skills: ["React", "TypeScript", "Node.js", "Express", "Prisma", "Python", "FastAPI", "Docker", "Git"],
     icon: "code",
     current: true
   }

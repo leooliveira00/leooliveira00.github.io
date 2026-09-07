@@ -68,6 +68,19 @@
   padding-top: 0;
 }
 
+/* Show more / less toggle */
+.show-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 16px;
+}
+
+.show-more-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
 /* Modern Project Card Design */
 .project-card {
   background: var(--light-bg);
@@ -115,21 +128,19 @@
   transform: scaleX(1);
 }
 
-.featured-badge {
-  position: absolute;
-  top: 16px;
-  right: 16px;
+/* Group labels (Featured / More projects) */
+.projects-group-label {
   display: flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  background: var(--gradient-accent);
-  color: white;
-  border-radius: 20px;
-  font-size: 0.75rem;
-  font-weight: 600;
-  z-index: 3;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  gap: 12px;
+  color: var(--text-light);
+  font-size: 1.1rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 0 0 24px;
+  padding-left: 12px;
+  border-left: 4px solid var(--primary-color);
 }
 
 /* Project Icon Section */
@@ -178,6 +189,26 @@
 .project-card:hover .project-icon {
   transform: scale(1.1) rotate(5deg);
   box-shadow: 0 12px 30px rgba(0, 127, 255, 0.6);
+}
+
+/* Project Screenshot */
+.project-image-wrapper {
+  height: 190px;
+  overflow: hidden;
+  background: var(--dark-bg);
+}
+
+.project-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  transition: transform 0.4s ease;
+}
+
+.project-card:hover .project-image {
+  transform: scale(1.06);
 }
 
 /* Project Content */
@@ -389,6 +420,82 @@
   }
 }
 
+.modal-gallery {
+  position: relative;
+}
+
+.modal-image {
+  display: block;
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+  object-position: top;
+  border-radius: 20px 20px 0 0;
+}
+
+.gallery-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.gallery-nav:hover {
+  background: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.gallery-prev {
+  left: 16px;
+}
+
+.gallery-next {
+  right: 16px;
+}
+
+.gallery-dots {
+  position: absolute;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 7px 12px;
+  background: rgba(0, 0, 0, 0.45);
+  border-radius: 20px;
+  z-index: 2;
+}
+
+.gallery-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.gallery-dot.active {
+  background: white;
+  width: 22px;
+  border-radius: 4px;
+}
+
 .modal-close {
   position: absolute;
   top: 20px;
@@ -412,6 +519,17 @@
 .modal-close:hover {
   background: var(--accent-color);
   transform: rotate(90deg);
+}
+
+/* Guarantee contrast for the close button when it sits over a screenshot */
+.modal-content:has(.modal-gallery) .modal-close {
+  background: rgba(0, 0, 0, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.modal-content:has(.modal-gallery) .modal-close:hover {
+  background: var(--accent-color);
+  border-color: transparent;
 }
 
 .modal-header {
@@ -735,6 +853,10 @@
     font-size: 1.7rem;
   }
 
+  .project-image-wrapper {
+    height: 160px;
+  }
+
   .project-content {
     padding: 24px;
   }
@@ -749,6 +871,10 @@
 
   .modal-content {
     max-height: 95vh;
+  }
+
+  .modal-image {
+    height: 200px;
   }
 
   .modal-header {
@@ -933,6 +1059,20 @@
     top: 18px;
     right: 18px;
     font-size: 1.8rem;
+  }
+
+  .gallery-nav {
+    width: 36px;
+    height: 36px;
+    font-size: 0.95rem;
+  }
+
+  .gallery-prev {
+    left: 10px;
+  }
+
+  .gallery-next {
+    right: 10px;
   }
 
   .modal-links {
