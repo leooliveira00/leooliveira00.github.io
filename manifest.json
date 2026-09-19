@@ -1,0 +1,26 @@
+{
+  "short_name": "Leonardo Sousa",
+  "name": "Leonardo Sousa | Full Stack Developer",
+  "icons": [
+    {
+      "src": "favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    },
+    {
+      "src": "logo192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "logo512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ],
+  "start_url": ".",
+  "display": "standalone",
+  "theme_color": "#007FFF",
+  "background_color": "#0A0E27"
+}
+
