@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import {
   FaGithub,
@@ -10,29 +10,45 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaChevronLeft,
-  FaChevronRight
+  FaChevronRight,
+  FaExpand
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './Projects.css';
 
 const Projects = () => {
   const { t } = useTranslation(['projects', 'common']);
-  const [activeCategory, setActiveCategory] = useState('all');
   const [selectedProject, setSelectedProject] = useState(null);
   const [showAll, setShowAll] = useState(false);
   const [activeImage, setActiveImage] = useState(0);
+  const [lightboxOpen, setLightboxOpen] = useState(false);
 
   const openProject = (project) => {
     setSelectedProject(project);
     setActiveImage(0);
+    setLightboxOpen(false);
   };
 
-  // Categories
-  const categories = [
-    { id: 'all', icon: 'grid' },
-    { id: 'web', icon: 'code' },
-    { id: 'automation', icon: 'cpu' }
-  ];
+  const stepImage = (images, direction) => {
+    setActiveImage((prev) => (prev + direction + images.length) % images.length);
+  };
+
+  // Close the lightbox with Escape, and let arrow keys step through images while it's open
+  useEffect(() => {
+    if (!lightboxOpen || !selectedProject) return;
+
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setLightboxOpen(false);
+      if (e.key === 'ArrowRight') stepImage(selectedProject.images, 1);
+      if (e.key === 'ArrowLeft') stepImage(selectedProject.images, -1);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [lightboxOpen, selectedProject]);
+
+  // Portrait (mobile) screenshots get a phone-frame treatment instead of being cropped like the desktop shots
+  const isMobileShot = (src) => /mobile/i.test(src);
 
   // Build projects data from translation
   const projectsData = t('projects:projects', { returnObjects: true }).map((project, index) => ({
@@ -49,25 +65,17 @@ const Projects = () => {
     images: project.images || [],
     githubUrl: project.githubUrl || null,
     liveUrl: project.liveUrl || null,
-    featured: !!project.featured
+    featured: !!project.featured,
+    inDevelopment: !!project.inDevelopment,
+    disclaimer: project.disclaimer || null
   }));
 
-  const filteredProjects = activeCategory === 'all'
-    ? projectsData
-    : projectsData.filter(project => project.category === activeCategory);
-
-  const featuredProjects = filteredProjects.filter(project => project.featured);
-  const otherProjects = filteredProjects.filter(project => !project.featured);
+  const featuredProjects = projectsData.filter(project => project.featured);
+  const otherProjects = projectsData.filter(project => !project.featured);
   const hasFeatured = featuredProjects.length > 0;
   const hasMore = hasFeatured && otherProjects.length > 0;
 
-  const handleCategoryChange = (categoryId) => {
-    setActiveCategory(categoryId);
-    setShowAll(false);
-  };
-
   const categoryIcons = {
-    grid: <FaServer />,
     code: <FaRocket />,
     cpu: <FaLightbulb />,
     server: <FaServer />
@@ -79,6 +87,10 @@ const Projects = () => {
         className={`project-card ${project.featured ? 'featured' : ''}`}
         onClick={() => openProject(project)}
       >
+        {project.inDevelopment && (
+          <div className="in-development-badge">{t('projects:inDevelopmentLabel')}</div>
+        )}
+
         {project.images.length > 0 ? (
           <div className="project-image-wrapper">
             <img src={project.images[0]} alt={project.title} className="project-image" loading="lazy" />
@@ -156,25 +168,6 @@ const Projects = () => {
           </p>
         </div>
 
-        {/* Category Filters - Horizontal scroll em mobile */}
-        <div className="category-filters mb-4">
-          {categories.map(category => (
-            <button
-              key={category.id}
-              className={`filter-btn ${activeCategory === category.id ? 'active' : ''}`}
-              onClick={() => handleCategoryChange(category.id)}
-            >
-              <span className="filter-icon">{categoryIcons[category.icon]}</span>
-              <span className="d-none d-sm-inline">{t(`projects:categories.${category.id}`)}</span>
-              <span className="d-inline d-sm-none">
-                {category.id === 'all' ? t(`projects:categories.${category.id}`) : 
-                 category.id === 'web' ? 'Web' : 
-                 category.id === 'automation' ? 'Auto' : 'Infra'}
-              </span>
-            </button>
-          ))}
-        </div>
-
         {/* Projects Grid */}
         {hasFeatured ? (
           <>
@@ -194,7 +187,7 @@ const Projects = () => {
           </>
         ) : (
           <Row className="projects-grid">
-            {filteredProjects.map(project => renderProjectCard(project))}
+            {projectsData.map(project => renderProjectCard(project))}
           </Row>
         )}
 
@@ -209,12 +202,6 @@ const Projects = () => {
             </button>
           </div>
         )}
-
-        {filteredProjects.length === 0 && (
-          <div className="no-projects">
-            <p>{t('projects:noProjects')}</p>
-          </div>
-        )}
       </Container>
 
       {/* Project Detail Modal */}
@@ -226,12 +213,16 @@ const Projects = () => {
             </button>
 
             {selectedProject.images.length > 0 && (
-              <div className="modal-gallery">
+              <div className={`modal-gallery ${isMobileShot(selectedProject.images[activeImage]) ? 'is-mobile-shot' : ''}`}>
                 <img
                   src={selectedProject.images[activeImage]}
                   alt={`${selectedProject.title} - ${activeImage + 1}`}
                   className="modal-image"
+                  onClick={() => setLightboxOpen(true)}
                 />
+                <div className="expand-hint" onClick={() => setLightboxOpen(true)}>
+                  <FaExpand />
+                </div>
 
                 {selectedProject.images.length > 1 && (
                   <>
@@ -239,7 +230,7 @@ const Projects = () => {
                       type="button"
                       className="gallery-nav gallery-prev"
                       aria-label={t('projects:gallery.prev')}
-                      onClick={() => setActiveImage((activeImage - 1 + selectedProject.images.length) % selectedProject.images.length)}
+                      onClick={() => stepImage(selectedProject.images, -1)}
                     >
                       <FaChevronLeft />
                     </button>
@@ -247,7 +238,7 @@ const Projects = () => {
                       type="button"
                       className="gallery-nav gallery-next"
                       aria-label={t('projects:gallery.next')}
-                      onClick={() => setActiveImage((activeImage + 1) % selectedProject.images.length)}
+                      onClick={() => stepImage(selectedProject.images, 1)}
                     >
                       <FaChevronRight />
                     </button>
@@ -269,11 +260,19 @@ const Projects = () => {
             )}
 
             <div className="modal-header">
-              <div className="project-category-badge">
-                {selectedProject.categoryLabel}
+              <div className="modal-badges">
+                <div className="project-category-badge">
+                  {selectedProject.categoryLabel}
+                </div>
+                {selectedProject.inDevelopment && (
+                  <div className="in-development-badge static">{t('projects:inDevelopmentLabel')}</div>
+                )}
               </div>
               <h2>{selectedProject.title}</h2>
               <p className="modal-subtitle">{selectedProject.shortDescription}</p>
+              {selectedProject.disclaimer && (
+                <p className="modal-disclaimer">{selectedProject.disclaimer}</p>
+              )}
             </div>
 
             <div className="modal-body">
@@ -379,6 +378,60 @@ const Projects = () => {
               </div>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Fullscreen image lightbox, rendered above the project modal */}
+      {lightboxOpen && selectedProject && (
+        <div className="image-lightbox" onClick={() => setLightboxOpen(false)}>
+          <button
+            type="button"
+            className="lightbox-close"
+            aria-label={t('projects:modal.close')}
+            onClick={() => setLightboxOpen(false)}
+          >
+            ×
+          </button>
+
+          <img
+            src={selectedProject.images[activeImage]}
+            alt={`${selectedProject.title} - ${activeImage + 1}`}
+            className="lightbox-image"
+            onClick={(e) => e.stopPropagation()}
+          />
+
+          {selectedProject.images.length > 1 && (
+            <>
+              <button
+                type="button"
+                className="gallery-nav gallery-prev lightbox-nav"
+                aria-label={t('projects:gallery.prev')}
+                onClick={(e) => { e.stopPropagation(); stepImage(selectedProject.images, -1); }}
+              >
+                <FaChevronLeft />
+              </button>
+              <button
+                type="button"
+                className="gallery-nav gallery-next lightbox-nav"
+                aria-label={t('projects:gallery.next')}
+                onClick={(e) => { e.stopPropagation(); stepImage(selectedProject.images, 1); }}
+              >
+                <FaChevronRight />
+              </button>
+
+              <div className="gallery-dots lightbox-dots" onClick={(e) => e.stopPropagation()}>
+                {selectedProject.images.map((_, index) => (
+                  <button
+                    type="button"
+                    key={index}
+                    className={`gallery-dot ${index === activeImage ? 'active' : ''}`}
+                    aria-label={`${t('projects:gallery.goTo')} ${index + 1}`}
+                    onClick={() => setActiveImage(index)}
+                  />
+                ))}
+              </div>
+            </>
+          )}
         </div>
       )}
     </section>

@@ -1,16 +1,17 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form } from 'react-bootstrap';
-import { 
-  FaEnvelope, 
-  FaLinkedin, 
-  FaGithub, 
-  FaPhone, 
+import {
+  FaEnvelope,
+  FaLinkedin,
+  FaGithub,
+  FaPhone,
   FaMapMarkerAlt,
   FaPaperPlane,
   FaCheckCircle,
   FaExclamationCircle
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
+import emailjs from '@emailjs/browser';
 import './Contact.css';
 
 const Contact = () => {
@@ -41,30 +42,45 @@ const Contact = () => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // ATENÇÃO: Atualmente simulando envio de email
-    // Para enviar emails reais, integre com EmailJS, SendGrid ou configure backend
-    // Veja o arquivo CONFIGURAR_EMAILJS.md na raiz do projeto para instruções
-    setTimeout(() => {
+    try {
+      await emailjs.send(
+        process.env.REACT_APP_EMAILJS_SERVICE_ID,
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message
+        },
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
+      );
+
       setFormStatus({
         submitted: true,
         success: true,
         message: t('form.successMessage')
       });
-      setIsSubmitting(false);
-      
-      // Limpar formulário
+
       setFormData({
         name: '',
         email: '',
         subject: '',
         message: ''
       });
+    } catch (error) {
+      console.error('Erro ao enviar email:', error);
+      setFormStatus({
+        submitted: true,
+        success: false,
+        message: t('form.errorMessage')
+      });
+    }
 
-      // Limpar status após 5 segundos
-      setTimeout(() => {
-        setFormStatus({ submitted: false, success: false, message: '' });
-      }, 5000);
-    }, 1500);
+    setIsSubmitting(false);
+
+    setTimeout(() => {
+      setFormStatus({ submitted: false, success: false, message: '' });
+    }, 5000);
   };
 
   const contactInfo = [

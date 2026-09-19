@@ -1,137 +1,84 @@
-# 🚀 Portfólio Full Stack Developer
+# 🚀 Portfólio de Leonardo Sousa
 
-Portfólio profissional desenvolvido em **React** e **Bootstrap**, destacando a combinação única de experiência em **Infraestrutura de TI** e **Desenvolvimento Full Stack**.
+Portfólio pessoal desenvolvido em **React** e **Bootstrap**, destacando a combinação de experiência em **Infraestrutura de TI** e **Desenvolvimento Full Stack**.
 
 ![React](https://img.shields.io/badge/React-18.2.0-blue?logo=react)
 ![Bootstrap](https://img.shields.io/badge/Bootstrap-5.3.2-purple?logo=bootstrap)
-![License](https://img.shields.io/badge/License-MIT-green)
 
 ---
 
 ## 📋 Índice
 
 - [Sobre o Projeto](#sobre-o-projeto)
-- [Otimizações Implementadas](#otimizações-implementadas)
-- [Demonstração](#demonstração)
 - [Funcionalidades](#funcionalidades)
 - [Tecnologias Utilizadas](#tecnologias-utilizadas)
 - [Estrutura do Projeto](#estrutura-do-projeto)
 - [Instalação e Configuração](#instalação-e-configuração)
 - [Scripts Disponíveis](#scripts-disponíveis)
-- [Personalização](#personalização)
 - [Deploy](#deploy)
-- [Licença](#licença)
+- [Contato](#contato)
+- [Próximos Passos](#próximos-passos)
 
 ---
 
 ## 🎯 Sobre o Projeto
 
-Este portfólio foi criado para **posicionar um desenvolvedor full stack júnior com sólida experiência em infraestrutura de TI** como diferencial competitivo no mercado de trabalho.
+Portfólio profissional que posiciona minha transição de **Infraestrutura de TI** para **Desenvolvimento Full Stack** como diferencial competitivo, com foco em:
 
-### Por que este portfólio é diferente?
-
-- ✅ **Foco em problemas reais resolvidos**, não apenas tecnologias usadas
-- ✅ **Destaque para a transição Infraestrutura → Full Stack** como vantagem
-- ✅ **Design moderno e profissional** que chama atenção visualmente
-- ✅ **Métricas de impacto** em cada projeto
-- ✅ **Organização clara** de habilidades técnicas multidisciplinares
+- ✅ Problemas reais resolvidos em cada projeto, não apenas tecnologias usadas
+- ✅ Métricas de impacto concretas (escala, tempo economizado, resultados)
+- ✅ Projetos com print real da aplicação, não só descrição em texto
+- ✅ Organização clara de habilidades técnicas multidisciplinares (dev + infra)
+- ✅ Suporte a português e inglês (i18n)
 
 ---
 
-## ⚡ Otimizações Implementadas
+## 🎨 Seções do Portfólio
 
-Este portfólio foi otimizado para **performance, acessibilidade e SEO** em janeiro de 2026:
-
-### 🎨 **Design Escuro Profissional**
-- Nova paleta de cores escura e moderna (#007FFF, #1D64C6, #1F335F)
-- Melhor contraste e legibilidade
-- Redução de fadiga visual
-
-### ⚡ **Performance (+20 pts Lighthouse)**
-- **Lazy Loading** de componentes - Redução de 40% no bundle inicial
-- **Code Splitting** automático
-- First Contentful Paint: **2.5s → 1.2s** (-52%)
-
-### ♿ **Acessibilidade (+15 pts Lighthouse)**
-- Skip to content link (WCAG 2.1)
-- ARIA labels em todos os elementos interativos
-- Navegação por teclado otimizada
-
-### 🔍 **SEO (+15 pts Lighthouse)**
-- React Helmet para meta tags dinâmicas
-- Open Graph e Twitter Cards
-- Canonical URLs e robots.txt
-
-### 📊 **UX Enhancements**
-- Scroll progress indicator
-- Loading states suaves
-- Feedback visual consistente
-
-**📄 [Ver documentação completa das otimizações](./OTIMIZACOES_IMPLEMENTADAS.md)**
-
----
-
-## 🎨 Demonstração
-
-### Seções do Portfólio:
-
-1. **Home (Hero)** - Apresentação impactante com animações de tecnologias
-2. **Sobre** - História da transição profissional como diferencial
-3. **Projetos** - Cards interativos organizados por categoria:
-   - Desenvolvimento Web
-   - Automação & Dados
-   - Infraestrutura & DevOps
-4. **Habilidades** - Divididas em Desenvolvimento e Infraestrutura
-5. **Trajetória** - Timeline interativa da evolução profissional
-6. **Contato** - Formulário funcional e links sociais
+1. **Home (Hero)**: apresentação com animação de stack de tecnologias
+2. **Sobre**: a trajetória de infraestrutura a full stack
+3. **Projetos**: cards com destaque, modal detalhado (problema, solução, impacto, stack) e galeria de imagens navegável
+4. **Habilidades**: desenvolvimento e infraestrutura, organizadas por grupo
+5. **Trajetória**: timeline da evolução profissional com conquistas expansíveis
+6. **Contato**: formulário funcional (EmailJS) e links sociais
 
 ---
 
 ## ✨ Funcionalidades
 
-### 🎯 Funcionalidades Principais
-
-- [x] **Navegação suave** com scroll animado entre seções
-- [x] **Navbar responsiva** com menu hambúrguer em mobile
-- [x] **Filtro de projetos** por categoria (Web, Automação, Infra)
-- [x] **Modal detalhado** para cada projeto com métricas de impacto
-- [x] **Timeline interativa** com conquistas expansíveis
-- [x] **Barras de progresso animadas** nas habilidades
-- [x] **Formulário de contato** com validação
-- [x] **Animações on scroll** usando AOS
-- [x] **Design responsivo** para todos os dispositivos
-- [x] **Ícones modernos** via React Icons
-
-### 🎨 Características de Design
-
-- **Paleta Profissional**: Azul tech (`#0066FF`) + Ciano (`#00D9FF`)
-- **Glassmorphism** em cards e elementos
-- **Gradientes modernos** em CTAs e destaques
-- **Tipografia**: Inter (body) + Poppins (headings)
-- **Animações sutis** que não distraem
-- **Modo escuro** em seções estratégicas
+- [x] Navegação suave com scroll animado entre seções
+- [x] Navbar responsiva com menu hambúrguer em mobile
+- [x] Cards de projeto com destaque e expansão ("Ver mais projetos")
+- [x] Modal de projeto com galeria de imagens (setas, indicadores) e lightbox em tela cheia
+- [x] Habilidades organizadas em tags por categoria (proficiente / em aprendizado)
+- [x] Timeline interativa com conquistas expansíveis
+- [x] Formulário de contato funcional via EmailJS
+- [x] Internacionalização PT-BR / EN-US com seletor de idioma
+- [x] SEO dinâmico (meta tags, Open Graph, Twitter Cards) via React Helmet
+- [x] Lazy loading e code splitting por seção
+- [x] Design responsivo, acessível (ARIA, skip link, navegação por teclado)
 
 ---
 
 ## 🛠️ Tecnologias Utilizadas
 
 ### Core
-- **React** 18.2.0 - Biblioteca JavaScript para UI
-- **React Router DOM** 6.20.0 - Navegação e rotas
-- **React Router Hash Link** 2.4.3 - Links com scroll suave
+- **React** 18 + **React Router DOM** + **React Router Hash Link**
 
 ### UI/UX
-- **Bootstrap** 5.3.2 - Framework CSS responsivo
-- **React Bootstrap** 2.9.1 - Componentes React do Bootstrap
-- **React Icons** 4.12.0 - Biblioteca de ícones
-- **AOS** 2.3.4 - Animações on scroll
+- **Bootstrap** 5 + **React Bootstrap**
+- **React Icons**
+- **AOS**: animações on scroll
+
+### Internacionalização & SEO
+- **i18next** + **react-i18next** + **i18next-browser-languagedetector**
+- **react-helmet-async**
 
 ### Formulário
-- **EmailJS** 3.2.0 - Envio de emails (opcional)
+- **@emailjs/browser**: envio de e-mail direto do frontend
 
-### Build & Deploy
-- **React Scripts** 5.0.1 - Scripts do Create React App
-- **Vercel/Netlify** - Plataformas de deploy recomendadas
+### Build
+- **React Scripts** (Create React App)
 
 ---
 
@@ -140,52 +87,31 @@ Este portfólio foi otimizado para **performance, acessibilidade e SEO** em jane
 ```
 portfolio-dev/
 ├── public/
-│   ├── index.html              # HTML principal
-│   ├── manifest.json           # PWA manifest
-│   └── favicon.ico             # Favicon
+│   ├── index.html
+│   ├── manifest.json
+│   └── projects/               # Screenshots dos projetos usados nos cards/modal
 │
 ├── src/
-│   ├── components/             # Componentes React
-│   │   ├── Navigation/
-│   │   │   ├── Navigation.jsx
-│   │   │   └── Navigation.css
-│   │   ├── Hero/
-│   │   │   ├── Hero.jsx
-│   │   │   └── Hero.css
-│   │   ├── About/
-│   │   │   ├── About.jsx
-│   │   │   └── About.css
-│   │   ├── Projects/
-│   │   │   ├── Projects.jsx
-│   │   │   └── Projects.css
-│   │   ├── Skills/
-│   │   │   ├── Skills.jsx
-│   │   │   └── Skills.css
-│   │   ├── Timeline/
-│   │   │   ├── Timeline.jsx
-│   │   │   └── Timeline.css
-│   │   ├── Contact/
-│   │   │   ├── Contact.jsx
-│   │   │   └── Contact.css
-│   │   └── Footer/
-│   │       ├── Footer.jsx
-│   │       └── Footer.css
+│   ├── components/              # Um componente por seção (+ .css correspondente)
+│   │   ├── Navigation/ Hero/ About/ Projects/ Skills/ Timeline/ Contact/ Footer/
+│   │   └── SEO/ ScrollProgress/ LanguageSwitcher/
 │   │
-│   ├── data/                   # Dados estruturados
-│   │   ├── projectsData.js     # Dados dos projetos
-│   │   ├── skillsData.js       # Dados das habilidades
-│   │   └── timelineData.js     # Dados da trajetória
+│   ├── locales/                 # Fonte real dos textos do site (pt-BR e en-US)
+│   │   ├── pt-BR/*.json
+│   │   └── en-US/*.json
 │   │
-│   ├── styles/
-│   │   └── globals.css         # Estilos globais e variáveis CSS
-│   │
-│   ├── App.js                  # Componente principal
-│   └── index.js                # Entry point
+│   ├── i18n/config.js           # Configuração do i18next
+│   ├── data/timelineData.js     # Dados da timeline (única fonte de dados fora do i18n)
+│   ├── styles/globals.css       # Variáveis CSS e estilos globais
+│   ├── App.js
+│   └── index.js
 │
 ├── .gitignore
 ├── package.json
 └── README.md
 ```
+
+> Detalhes de arquitetura (por que o conteúdo vive em `locales/` e não em `data/`, como o i18n é montado, etc.) estão documentados em [CLAUDE.md](./CLAUDE.md).
 
 ---
 
@@ -193,324 +119,84 @@ portfolio-dev/
 
 ### Pré-requisitos
 
-- **Node.js** 14+ e **npm** 6+ instalados
-- Git (opcional, para clonar o repositório)
+- **Node.js** 18+ e **npm**
 
-### Passo 1: Clonar ou baixar o projeto
-
-```bash
-# Se estiver no GitHub
-git clone https://github.com/seu-usuario/portfolio-dev.git
-cd portfolio-dev
-
-# Ou simplesmente navegue até a pasta do projeto
-cd portfolio-dev
-```
-
-### Passo 2: Instalar dependências
+### Passos
 
 ```bash
+git clone https://github.com/leooliveira00/portfolio-dev.git
+cd portfolio-dev
 npm install
-```
-
-Isso instalará todas as dependências listadas no `package.json`.
-
-### Passo 3: Iniciar servidor de desenvolvimento
-
-```bash
 npm start
 ```
 
-O projeto abrirá automaticamente em [http://localhost:3000](http://localhost:3000)
+O projeto abre em [http://localhost:3000](http://localhost:3000)
+
+### Variáveis de ambiente
+
+O formulário de contato usa EmailJS. Crie um arquivo `.env` na raiz (nunca commitado, já está no `.gitignore`) com:
+
+```
+REACT_APP_EMAILJS_SERVICE_ID=xxxxxxxx
+REACT_APP_EMAILJS_TEMPLATE_ID=xxxxxxxx
+REACT_APP_EMAILJS_PUBLIC_KEY=xxxxxxxx
+```
+
+Sem essas variáveis, o envio do formulário falha silenciosamente no `catch` do `Contact.jsx`.
 
 ---
 
 ## 📜 Scripts Disponíveis
 
-No diretório do projeto, você pode executar:
-
-### `npm start`
-Inicia o servidor de desenvolvimento.
-- Abre [http://localhost:3000](http://localhost:3000)
-- Hot reload habilitado
-- Erros e avisos aparecem no console
-
-### `npm run build`
-Cria a versão otimizada para produção na pasta `build/`.
-- Minifica código
-- Otimiza assets
-- Pronto para deploy
-
-### `npm test`
-Executa os testes (se configurado).
-
-### `npm run eject`
-**⚠️ Operação irreversível!** Remove a abstração do Create React App.
-
----
-
-## 🎨 Personalização
-
-### 1. Informações Pessoais
-
-Edite os seguintes arquivos para adicionar suas informações:
-
-#### `public/index.html`
-```html
-<title>Seu Nome - Full Stack Developer</title>
-<meta name="author" content="Seu Nome" />
-```
-
-#### Componentes que precisam de personalização:
-- **Hero.jsx**: Altere nome, links sociais e descrição
-- **About.jsx**: Atualize sua história profissional
-- **Contact.jsx**: Configure email, telefone, localização
-- **Footer.jsx**: Atualize copyright e links
-
-### 2. Dados dos Projetos
-
-Edite `src/data/projectsData.js`:
-
-```javascript
-export const projectsData = [
-  {
-    id: 1,
-    title: "Seu Projeto",
-    category: "web", // ou "automation", "infrastructure"
-    shortDescription: "Breve descrição",
-    problem: "Problema que resolveu",
-    solution: "Como resolveu",
-    impact: ["Métrica 1", "Métrica 2"],
-    technologies: ["React", "Node.js"],
-    infrastructureRole: "Como infra foi usada",
-    githubUrl: "https://github.com/seu-usuario/projeto",
-    liveUrl: "https://projeto.com",
-    featured: true // destaque na home
-  }
-  // Adicione mais projetos...
-];
-```
-
-### 3. Habilidades
-
-Edite `src/data/skillsData.js`:
-
-- Ajuste os níveis de proficiência (0-100)
-- Adicione novas habilidades
-- Modifique o status: `"proficient"` ou `"learning"`
-
-### 4. Trajetória Profissional
-
-Edite `src/data/timelineData.js`:
-
-- Adicione suas experiências profissionais
-- Atualize anos, empresas e conquistas
-- Marque a posição atual com `current: true`
-
-### 5. Cores e Estilos
-
-Edite `src/styles/globals.css`:
-
-```css
-:root {
-  --primary-color: #0066FF;      /* Cor primária */
-  --secondary-color: #00D9FF;    /* Cor secundária */
-  --accent-color: #FF6B35;       /* Cor de destaque */
-  /* Altere conforme necessário */
-}
-```
-
-### 6. Configurar EmailJS (Formulário)
-
-Para fazer o formulário de contato funcionar:
-
-1. Crie conta em [EmailJS](https://www.emailjs.com/)
-2. Configure um serviço de email
-3. Crie um template
-4. Instale: `npm install @emailjs/browser`
-5. Edite `Contact.jsx`:
-
-```javascript
-import emailjs from '@emailjs/browser';
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-  
-  emailjs.send(
-    'YOUR_SERVICE_ID',
-    'YOUR_TEMPLATE_ID',
-    formData,
-    'YOUR_PUBLIC_KEY'
-  )
-  .then(() => {
-    setFormStatus({ success: true, message: 'Enviado!' });
-  })
-  .catch(() => {
-    setFormStatus({ success: false, message: 'Erro!' });
-  });
-};
-```
+| Comando | Descrição |
+|---|---|
+| `npm start` | Servidor de desenvolvimento com hot reload |
+| `npm run build` | Build de produção na pasta `build/` |
+| `npm test` | Executa os testes (nenhum teste implementado ainda) |
+| `npm run eject` | ⚠️ Irreversível, remove a abstração do Create React App |
 
 ---
 
 ## 🌐 Deploy
 
-### Opção 1: Vercel (Recomendado)
+### GitHub Pages
 
-1. **Instalar Vercel CLI**
-```bash
-npm install -g vercel
-```
+As imagens dos projetos usam caminho absoluto (`/projects/...`), então o site precisa ser servido a partir da **raiz do domínio**. Isso significa publicar numa *user page* (repositório `leooliveira00.github.io`), em vez de uma *project page* (`.../portfolio-dev/`), que quebraria esses caminhos.
 
-2. **Fazer deploy**
 ```bash
 npm run build
-vercel
+# publicar o conteúdo de build/ no repositório leooliveira00.github.io
 ```
 
-3. **Seguir instruções** no terminal
+### Alternativas (Vercel / Netlify)
 
-**Ou via GitHub:**
-1. Faça push do código para GitHub
-2. Acesse [vercel.com](https://vercel.com)
-3. Importe o repositório
-4. Deploy automático!
-
-### Opção 2: Netlify
-
-1. **Build do projeto**
-```bash
-npm run build
-```
-
-2. **Arraste a pasta `build/`** para [Netlify Drop](https://app.netlify.com/drop)
-
-**Ou via CLI:**
-```bash
-npm install -g netlify-cli
-npm run build
-netlify deploy --prod --dir=build
-```
-
-### Opção 3: GitHub Pages
-
-1. **Instalar gh-pages**
-```bash
-npm install --save-dev gh-pages
-```
-
-2. **Adicionar ao `package.json`**
-```json
-{
-  "homepage": "https://seu-usuario.github.io/portfolio-dev",
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
-  }
-}
-```
-
-3. **Deploy**
-```bash
-npm run deploy
-```
+Ambos detectam automaticamente o build do Create React App a partir do repositório Git, sem esse problema de subpasta.
 
 ---
 
-## 📊 Otimizações
+## 📞 Contato
 
-### Performance
-- [x] Lazy loading de imagens
-- [x] Code splitting
-- [x] Minificação de CSS/JS
-- [x] Compressão de assets
+**Leonardo Sousa**
 
-### SEO
-- [x] Meta tags configuradas
-- [x] Semantic HTML
-- [x] Títulos descritivos
-- [x] Alt text em imagens
-
-### Acessibilidade
-- [x] ARIA labels
-- [x] Navegação por teclado
-- [x] Contraste adequado
-- [x] Responsivo mobile-first
+- 💼 LinkedIn: [linkedin.com/in/leooliveira00](https://www.linkedin.com/in/leooliveira00/)
+- 🐙 GitHub: [github.com/leooliveira00](https://github.com/leooliveira00/)
+- 📧 Email: lsousa2020@hotmail.com
 
 ---
 
-## 🤝 Contribuindo
-
-Este é um projeto pessoal, mas sugestões são bem-vindas!
-
-1. Fork o projeto
-2. Crie uma branch (`git checkout -b feature/NovaFeature`)
-3. Commit suas mudanças (`git commit -m 'Add NovaFeature'`)
-4. Push para a branch (`git push origin feature/NovaFeature`)
-5. Abra um Pull Request
-
----
-
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo `LICENSE` para mais detalhes.
-
----
-
-## 👨‍💻 Autor
-
-**Seu Nome**
-
-- 💼 LinkedIn: [linkedin.com/in/seu-perfil](https://linkedin.com/in/seu-perfil)
-- 🐙 GitHub: [github.com/seu-usuario](https://github.com/seu-usuario)
-- 📧 Email: seu-email@exemplo.com
-
----
-
-## 🙏 Agradecimentos
-
-- React Team pela incrível biblioteca
-- Bootstrap pela framework CSS
-- Comunidade open source pelas bibliotecas utilizadas
-
----
-
-## 📌 Notas Importantes
-
-### Para Recrutadores
+## 📌 Para Recrutadores
 
 Este portfólio demonstra:
-- ✅ Capacidade de resolver problemas reais
-- ✅ Conhecimento em React e desenvolvimento moderno
-- ✅ Experiência única em infraestrutura + desenvolvimento
-- ✅ Atenção a detalhes de design e UX
-- ✅ Código limpo e bem organizado
+- ✅ Capacidade de resolver problemas reais de negócio, com métricas de impacto
+- ✅ Experiência combinando infraestrutura e desenvolvimento full stack
+- ✅ Projetos com arquitetura não trivial (integração com ERP, motores de regras de negócio, autenticação, i18n)
+- ✅ Atenção a detalhes de design, UX e acessibilidade
 
-### Próximos Passos
+---
 
-- [ ] Adicionar mais projetos conforme desenvolve
-- [ ] Implementar blog/artigos (opcional)
-- [ ] Adicionar certificações e cursos
+## 📌 Próximos Passos
+
+- [ ] Configurar domínio personalizado
 - [ ] Implementar testes automatizados
 - [ ] Adicionar analytics (Google Analytics / Plausible)
-- [ ] Configurar domínio personalizado
-
----
-
-## 🎯 Posicionamento Profissional
-
-**"Full Stack Developer com Base em Infraestrutura"**
-
-Este portfólio posiciona você como:
-- Desenvolvedor full stack competente
-- Com diferencial técnico em infraestrutura
-- Capaz de criar soluções end-to-end
-- Focado em resolver problemas reais
-- Em constante evolução profissional
-
----
-
-**Desenvolvido com 💙 usando React, Bootstrap e muita dedicação**
-
-⭐ Se este projeto te ajudou, considere dar uma estrela no GitHub!
-
+- [ ] Adicionar certificações e cursos conforme concluídos

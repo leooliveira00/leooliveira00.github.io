@@ -1,12 +1,6 @@
 {
   "title": "Projetos que Resolvem Problemas Reais",
   "subtitle": "Aplicações práticas que combinam desenvolvimento e conhecimento em infraestrutura",
-  "categories": {
-    "all": "Todos os Projetos",
-    "web": "Desenvolvimento Web",
-    "automation": "Automação & Dados",
-    "infrastructure": "Infraestrutura & DevOps"
-  },
   "viewDetails": "Ver detalhes",
   "gallery": {
     "prev": "Imagem anterior",
@@ -14,10 +8,10 @@
     "goTo": "Ir para a imagem"
   },
   "featuredLabel": "Projetos em Destaque",
+  "inDevelopmentLabel": "Em Desenvolvimento",
   "moreLabel": "Mais Projetos",
   "showMore": "Ver mais projetos",
   "showLess": "Ver menos",
-  "noProjects": "Nenhum projeto encontrado nesta categoria.",
   "modal": {
     "problem": "O Desafio",
     "solution": "A Solução",
@@ -30,37 +24,17 @@
   },
   "projects": [
     {
-      "title": "Sistema de Reservas de Salas",
-      "category": "web",
-      "categoryLabel": "Desenvolvimento Web",
-      "shortDescription": "Sistema web full stack para gerenciamento de reservas de salas em ambiente corporativo",
-      "problem": "Controle manual em papel gerava conflitos de agendamento, retrabalho e baixa adesão dos colaboradores em duas unidades da empresa.",
-      "solution": "Aplicação web centralizada, calendário interativo e notificações automáticas, digitalizando completamente o processo de reservas.",
-      "impact": [
-        "150+ colaboradores ativos em 2 unidades (matriz e filial)",
-        "100+ agendamentos processados mensalmente",
-        "Eliminação de conflitos de agendamento",
-        "Redução de 90% no tempo de reserva de salas",
-        "Notificações via e-mail"
-      ],
-      "technologies": ["JavaScript", "HTML5", "CSS3", "Bootstrap", "Express.js", "Node.js", "MSSQL Express"],
-      "infrastructureRole": "Deploy com Docker em servidor Linux, backup automatizado, monitoramento de uptime e logs centralizados.",
-      "githubUrl": null,
-      "liveUrl": null,
-      "featured": false
-    },
-    {
-      "title": "Plataforma de Forecast de Vendas com IA",
+      "title": "Sales Forecast Web: Plataforma de Forecast de Vendas com IA",
       "category": "web",
       "categoryLabel": "Desenvolvimento Web",
       "shortDescription": "Plataforma full-stack que substitui planilhas de forecast por um fluxo colaborativo com aprovação, auditoria e previsão assistida por IA",
       "problem": "Múltiplas unidades de venda consolidavam previsões mensais em planilhas soltas por e-mail: cada gestor preenchia a sua, a consolidação era manual, aprovações aconteciam fora do arquivo e não havia histórico confiável de quem mudou o quê.",
       "solution": "Plataforma web com fluxo de estados (rascunho → submissão → aprovação), motor de IA que testa 6 modelos estatísticos de série temporal por produto/unidade e seleciona o de menor erro, e dashboards consolidados que comparam orçado × forecast × vendas realizadas.",
       "impact": [
-        "Substituição completa de planilhas por um fluxo único com trilha de auditoria",
+        "Controla hoje o forecast de mais de 600 SKUs em 8 unidades de venda, nacionais e de exportação",
         "Motor de IA testa 6 modelos estatísticos por série e seleciona automaticamente o de menor erro",
+        "Substituição completa de planilhas por um fluxo único com trilha de auditoria",
         "Integração bidirecional com ERP para sincronização de dados e exportação de resultados",
-        "4 perfis de acesso com controle reforçado no backend (gestor, PCP, TI, consulta)",
         "Interface multi-idioma (português, inglês e espanhol)"
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
@@ -69,66 +43,66 @@
         "/projects/sales-forecast-consolidado.jpg",
         "/projects/sales-forecast-aprovacoes.jpg",
         "/projects/sales-forecast-meu-forecast.jpg",
-        "/projects/sales-forecast-login.jpg"
+        "/projects/sales-forecast-login.jpg",
+        "/projects/sales-forecast-mobile.jpg"
       ],
+      "disclaimer": "Este projeto contém dados fictícios para apresentação no portfólio; as métricas de uso e benefícios vêm da aplicação real, levantadas com usuários-chave.",
       "githubUrl": null,
       "liveUrl": null,
       "featured": true
     },
     {
-      "title": "Automação de Extração DATASUS",
-      "category": "automation",
-      "categoryLabel": "Automação & Dados",
-      "shortDescription": "Automação Python para extração e análise de dados DATASUS para inteligência de mercado",
-      "problem": "Departamento de Marketing precisava de dados do DATASUS para análise de concorrentes e market share, mas extração manual era demorada e propensa a erros.",
-      "solution": "Script Python que automatiza extração mensal de dados DATASUS, filtra informações relevantes e disponibiliza em banco de dados para análise de inteligência de mercado.",
-      "impact": [
-        "Automação 100% da extração e filtragem de dados",
-        "Execução mensal agendada via Task Scheduler",
-        "Dados de vendas e concorrência disponíveis para análise estratégica",
-        "Suporte à inteligência de mercado do departamento de Marketing",
-        "Análise de vendas mês-2 para tomada de decisão"
-      ],
-      "technologies": ["Python", "Pandas", "Requests", "Task Scheduler"],
-      "infrastructureRole": "Agendamento via Task Scheduler, logs estruturados, tratamento de erros e notificações automáticas via e-mail",
-      "githubUrl": null,
-      "liveUrl": null,
-      "featured": false
-    },
-    {
-      "title": "Sistema de Gestão de Capacidade para Estudos de Estabilidade",
+      "title": "App Stability Control: Gestão de Estudos de Estabilidade",
       "category": "web",
       "categoryLabel": "Desenvolvimento Web",
-      "shortDescription": "Plataforma que controla estudos de estabilidade de produtos médicos e aloca automaticamente a capacidade de estufas/incubadoras via algoritmo de otimização",
-      "problem": "O controle de estudos de estabilidade e a alocação de amostras em estufas/incubadoras era feito manualmente, sem visibilidade de capacidade disponível nem verificação sistemática de conflitos entre estudos concorrentes.",
-      "solution": "Motor de alocação que calcula, para cada estudo, quais incubadoras atendem as condições exigidas de temperatura/umidade, verifica conflitos de capacidade e altura entre estudos com janelas sobrepostas, e sugere a melhor alocação priorizando o reaproveitamento de prateleiras já em uso.",
+      "shortDescription": "Plataforma que controla estudos de estabilidade de produtos médicos e aloca automaticamente a capacidade de incubadoras por cubagem, com simulação antes de confirmar",
+      "problem": "Estudos de estabilidade acompanham como um produto se comporta ao longo do tempo sob condição controlada de temperatura e umidade. Feito manualmente (planilha e controle visual da câmara), o processo perde rastreabilidade conforme o volume de estudos cresce: é fácil alocar uma incubadora além da capacidade, perder o histórico de quem alterou o quê, ou não perceber uma condição conflitante entre dois estudos concorrentes na mesma câmara.",
+      "solution": "Motor de alocação que mede a capacidade por cubagem (volume), não por posição fixa de prateleira, permitindo combinar caixas de tamanhos diferentes na mesma incubadora. Antes de confirmar um estudo, o simulador testa todas as câmaras compatíveis considerando condição exigida, ocupação de estudos concorrentes e janelas de tempo sobrepostas, reportando a melhor opção ou o motivo do conflito.",
       "impact": [
-        "Algoritmo de alocação substitui o controle manual de capacidade das estufas",
-        "Verificação automática de conflitos entre estudos concorrentes por período e capacidade física",
-        "Rastreamento completo do ciclo de retirada de amostras (pull points) por estudo",
-        "Versionamento com Conventional Commits e releases automatizados (semantic-release)"
+        "Motor de alocação por cubagem: considera o volume real de cada caixa, não posições fixas por prateleira",
+        "Regra de condição exclusiva por câmara: bloqueia dois estudos com temperatura/umidade diferentes sobrepostos no tempo, mesmo quando a incubadora suporta fisicamente ambas",
+        "Liberação progressiva de capacidade a cada retirada de amostra confirmada, não apenas ao final do estudo",
+        "Cronograma automático por tipo de estudo, incluindo calculadora de estudo acelerado embutida",
+        "Emissão automática de protocolo e relatório final em PDF, consolidando os resultados de todos os checkpoints"
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker"],
-      "infrastructureRole": "Deploy em containers Docker atrás de Traefik, schema versionado com Prisma Migrate, pipeline de release semântico com Conventional Commits.",
+      "infrastructureRole": "Deploy em containers Docker, schema versionado com Prisma Migrate, pipeline de release semântico com Conventional Commits.",
+      "images": [
+        "/projects/stability-mapa.jpg",
+        "/projects/stability-dashboard.jpg",
+        "/projects/stability-incubadoras.jpg",
+        "/projects/stability-estudos.jpg",
+        "/projects/stability-login.jpg"
+      ],
+      "disclaimer": "Este projeto contém dados fictícios para apresentação no portfólio; a arquitetura e as regras de negócio refletem a aplicação real, ainda em desenvolvimento.",
       "githubUrl": null,
       "liveUrl": null,
-      "featured": true
+      "featured": true,
+      "inDevelopment": true
     },
     {
-      "title": "Plataforma de Automação de Rateio Contábil",
+      "title": "FinanceFlow: Automação de Rateio Contábil",
       "category": "web",
       "categoryLabel": "Desenvolvimento Web",
-      "shortDescription": "Plataforma modular que automatiza lançamentos contábeis recorrentes, concilia documentos e integra com ERP corporativo",
-      "problem": "Lançamentos contábeis recorrentes (mensalidades, descontos e faturas de fornecedores) eram processados manualmente por múltiplos departamentos, com conciliação sujeita a erro e sem trilha de auditoria de quem lançou o quê.",
-      "solution": "Plataforma com arquitetura de módulos plugáveis — cada processo de rateio é descoberto automaticamente no startup, permitindo adicionar novos processos sem alterar o núcleo do sistema. Concilia os documentos recebidos, lança automaticamente no ERP e notifica o departamento responsável por e-mail.",
+      "shortDescription": "Plataforma modular que automatiza rateio contábil, concilia documentos fiscais e lança automaticamente no ERP, com arquitetura plugável para novos processos",
+      "problem": "Departamentos como RH e Financeiro processavam manualmente lançamentos contábeis recorrentes (mensalidade de plano de saúde, desconto de coparticipação em folha, faturas de fornecedores), conferindo o valor contra a nota ou boleto em planilha: um trabalho repetitivo, sujeito a erro humano (percentual errado, esquecimento de um centro de custo, lançamento em duplicidade) e sem trilha de auditoria de quem lançou o quê.",
+      "solution": "Plataforma com arquitetura de módulos plugáveis: cada tipo de rateio é um pacote independente, descoberto automaticamente no startup, permitindo adicionar um novo processo copiando um template, sem alterar o restante do sistema. O fluxo é único para todos: upload do documento → cálculo do rateio por centro de custo → reconciliação automática contra o valor fiscal → lançamento no ERP → notificação de quem precisa saber.",
       "impact": [
-        "Arquitetura de plugins: novos processos de rateio são adicionados sem alterar o núcleo da aplicação",
-        "Estratégia de dupla base no ERP (leitura da base oficial, escrita na base de teste) para rollout seguro em produção — troca de ambiente via variável de configuração",
-        "Trava anti-parcial: lançamentos multi-documento só são confirmados no ERP quando todos os itens são aceitos",
-        "Controle de acesso por área/departamento com notificação automática ao setor responsável"
+        "Economiza de 2 a 3 dias de trabalho de 2 colaboradores por ciclo nos processos já automatizados, com potencial de crescer a cada novo processo migrado para a plataforma",
+        "Arquitetura de módulos plugáveis: 5 processos de rateio ativos hoje (mensalidades, desconto em folha, faturas de fornecedores), cada um adicionado sem alterar o núcleo do sistema",
+        "Regras de negócio complexas centralizadas: teto de desconto por percentual do salário, consolidação de múltiplos planos por colaborador num único lançamento, resolução automática de vínculo duplicado entre empresas do mesmo grupo",
+        "Trava anti-parcial com reenvio seletivo: falha parcial no ERP nunca duplica lançamentos já aceitos"
       ],
-      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "Docker"],
-      "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, deploy em containers Docker atrás de Traefik, gate automatizado de qualidade com ruff e mypy.",
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker"],
+      "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, autenticação JWT com bcrypt, deploy em containers Docker, versionamento semântico automatizado (semantic-release) com gate de qualidade via ruff e mypy.",
+      "images": [
+        "/projects/financeflow-painel.jpg",
+        "/projects/financeflow-resultado.jpg",
+        "/projects/financeflow-upload.jpg",
+        "/projects/financeflow-configuracoes.jpg",
+        "/projects/financeflow-login.jpg"
+      ],
+      "disclaimer": "Este projeto contém dados fictícios para apresentação no portfólio; as métricas de uso e benefícios vêm da aplicação real, levantadas com usuários-chave.",
       "githubUrl": null,
       "liveUrl": null,
       "featured": true

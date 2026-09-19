@@ -30,9 +30,11 @@ const Navigation = () => {
   };
 
   return (
-    <Navbar 
-      expand="lg" 
-      fixed="top" 
+    <Navbar
+      expand="lg"
+      fixed="top"
+      expanded={mobileMenuOpen}
+      onToggle={(expanded) => setMobileMenuOpen(expanded)}
       className={`custom-navbar ${scrolled ? 'scrolled' : ''}`}
     >
       <Container>
@@ -44,10 +46,7 @@ const Navigation = () => {
           </span>
         </Navbar.Brand>
 
-        <Navbar.Toggle 
-          aria-controls="navbar-nav"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-        >
+        <Navbar.Toggle aria-controls="navbar-nav">
           {mobileMenuOpen ? <FaTimes /> : <FaBars />}
         </Navbar.Toggle>
 
