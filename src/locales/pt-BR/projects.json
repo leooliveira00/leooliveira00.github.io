@@ -1,6 +1,6 @@
 {
   "title": "Projetos que Resolvem Problemas Reais",
-  "subtitle": "Aplicações práticas que combinam desenvolvimento e conhecimento em infraestrutura",
+  "subtitle": "Soluções full stack desenvolvidas para resolver problemas reais de negócio",
   "viewDetails": "Ver detalhes",
   "gallery": {
     "prev": "Imagem anterior",
@@ -16,7 +16,8 @@
     "problem": "O Desafio",
     "solution": "A Solução",
     "impact": "Impacto e Resultados",
-    "infrastructure": "Infraestrutura",
+    "infrastructure": "Infraestrutura e Arquitetura",
+    "myRole": "Meu Papel",
     "stack": "Stack Tecnológica",
     "github": "Ver no GitHub",
     "live": "Ver Projeto Ao Vivo",
@@ -39,6 +40,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
       "infrastructureRole": "Orquestração via Docker Compose com Traefik como proxy reverso, DAGs Airflow para sincronização com ERP e execução do motor de forecast, autenticação dupla (JWT de usuário + token estático para chamadas internas do Airflow).",
+      "myRole": ["Arquitetura", "Desenvolvimento Full Stack", "Integração com ERP", "Modelagem de Dados", "Automação", "Infraestrutura"],
       "images": [
         "/projects/sales-forecast-consolidado.jpg",
         "/projects/sales-forecast-aprovacoes.jpg",
@@ -47,7 +49,7 @@
         "/projects/sales-forecast-mobile.jpg"
       ],
       "disclaimer": "Este projeto contém dados fictícios para apresentação no portfólio; as métricas de uso e benefícios vêm da aplicação real, levantadas com usuários-chave.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/leooliveira00/app-sales-forecast",
       "liveUrl": null,
       "featured": true
     },
@@ -67,6 +69,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker"],
       "infrastructureRole": "Deploy em containers Docker, schema versionado com Prisma Migrate, pipeline de release semântico com Conventional Commits.",
+      "myRole": ["Arquitetura", "Desenvolvimento Full Stack", "Implementação das Regras de Negócio", "Modelagem de Dados", "Infraestrutura"],
       "images": [
         "/projects/stability-mapa.jpg",
         "/projects/stability-dashboard.jpg",
@@ -95,6 +98,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker"],
       "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, autenticação JWT com bcrypt, deploy em containers Docker, versionamento semântico automatizado (semantic-release) com gate de qualidade via ruff e mypy.",
+      "myRole": ["Arquitetura", "Desenvolvimento Full Stack", "Implementação das Regras de Negócio", "Integração com ERP", "Automação", "Infraestrutura"],
       "images": [
         "/projects/financeflow-painel.jpg",
         "/projects/financeflow-resultado.jpg",
@@ -103,7 +107,7 @@
         "/projects/financeflow-login.jpg"
       ],
       "disclaimer": "Este projeto contém dados fictícios para apresentação no portfólio; as métricas de uso e benefícios vêm da aplicação real, levantadas com usuários-chave.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/leooliveira00/app-finance-flow",
       "liveUrl": null,
       "featured": true
     }

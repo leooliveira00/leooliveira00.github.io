@@ -15,6 +15,7 @@ import ScrollProgress from './components/ScrollProgress/ScrollProgress';
 
 // Lazy load de componentes abaixo da dobra
 const About = lazy(() => import('./components/About/About'));
+const WhatIBuild = lazy(() => import('./components/WhatIBuild/WhatIBuild'));
 const Projects = lazy(() => import('./components/Projects/Projects'));
 const Skills = lazy(() => import('./components/Skills/Skills'));
 const Contact = lazy(() => import('./components/Contact/Contact'));
@@ -65,6 +66,7 @@ function App() {
             <Hero />
             <Suspense fallback={<LoadingFallback />}>
               <About />
+              <WhatIBuild />
               <Projects />
               <Skills />
               <Contact />

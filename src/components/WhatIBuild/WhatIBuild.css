@@ -1,0 +1,68 @@
+.capability-grid {
+  margin-top: 20px;
+}
+
+.capability-card {
+  height: 100%;
+  background: var(--light-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 20px;
+  padding: 32px 28px;
+  text-align: center;
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.capability-card:hover {
+  transform: translateY(-8px);
+  border-color: var(--primary-color);
+  box-shadow: var(--shadow-lg);
+}
+
+.capability-icon {
+  width: 64px;
+  height: 64px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gradient-primary);
+  color: white;
+  border-radius: 16px;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 20px rgba(0, 127, 255, 0.3);
+  transition: transform 0.3s ease;
+}
+
+.capability-card:hover .capability-icon {
+  transform: scale(1.08) rotate(-4deg);
+}
+
+.capability-title {
+  font-size: 1.15rem;
+  color: var(--text-light);
+  margin-bottom: 12px;
+}
+
+.capability-description {
+  font-size: 0.9rem;
+  color: var(--text-gray);
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+@media (max-width: 576px) {
+  .capability-card {
+    padding: 28px 24px;
+  }
+
+  .capability-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.4rem;
+  }
+
+  .capability-title {
+    font-size: 1.05rem;
+  }
+}

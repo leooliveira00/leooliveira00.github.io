@@ -7,7 +7,7 @@
   },
   "sections": {
     "development": "Desenvolvimento",
-    "infrastructure": "Infraestrutura & DevOps"
+    "infrastructure": "Infraestrutura & Automação"
   },
   "groups": {
     "frontend": "Frontend",
@@ -27,7 +27,7 @@
     "databases": "PostgreSQL & MSSQL",
     "apiAuth": "RESTful APIs, JWT & RBAC",
     "airflowAutomation": "Apache Airflow & Automação Python",
-    "gitCicd": "Git & CI/CD (Semantic Release)",
+    "gitCicd": "Git, CI/CD e Semantic Release",
     "bashScripting": "Bash Scripting",
     "dockerCompose": "Docker & Docker Compose",
     "traefik": "Traefik (Reverse Proxy)",

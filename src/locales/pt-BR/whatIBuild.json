@@ -1,0 +1,22 @@
+{
+  "title": "O que eu construo",
+  "subtitle": "Aplicações e automações voltadas para problemas reais de negócio",
+  "cards": {
+    "web": {
+      "title": "Aplicações Web",
+      "description": "Sistemas full stack com frontend moderno, backend em Node.js e Python, APIs REST e bancos relacionais."
+    },
+    "integrations": {
+      "title": "Integrações",
+      "description": "APIs e integrações entre aplicações, bancos de dados e sistemas corporativos."
+    },
+    "automation": {
+      "title": "Automação",
+      "description": "Processos automatizados para reduzir tarefas manuais e melhorar confiabilidade operacional."
+    },
+    "corporate": {
+      "title": "Sistemas Corporativos",
+      "description": "Soluções para processos financeiros, comerciais e operacionais, com controle de acesso, auditoria e regras de negócio."
+    }
+  }
+}

@@ -1,6 +1,6 @@
 {
   "title": "Projects That Solve Real Problems",
-  "subtitle": "Practical applications combining development and infrastructure knowledge",
+  "subtitle": "Full-stack solutions built to solve real business problems",
   "viewDetails": "View details",
   "gallery": {
     "prev": "Previous image",
@@ -16,7 +16,8 @@
     "problem": "The Challenge",
     "solution": "The Solution",
     "impact": "Impact and Results",
-    "infrastructure": "Infrastructure",
+    "infrastructure": "Infrastructure and Architecture",
+    "myRole": "My Role",
     "stack": "Technology Stack",
     "github": "View on GitHub",
     "live": "View Live Project",
@@ -39,6 +40,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
       "infrastructureRole": "Docker Compose orchestration with Traefik as reverse proxy, Airflow DAGs for ERP sync and forecast engine execution, dual authentication (user JWT + static token for internal Airflow calls).",
+      "myRole": ["Architecture", "Full Stack Development", "ERP Integration", "Data Modeling", "Automation", "Infrastructure"],
       "images": [
         "/projects/sales-forecast-consolidado.jpg",
         "/projects/sales-forecast-aprovacoes.jpg",
@@ -47,7 +49,7 @@
         "/projects/sales-forecast-mobile.jpg"
       ],
       "disclaimer": "This project uses fictional data for portfolio presentation; the usage metrics and benefits come from the real application, gathered with key users.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/leooliveira00/app-sales-forecast",
       "liveUrl": null,
       "featured": true
     },
@@ -67,6 +69,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Docker"],
       "infrastructureRole": "Docker container deployment, schema versioned with Prisma Migrate, semantic release pipeline with Conventional Commits.",
+      "myRole": ["Architecture", "Full Stack Development", "Business Rules Implementation", "Data Modeling", "Infrastructure"],
       "images": [
         "/projects/stability-mapa.jpg",
         "/projects/stability-dashboard.jpg",
@@ -95,6 +98,7 @@
       ],
       "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker"],
       "infrastructureRole": "Python backend (FastAPI + SQLAlchemy 2.0) with idempotent migrations, JWT authentication with bcrypt, Docker deployment, automated semantic versioning (semantic-release) with a ruff and mypy quality gate.",
+      "myRole": ["Architecture", "Full Stack Development", "Business Rules Implementation", "ERP Integration", "Automation", "Infrastructure"],
       "images": [
         "/projects/financeflow-painel.jpg",
         "/projects/financeflow-resultado.jpg",
@@ -103,7 +107,7 @@
         "/projects/financeflow-login.jpg"
       ],
       "disclaimer": "This project uses fictional data for portfolio presentation; the usage metrics and benefits come from the real application, gathered with key users.",
-      "githubUrl": null,
+      "githubUrl": "https://github.com/leooliveira00/app-finance-flow",
       "liveUrl": null,
       "featured": true
     }

@@ -1,0 +1,22 @@
+{
+  "title": "What I Build",
+  "subtitle": "Applications and automations built for real business problems",
+  "cards": {
+    "web": {
+      "title": "Web Applications",
+      "description": "Full stack systems with a modern frontend, Node.js and Python backends, REST APIs, and relational databases."
+    },
+    "integrations": {
+      "title": "Integrations",
+      "description": "APIs and integrations between applications, databases, and corporate systems."
+    },
+    "automation": {
+      "title": "Automation",
+      "description": "Automated processes that reduce manual work and improve operational reliability."
+    },
+    "corporate": {
+      "title": "Corporate Systems",
+      "description": "Solutions for financial, commercial, and operational processes, with access control, auditing, and business rules."
+    }
+  }
+}

@@ -39,8 +39,7 @@ Portfólio profissional que posiciona minha transição de **Infraestrutura de T
 2. **Sobre**: a trajetória de infraestrutura a full stack
 3. **Projetos**: cards com destaque, modal detalhado (problema, solução, impacto, stack) e galeria de imagens navegável
 4. **Habilidades**: desenvolvimento e infraestrutura, organizadas por grupo
-5. **Trajetória**: timeline da evolução profissional com conquistas expansíveis
-6. **Contato**: formulário funcional (EmailJS) e links sociais
+5. **Contato**: formulário funcional (EmailJS) e links sociais
 
 ---
 
@@ -51,7 +50,6 @@ Portfólio profissional que posiciona minha transição de **Infraestrutura de T
 - [x] Cards de projeto com destaque e expansão ("Ver mais projetos")
 - [x] Modal de projeto com galeria de imagens (setas, indicadores) e lightbox em tela cheia
 - [x] Habilidades organizadas em tags por categoria (proficiente / em aprendizado)
-- [x] Timeline interativa com conquistas expansíveis
 - [x] Formulário de contato funcional via EmailJS
 - [x] Internacionalização PT-BR / EN-US com seletor de idioma
 - [x] SEO dinâmico (meta tags, Open Graph, Twitter Cards) via React Helmet
@@ -93,7 +91,7 @@ portfolio-dev/
 │
 ├── src/
 │   ├── components/              # Um componente por seção (+ .css correspondente)
-│   │   ├── Navigation/ Hero/ About/ Projects/ Skills/ Timeline/ Contact/ Footer/
+│   │   ├── Navigation/ Hero/ About/ Projects/ Skills/ Contact/ Footer/
 │   │   └── SEO/ ScrollProgress/ LanguageSwitcher/
 │   │
 │   ├── locales/                 # Fonte real dos textos do site (pt-BR e en-US)
@@ -101,7 +99,6 @@ portfolio-dev/
 │   │   └── en-US/*.json
 │   │
 │   ├── i18n/config.js           # Configuração do i18next
-│   ├── data/timelineData.js     # Dados da timeline (única fonte de dados fora do i18n)
 │   ├── styles/globals.css       # Variáveis CSS e estilos globais
 │   ├── App.js
 │   └── index.js

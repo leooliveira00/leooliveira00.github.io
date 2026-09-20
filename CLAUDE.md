@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project
 
-A single-page personal portfolio (React 18 + Create React App, Bootstrap 5) for a full-stack developer with an IT infrastructure background. All sections (Hero, About, Projects, Skills, Timeline, Contact, Footer) render on one page (`src/App.js`) and are navigated via hash links (`HashRouter` + `react-router-hash-link`).
+A single-page personal portfolio (React 18 + Create React App, Bootstrap 5) for a full-stack developer with an IT infrastructure background. All sections (Hero, About, Projects, Skills, Contact, Footer) render on one page (`src/App.js`) and are navigated via hash links (`HashRouter` + `react-router-hash-link`).
 
 ## Commands
 
@@ -21,8 +21,6 @@ There is no lint script; ESLint runs via `react-scripts` using the `react-app` c
 
 - `src/locales/{pt-BR,en-US}/*.json` — the actual source of truth for on-page text. Loaded eagerly and registered as i18next namespaces in `src/i18n/config.js` (one namespace per file: `common`, `hero`, `about`, `projects`, `skills`, `contact`, `footer`).
 - `src/data/projectsData.js` and `src/data/skillsData.js` — **dead code**. `Projects.jsx` and `Skills.jsx` do not import them; instead each component rebuilds an equivalent array/object at render time from `t('projects:projects', { returnObjects: true })` / from individual `t('skills....')` calls, hardcoding things like `technologies` and skill `level` percentages inline in the component. When editing project or skill content, edit the JSON locale files (and keep pt-BR/en-US in sync) plus the parallel hardcoded arrays in the component (technologies list in `Projects.jsx`, skill levels in `Skills.jsx`) — not `src/data/projectsData.js`/`skillsData.js`.
-- `src/data/timelineData.js` — used directly by `Timeline.jsx`, but is **not internationalized at all**: no i18n namespace exists for it, and `Timeline.jsx` also has its own hardcoded Portuguese strings (headings, "Ver conquistas", `typeColors` labels, summary stats). Switching language does not affect the Timeline section. If asked to translate it, this requires adding a new `timeline` namespace/locale files and wiring `useTranslation` into `Timeline.jsx`, mirroring the pattern in `Projects.jsx`/`Skills.jsx`.
-
 ### i18n mechanics
 
 - `src/i18n/config.js` statically imports every JSON file and initializes i18next with `LanguageDetector` (localStorage → navigator) and `fallbackLng: 'pt-BR'`. Adding a new locale namespace means: create the JSON pair under `src/locales/{pt-BR,en-US}/`, import both in `config.js`, and add them to the `resources` map under the appropriate key.

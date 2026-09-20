@@ -62,6 +62,7 @@ const Projects = () => {
     impact: project.impact,
     technologies: project.technologies,
     infrastructureRole: project.infrastructureRole,
+    myRole: project.myRole || [],
     images: project.images || [],
     githubUrl: project.githubUrl || null,
     liveUrl: project.liveUrl || null,
@@ -333,6 +334,17 @@ const Projects = () => {
 
               {/* Two Column Layout for Stack & Infrastructure */}
               <div className="modal-tech-section">
+                {selectedProject.myRole.length > 0 && (
+                  <div className="role-column">
+                    <h4>{t('projects:modal.myRole')}</h4>
+                    <div className="tech-badges">
+                      {selectedProject.myRole.map((role, index) => (
+                        <span key={index} className="tech-badge">{role}</span>
+                      ))}
+                    </div>
+                  </div>
+                )}
+
                 <div className="tech-column">
                   <h4>{t('projects:modal.stack')}</h4>
                   <div className="tech-badges">

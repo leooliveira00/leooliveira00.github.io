@@ -881,6 +881,11 @@
   margin-bottom: 32px;
 }
 
+.infra-column {
+  grid-column: 1 / -1;
+}
+
+.role-column h4,
 .tech-column h4,
 .infra-column h4 {
   display: flex;

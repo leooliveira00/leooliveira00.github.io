@@ -6,6 +6,7 @@ import LanguageDetector from 'i18next-browser-languagedetector';
 import commonPT from '../locales/pt-BR/common.json';
 import heroPT from '../locales/pt-BR/hero.json';
 import aboutPT from '../locales/pt-BR/about.json';
+import whatIBuildPT from '../locales/pt-BR/whatIBuild.json';
 import projectsPT from '../locales/pt-BR/projects.json';
 import skillsPT from '../locales/pt-BR/skills.json';
 import contactPT from '../locales/pt-BR/contact.json';
@@ -15,6 +16,7 @@ import footerPT from '../locales/pt-BR/footer.json';
 import commonEN from '../locales/en-US/common.json';
 import heroEN from '../locales/en-US/hero.json';
 import aboutEN from '../locales/en-US/about.json';
+import whatIBuildEN from '../locales/en-US/whatIBuild.json';
 import projectsEN from '../locales/en-US/projects.json';
 import skillsEN from '../locales/en-US/skills.json';
 import contactEN from '../locales/en-US/contact.json';
@@ -25,6 +27,7 @@ const resources = {
     common: commonPT,
     hero: heroPT,
     about: aboutPT,
+    whatIBuild: whatIBuildPT,
     projects: projectsPT,
     skills: skillsPT,
     contact: contactPT,
@@ -34,6 +37,7 @@ const resources = {
     common: commonEN,
     hero: heroEN,
     about: aboutEN,
+    whatIBuild: whatIBuildEN,
     projects: projectsEN,
     skills: skillsEN,
     contact: contactEN,
