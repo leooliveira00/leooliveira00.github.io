@@ -12,10 +12,15 @@
   "moreLabel": "More Projects",
   "showMore": "Show more projects",
   "showLess": "Show less",
+  "qualityBadge": "CI",
+  "qualityBadgeTitle": "CI pipeline with automated tests",
   "modal": {
     "problem": "The Challenge",
     "solution": "The Solution",
     "impact": "Impact and Results",
+    "engineering": "Engineering and Quality",
+    "decisions": "Technical Decisions",
+    "ci": "View CI pipeline",
     "infrastructure": "Infrastructure and Architecture",
     "myRole": "My Role",
     "stack": "Technology Stack",
@@ -38,8 +43,20 @@
         "Bidirectional ERP integration for data sync and results export",
         "Multi-language interface (Portuguese, English, and Spanish)"
       ],
-      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
+      "technologies": ["React 19", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Python", "Apache Airflow", "Docker"],
       "infrastructureRole": "Docker Compose orchestration with Traefik as reverse proxy, Airflow DAGs for ERP sync and forecast engine execution, dual authentication (user JWT + static token for internal Airflow calls).",
+      "engineering": [
+        "GitHub Actions CI: lint, typecheck, tests (Vitest and pytest) and build",
+        "Tests for critical domain logic: approval flow, active forecast and sMAPE",
+        "Payloads validated with zod, including the Airflow contract",
+        "TypeScript strict, ESLint/Prettier and centralized error handling"
+      ],
+      "technicalDecisions": [
+        "Active forecast resolved by overlapping window, not by the most recent run",
+        "Dual authentication: JWT for users and an internal token for Airflow",
+        "Snapshots as a read cache, never as the source of truth"
+      ],
+      "ciUrl": "https://github.com/leooliveira00/app-sales-forecast/actions/workflows/ci.yml",
       "myRole": ["Architecture", "Full Stack Development", "ERP Integration", "Data Modeling", "Automation", "Infrastructure"],
       "images": [
         "/projects/sales-forecast-consolidado.jpg",
@@ -96,8 +113,20 @@
         "Complex business rules handled centrally: a salary-percentage discount cap, consolidating an employee's multiple health plans into a single posting, automatically resolving duplicate employment records across companies in the same group",
         "Anti-partial lock with selective resend: a partial ERP failure never duplicates postings that were already accepted"
       ],
-      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker"],
-      "infrastructureRole": "Python backend (FastAPI + SQLAlchemy 2.0) with idempotent migrations, JWT authentication with bcrypt, Docker deployment, automated semantic versioning (semantic-release) with a ruff and mypy quality gate.",
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker", "pytest", "Vitest", "Testing Library", "GitHub Actions"],
+      "infrastructureRole": "Python backend (FastAPI + SQLAlchemy 2.0) with idempotent migrations, JWT authentication with bcrypt, Docker deployment, automated semantic versioning (semantic-release) and a CI quality gate (ruff, mypy, pytest, ESLint and Vitest).",
+      "engineering": [
+        "GitHub Actions CI: ruff, mypy, pytest, ESLint, Vitest and build",
+        "Business-rule tests for each apportionment module with synthetic data",
+        "Component tests with Vitest and Testing Library",
+        "TypeScript strict and versioning with semantic-release"
+      ],
+      "technicalDecisions": [
+        "Pluggable apportionment modules, auto-discovered at startup",
+        "Reconciliation that flags mismatches without blocking the process",
+        "ERP with separate read and write targets, for a safe go-live validation"
+      ],
+      "ciUrl": "https://github.com/leooliveira00/app-finance-flow/actions/workflows/ci.yml",
       "myRole": ["Architecture", "Full Stack Development", "Business Rules Implementation", "ERP Integration", "Automation", "Infrastructure"],
       "images": [
         "/projects/financeflow-painel.jpg",

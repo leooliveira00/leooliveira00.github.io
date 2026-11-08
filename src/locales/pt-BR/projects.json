@@ -12,10 +12,15 @@
   "moreLabel": "Mais Projetos",
   "showMore": "Ver mais projetos",
   "showLess": "Ver menos",
+  "qualityBadge": "CI",
+  "qualityBadgeTitle": "Pipeline de CI com testes automatizados",
   "modal": {
     "problem": "O Desafio",
     "solution": "A Solução",
     "impact": "Impacto e Resultados",
+    "engineering": "Engenharia e Qualidade",
+    "decisions": "Decisões Técnicas",
+    "ci": "Ver pipeline de CI",
     "infrastructure": "Infraestrutura e Arquitetura",
     "myRole": "Meu Papel",
     "stack": "Stack Tecnológica",
@@ -38,8 +43,20 @@
         "Integração bidirecional com ERP para sincronização de dados e exportação de resultados",
         "Interface multi-idioma (português, inglês e espanhol)"
       ],
-      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "Node.js", "Express", "Prisma", "PostgreSQL", "Apache Airflow", "Docker"],
+      "technologies": ["React 19", "TypeScript", "Node.js", "Express", "Prisma", "PostgreSQL", "Python", "Apache Airflow", "Docker"],
       "infrastructureRole": "Orquestração via Docker Compose com Traefik como proxy reverso, DAGs Airflow para sincronização com ERP e execução do motor de forecast, autenticação dupla (JWT de usuário + token estático para chamadas internas do Airflow).",
+      "engineering": [
+        "CI no GitHub Actions: lint, typecheck, testes (Vitest e pytest) e build",
+        "Testes do domínio crítico: fluxo de aprovação, forecast vigente e sMAPE",
+        "Payloads validados com zod, incluindo o contrato com o Airflow",
+        "TypeScript strict, ESLint/Prettier e erros centralizados"
+      ],
+      "technicalDecisions": [
+        "Forecast vigente resolvido por janela sobreposta, não pela execução mais recente",
+        "Autenticação dupla: JWT para usuários e token interno para o Airflow",
+        "Snapshots como cache de leitura, nunca como fonte de verdade"
+      ],
+      "ciUrl": "https://github.com/leooliveira00/app-sales-forecast/actions/workflows/ci.yml",
       "myRole": ["Arquitetura", "Desenvolvimento Full Stack", "Integração com ERP", "Modelagem de Dados", "Automação", "Infraestrutura"],
       "images": [
         "/projects/sales-forecast-consolidado.jpg",
@@ -96,8 +113,20 @@
         "Regras de negócio complexas centralizadas: teto de desconto por percentual do salário, consolidação de múltiplos planos por colaborador num único lançamento, resolução automática de vínculo duplicado entre empresas do mesmo grupo",
         "Trava anti-parcial com reenvio seletivo: falha parcial no ERP nunca duplica lançamentos já aceitos"
       ],
-      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker"],
-      "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, autenticação JWT com bcrypt, deploy em containers Docker, versionamento semântico automatizado (semantic-release) com gate de qualidade via ruff e mypy.",
+      "technologies": ["React 19", "TypeScript", "Vite", "Tailwind CSS", "FastAPI", "SQLAlchemy", "PostgreSQL", "JWT", "Docker", "pytest", "Vitest", "Testing Library", "GitHub Actions"],
+      "infrastructureRole": "Backend Python (FastAPI + SQLAlchemy 2.0) com migrações idempotentes, autenticação JWT com bcrypt, deploy em containers Docker, versionamento semântico automatizado (semantic-release) e gate de qualidade no CI (ruff, mypy, pytest, ESLint e Vitest).",
+      "engineering": [
+        "CI no GitHub Actions: ruff, mypy, pytest, ESLint, Vitest e build",
+        "Testes das regras de cada módulo de rateio com dados sintéticos",
+        "Testes de componentes com Vitest e Testing Library",
+        "TypeScript strict e versionamento com semantic-release"
+      ],
+      "technicalDecisions": [
+        "Módulos de rateio plugáveis, descobertos automaticamente no startup",
+        "Reconciliação que alerta divergências sem bloquear o processo",
+        "ERP com bases de leitura e escrita separadas, para validar o go-live com segurança"
+      ],
+      "ciUrl": "https://github.com/leooliveira00/app-finance-flow/actions/workflows/ci.yml",
       "myRole": ["Arquitetura", "Desenvolvimento Full Stack", "Implementação das Regras de Negócio", "Integração com ERP", "Automação", "Infraestrutura"],
       "images": [
         "/projects/financeflow-painel.jpg",
