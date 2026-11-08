@@ -17,8 +17,8 @@ const SEO = ({
   const pageDescription = description || t('pageDescription');
   const pageKeywords = keywords || (
     i18n.language === 'pt-BR' 
-      ? "Full Stack Developer, React, Node.js, Python, DevOps, Infraestrutura, Automação, Leonardo Sousa, desenvolvedor"
-      : "Full Stack Developer, React, Node.js, Python, DevOps, Infrastructure, Automation, Leonardo Sousa, developer"
+      ? "Full Stack Developer, React, TypeScript, Node.js, Python, FastAPI, PostgreSQL, Docker, Infraestrutura, Automação, Integração ERP, Leonardo Sousa, desenvolvedor"
+      : "Full Stack Developer, React, TypeScript, Node.js, Python, FastAPI, PostgreSQL, Docker, Infrastructure, Automation, ERP Integration, Leonardo Sousa, developer"
   );
   const pageLanguage = i18n.language === 'pt-BR' ? 'pt-BR' : 'en-US';
   const siteName = i18n.language === 'pt-BR' 
