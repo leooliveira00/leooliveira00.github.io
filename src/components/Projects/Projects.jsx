@@ -11,7 +11,10 @@ import {
   FaChevronUp,
   FaChevronLeft,
   FaChevronRight,
-  FaExpand
+  FaExpand,
+  FaShieldAlt,
+  FaProjectDiagram,
+  FaCodeBranch
 } from 'react-icons/fa';
 import { useTranslation } from 'react-i18next';
 import './Projects.css';
@@ -62,6 +65,9 @@ const Projects = () => {
     impact: project.impact,
     technologies: project.technologies,
     infrastructureRole: project.infrastructureRole,
+    engineering: project.engineering || [],
+    technicalDecisions: project.technicalDecisions || [],
+    ciUrl: project.ciUrl || null,
     myRole: project.myRole || [],
     images: project.images || [],
     githubUrl: project.githubUrl || null,
@@ -106,8 +112,15 @@ const Projects = () => {
         )}
 
         <div className="project-content">
-          <div className="project-category-badge">
-            {project.categoryLabel}
+          <div className="project-badges">
+            <div className="project-category-badge">
+              {project.categoryLabel}
+            </div>
+            {project.ciUrl && (
+              <div className="project-quality-badge" title={t('projects:qualityBadgeTitle')}>
+                <FaCheckCircle /> {t('projects:qualityBadge')}
+              </div>
+            )}
           </div>
 
           <h3 className="project-title">{project.title}</h3>
@@ -332,6 +345,45 @@ const Projects = () => {
                 </ul>
               </div>
 
+              {/* Engineering quality & technical decisions (only for projects that document them) */}
+              {(selectedProject.engineering.length > 0 || selectedProject.technicalDecisions.length > 0) && (
+                <div className="modal-engineering">
+                  {selectedProject.engineering.length > 0 && (
+                    <div className="engineering-item">
+                      <h4>
+                        <FaShieldAlt className="section-icon" />
+                        {t('projects:modal.engineering')}
+                      </h4>
+                      <ul className="engineering-list">
+                        {selectedProject.engineering.map((item, index) => (
+                          <li key={index}>
+                            <FaCheckCircle className="engineering-icon" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+
+                  {selectedProject.technicalDecisions.length > 0 && (
+                    <div className="engineering-item">
+                      <h4>
+                        <FaProjectDiagram className="section-icon" />
+                        {t('projects:modal.decisions')}
+                      </h4>
+                      <ul className="engineering-list">
+                        {selectedProject.technicalDecisions.map((item, index) => (
+                          <li key={index}>
+                            <FaChevronRight className="engineering-icon" />
+                            <span>{item}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
               {/* Two Column Layout for Stack & Infrastructure */}
               <div className="modal-tech-section">
                 {selectedProject.myRole.length > 0 && (
@@ -375,6 +427,16 @@ const Projects = () => {
                     className="btn-primary-custom"
                   >
                     <FaGithub /> {t('projects:modal.github')}
+                  </a>
+                )}
+                {selectedProject.ciUrl && (
+                  <a
+                    href={selectedProject.ciUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="btn-outline-custom"
+                  >
+                    <FaCodeBranch /> {t('projects:modal.ci')}
                   </a>
                 )}
                 {selectedProject.liveUrl && (

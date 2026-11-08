@@ -216,6 +216,35 @@
 }
 
 /* In the modal header: sits inline next to the category badge */
+/* Card badges row: category + quality (CI/tests) */
+.project-badges {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.project-badges .project-category-badge {
+  margin-bottom: 0;
+}
+
+.project-quality-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  background: rgba(16, 185, 129, 0.12);
+  color: var(--success-color);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  border-radius: 6px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: fit-content;
+}
+
 .modal-badges {
   display: flex;
   align-items: center;
@@ -873,6 +902,57 @@
   font-weight: 500;
 }
 
+/* Engineering & Technical Decisions - Two Column Layout */
+.modal-engineering {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.engineering-item {
+  background: rgba(0, 127, 255, 0.05);
+  border: 1px solid rgba(0, 127, 255, 0.2);
+  border-radius: 12px;
+  padding: 20px 24px;
+}
+
+.engineering-item h4 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: white;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.engineering-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.engineering-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.95rem;
+  line-height: 1.55;
+  margin-bottom: 6px;
+}
+
+.engineering-list li:last-child {
+  margin-bottom: 0;
+}
+
+.engineering-icon {
+  color: var(--primary-color);
+  flex-shrink: 0;
+  margin-top: 5px;
+  font-size: 0.85rem;
+}
+
 /* Tech & Infrastructure Section - Two Column Layout */
 .modal-tech-section {
   display: grid;
@@ -1026,12 +1106,18 @@
   }
 
   .modal-context,
-  .modal-tech-section {
+  .modal-tech-section,
+  .modal-engineering {
     grid-template-columns: 1fr;
     gap: 16px;
   }
 
-  .context-item {
+  .modal-engineering {
+    margin-bottom: 24px;
+  }
+
+  .context-item,
+  .engineering-item {
     padding: 20px;
   }
 }
@@ -1160,12 +1246,18 @@
     font-size: 0.85rem;
   }
 
-  .context-item {
+  .context-item,
+  .engineering-item {
     padding: 16px;
   }
 
-  .context-item h4 {
+  .context-item h4,
+  .engineering-item h4 {
     font-size: 1rem;
+  }
+
+  .engineering-list li {
+    font-size: 0.9rem;
   }
 
   .modal-section-highlight {
