@@ -12,6 +12,7 @@
   "groups": {
     "frontend": "Frontend",
     "backendDatabase": "Backend & Database",
+    "qualityTesting": "Quality & Testing",
     "automationCICD": "Automation & CI/CD",
     "serversContainers": "Servers & Containers",
     "networkingMonitoring": "Networking & Monitoring"
@@ -26,8 +27,12 @@
     "ormPrismaSqlalchemy": "Prisma & SQLAlchemy (ORM)",
     "databases": "PostgreSQL & MSSQL",
     "apiAuth": "RESTful APIs, JWT & RBAC",
+    "vitestTestingLibrary": "Vitest & Testing Library",
+    "pytest": "pytest",
+    "lintTypecheck": "ESLint/Prettier · ruff/mypy",
+    "schemaValidation": "Schema validation (zod)",
     "airflowAutomation": "Apache Airflow & Python Automation",
-    "gitCicd": "Git, CI/CD, and Semantic Release",
+    "gitCicd": "Git, GitHub Actions (CI), and Semantic Release",
     "bashScripting": "Bash Scripting",
     "dockerCompose": "Docker & Docker Compose",
     "traefik": "Traefik (Reverse Proxy)",

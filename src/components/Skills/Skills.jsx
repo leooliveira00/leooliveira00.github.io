@@ -48,6 +48,15 @@ const Skills = () => {
             { name: t('skills.databases'), status: 'proficient' },
             { name: t('skills.apiAuth'), status: 'proficient' }
           ]
+        },
+        {
+          name: t('groups.qualityTesting'),
+          items: [
+            { name: t('skills.vitestTestingLibrary'), status: 'learning' },
+            { name: t('skills.pytest'), status: 'learning' },
+            { name: t('skills.lintTypecheck'), status: 'learning' },
+            { name: t('skills.schemaValidation'), status: 'learning' }
+          ]
         }
       ]
     },
